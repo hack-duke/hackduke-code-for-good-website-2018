@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { SectionBase } from './common-styles.jsx';
+import { SectionBase, SectionTitle } from './common-styles.jsx';
 
 import AboutLine from './img/ABOUTLINE.svg';
 
@@ -10,4 +10,12 @@ const Container = styled('div')`
     background-image: url(${AboutLine});
 `;
 
-export default () => <Container>About content here</Container>;
+const Title = styled('div')`
+    ${SectionTitle};
+`;
+
+export default () => (
+    <Container>
+        <Title>About</Title>
+    </Container>
+);

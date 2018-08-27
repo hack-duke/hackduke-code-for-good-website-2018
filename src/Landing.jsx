@@ -34,7 +34,7 @@ export default () => (
         <LandingContent>
             <Logo />
             <div>October 19th - 21st</div>
-            <SignupButton href="#">SIGN UP</SignupButton>
+            <SignupButton href="https://duke.edu/">SIGN UP</SignupButton>
         </LandingContent>
     </Container>
 );

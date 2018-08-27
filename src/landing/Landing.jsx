@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Home from './img/HOME.svg';
-import LogoImage from './img/hackduke-logo.png';
+import Home from './HOME.svg';
+import LogoImage from './hackduke-logo.png';
 
-import { SectionBase } from './common-styles.jsx';
+import { SectionBase } from '../common-styles';
 
 const Container = styled('div')`
     ${SectionBase({ height: '900px' })}

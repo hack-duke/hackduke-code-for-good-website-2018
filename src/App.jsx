@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Landing from './Landing.jsx';
-import About from './About.jsx';
+import Landing from './landing/Landing';
+import About from './about/About';
 
 export default () => (
     <React.Fragment>

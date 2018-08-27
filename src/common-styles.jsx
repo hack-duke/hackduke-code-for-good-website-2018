@@ -6,7 +6,7 @@ export const SectionBase = props => css`
     height: ${props.height};
     background-repeat: no-repeat;
     background-position: center top;
-    padding-left: 150px;
+    padding: 0 144px;
     background-size: 1366px ${props.height};
 
     @media screen and (max-width: 1380px) {
@@ -19,4 +19,6 @@ export const SectionTitle = css`
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 3px;
+    padding-left: 20px;
+    display: inline-block;
 `;

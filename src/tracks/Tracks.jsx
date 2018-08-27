@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import { SectionBase, SectionContent, SectionTitle } from '../common-styles';
 
 import TracksLine from './tracks-line.svg';
+import TracksGraphic from './TracksGraphic';
 
 const Container = styled('div')`
     ${SectionBase({ height: '800px' })}
@@ -41,5 +42,6 @@ export default () => (
             </p>
             <p>select a line for more info!</p>
         </TracksParagraph>
+        <TracksGraphic onMoreClick={tag => alert(`${tag} clicked`)} />
     </Container>
 );

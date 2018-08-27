@@ -10,7 +10,6 @@ const Container = styled('div')`
     ${SectionBase({ height: '800px' })}
     background-image: url(${AboutLine});
     padding-top: 90px;
-    position: relative;
 `;
 
 const Title = styled('div')`

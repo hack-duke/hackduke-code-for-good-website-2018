@@ -1,0 +1,25 @@
+{
+    "name": "hackduke-code-for-good-website-2018",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "parcel index.html",
+        "build": "parcel build --public-url / index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hack-duke/hackduke-code-for-good-website-2018.git"
+    },
+    "author": "Yunyu Lin <mail@yunyul.in>",
+    "license": "MIT",
+    "dependencies": {
+        "babel-plugin-emotion": "^9.2.6",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "emotion": "^9.2.6",
+        "parcel-bundler": "^1.9.7",
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2",
+        "react-emotion": "^9.2.6"
+    }
+}

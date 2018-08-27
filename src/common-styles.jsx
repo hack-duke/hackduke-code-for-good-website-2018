@@ -14,11 +14,15 @@ export const SectionBase = props => css`
     }
 `;
 
-export const SectionTitle = css`
+export const SectionContent = css`
     font-family: 'Inconsolata', monospace;
+    padding-left: 20px;
+    display: inline-block;
+`;
+
+export const SectionTitle = css`
+    ${SectionContent};
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 3px;
-    padding-left: 20px;
-    display: inline-block;
 `;

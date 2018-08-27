@@ -7,7 +7,7 @@ import AboutLine from './ABOUTLINE.svg';
 import AboutGraphic from './about-graphic.svg';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '900px' })}
+    ${SectionBase({ height: '800px' })}
     background-image: url(${AboutLine});
     padding-top: 90px;
     position: relative;

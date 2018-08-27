@@ -7,7 +7,7 @@ import TracksLine from './tracks-line.svg';
 import TracksGraphic from './TracksGraphic';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '800px' })}
+    ${SectionBase({ height: '660px' })}
     background-image: url(${TracksLine});
     padding-top: 90px;
     position: relative;

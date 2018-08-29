@@ -15,7 +15,7 @@ import TracksLine from './tracks-line.svg';
 import TrackCard from './TrackCard';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '660px' })}
+    ${SectionBase({ height: '800px' })}
     background-image: url(${TracksLine});
     padding-top: 90px;
     position: relative;
@@ -30,6 +30,19 @@ const Title = styled('div')`
 const TrackRow = styled('div')`
     display: flex;
 `;
+
+const TrackCTA = styled('a')`
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    cursor: pointer;
+`;
+
+const arrow = '\uD83E\uDC6A';
 
 export default () => (
     <Container>
@@ -52,11 +65,13 @@ export default () => (
                     <TrackCard color="#3549A2" title="Inequality">
                         The <b>Inequality</b> track targets problems regarding
                         both social and economic inequality. Whether it is
-                        creating solutions to bridge the gap between the
-                        affluent and the poor, or finding ways to eliminate
-                        disparities in gender or race, this track is built on
-                        the principle that everyone should have the capacity to
-                        reach their full potential.
+                        creating solutions to bridge the income gap, or finding
+                        ways to reduce disparities in gender or race, this track
+                        is built on the principle that everyone should have the
+                        capacity to reach their full potential.
+                        <TrackCTA href="https://hackduke.tumblr.com/tagged/inequality">
+                            {arrow} See Projects
+                        </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#5C5299" title="Energy">
                         The <b>Energy</b> track encompasses a technical
@@ -65,6 +80,9 @@ export default () => (
                         track has many applications, including machine learning
                         for resource extraction, the use of green energy and
                         enforcing environmental policy.
+                        <TrackCTA href="http://hackduke.tumblr.com/tagged/energy-&-environment">
+                            {arrow} See Projects
+                        </TrackCTA>
                     </TrackCard>
                 </TrackRow>
                 <TrackRow>
@@ -75,13 +93,19 @@ export default () => (
                         technology. More than ever, technology today is in a
                         prime position to improve the quality, efficiency, and
                         accessibility of health care.
+                        <TrackCTA href="http://hackduke.tumblr.com/tagged/health-&-wellness">
+                            {arrow} See Projects
+                        </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#FFAA5B" title="Education">
-                        The <b>Education</b> track teams hackers with educators,
+                        The <b>Education</b> track pairs hackers with educators,
                         reaching out to all levels of subjects and skills. In
                         addition to Education events sponsored by HackDuke,
                         projects aim to increase visibility of technology and to
                         introduce basic skills to the public.
+                        <TrackCTA href="http://hackduke.tumblr.com/tagged/education">
+                            {arrow} See Projects
+                        </TrackCTA>
                     </TrackCard>
                 </TrackRow>
             </SectionRightColumn>

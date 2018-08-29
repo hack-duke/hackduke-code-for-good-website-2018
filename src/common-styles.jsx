@@ -62,7 +62,7 @@ export const SectionLeftColumn = styled('div')`
 `;
 
 export const SectionRightColumn = styled('div')`
-    padding-left: 45px;
+    padding-left: 40px;
     flex-grow: 1;
     flex-basis: 0;
 `;

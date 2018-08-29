@@ -7,7 +7,7 @@ const CardBase = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
     display: flex;
-    height: 260px;
+    height: 265px;
     margin-bottom: 25px;
     margin-right: 25px;
     padding: 25px;

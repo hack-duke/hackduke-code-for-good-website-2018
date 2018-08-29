@@ -40,6 +40,14 @@ const TrackCTA = styled('a')`
     display: block;
     margin-top: 15px;
     cursor: pointer;
+    /* TODO: remove this hack */
+    position: absolute;
+    bottom: 25px;
+    transition: opacity 0.2s;
+
+    :hover {
+        opacity: 0.8;
+    }
 `;
 
 const arrow = '\uD83E\uDC6A';
@@ -69,8 +77,12 @@ export default () => (
                         ways to reduce disparities in gender or race, this track
                         is built on the principle that everyone should have the
                         capacity to reach their full potential.
-                        <TrackCTA href="https://hackduke.tumblr.com/tagged/inequality">
-                            {arrow} See Projects
+                        <TrackCTA
+                            href="https://hackduke.tumblr.com/tagged/inequality"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            See Projects {arrow}
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#5C5299" title="Energy">
@@ -80,8 +92,12 @@ export default () => (
                         track has many applications, including machine learning
                         for resource extraction, the use of green energy and
                         enforcing environmental policy.
-                        <TrackCTA href="http://hackduke.tumblr.com/tagged/energy-&-environment">
-                            {arrow} See Projects
+                        <TrackCTA
+                            href="http://hackduke.tumblr.com/tagged/energy-&-environment"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            See Projects {arrow}
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>
@@ -93,8 +109,12 @@ export default () => (
                         technology. More than ever, technology today is in a
                         prime position to improve the quality, efficiency, and
                         accessibility of health care.
-                        <TrackCTA href="http://hackduke.tumblr.com/tagged/health-&-wellness">
-                            {arrow} See Projects
+                        <TrackCTA
+                            href="http://hackduke.tumblr.com/tagged/health-&-wellness"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            See Projects {arrow}
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#FFAA5B" title="Education">
@@ -103,8 +123,12 @@ export default () => (
                         addition to Education events sponsored by HackDuke,
                         projects aim to increase visibility of technology and to
                         introduce basic skills to the public.
-                        <TrackCTA href="http://hackduke.tumblr.com/tagged/education">
-                            {arrow} See Projects
+                        <TrackCTA
+                            href="http://hackduke.tumblr.com/tagged/education"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            See Projects {arrow}
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>

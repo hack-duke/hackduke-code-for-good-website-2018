@@ -7,10 +7,11 @@ const CardBase = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
     display: flex;
-    height: 265px;
+    height: 285px;
     margin-bottom: 25px;
     margin-right: 25px;
     padding: 25px;
+    position: relative;
     cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
 
     :last-child {
@@ -26,6 +27,7 @@ const CardTitle = styled('div')`
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-size: 1.8em;
+    font-weight: bold;
     color: white;
     pointer-events: none;
 `;

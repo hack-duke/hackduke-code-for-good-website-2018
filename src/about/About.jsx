@@ -53,7 +53,7 @@ export default () => (
                     coding alongside mentors from tech companies!
                 </PrinciplesCard>
                 <PrinciplesCard
-                    title="Use tech to further social good"
+                    title="Using tech to further social good"
                     titleColor="#A94A64"
                 >
                     The core principle behind hacking for social good is
@@ -62,7 +62,7 @@ export default () => (
                     their university and with community organizations.
                 </PrinciplesCard>
                 <PrinciplesCard
-                    title="Give back to the community"
+                    title="Giving back to the community"
                     titleColor="#FFAA5B"
                 >
                     HackDuke encourages students to venture beyond the

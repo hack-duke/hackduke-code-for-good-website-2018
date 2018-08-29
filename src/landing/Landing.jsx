@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import Home from './home-bg.svg';
 import LogoImage from './hackduke-logo.png';
 
-import { SectionBase } from '../common-styles';
+import { SectionBase, ShadowItem } from '../common-styles';
 
 const Container = styled('div')`
     ${SectionBase({ height: '900px' })}
@@ -27,13 +27,26 @@ const SignupButton = styled('a')`
     display: inline-block;
     margin-top: 8px;
     text-decoration: none;
+    transition: all 0.2s;
+    ${ShadowItem};
+
+    :hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
+    :active {
+        opacity: 1;
+        transform: scale(0.95);
+        background: #463f73;
+    }
 `;
 
 export default () => (
     <Container>
         <LandingContent>
             <Logo />
-            <div>October 19th - 21st</div>
+            <div>October 13th - 14th</div>
             <SignupButton href="https://duke.edu/">SIGN UP</SignupButton>
         </LandingContent>
     </Container>

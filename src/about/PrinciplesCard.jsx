@@ -1,17 +1,15 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { SecondaryText } from '../common-styles';
+import { SecondaryText, ShadowItem } from '../common-styles';
 
 const CardBase = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
-    margin-right: 20px;
-    border-radius: 6px;
+    margin-right: 25px;
     padding: 25px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12.5px 40px rgba(0, 0, 0, 0.07);
     border-top: 6px solid ${props => props.color};
-
+    ${ShadowItem};
     :last-child {
         margin-right: 0;
     }
@@ -28,7 +26,6 @@ const CardTitle = styled('span')`
 const CardText = styled('p')`
     ${SecondaryText};
     font-size: 1.25em;
-    text-align: left;
 `;
 
 export default ({ title, children, titleColor, textColor }) => (

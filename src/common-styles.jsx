@@ -9,7 +9,6 @@ export const PrimaryFont = css`
 
 export const SecondaryText = css`
     ${PrimaryFont};
-    text-align: justify;
 `;
 
 export const SectionBase = props => css`
@@ -44,6 +43,7 @@ export const SectionTextContent = styled('p')`
     display: inline-block;
     font-size: 1.33em;
     color: #3b3e6e;
+    margin-top: 0;
 `;
 
 const FlexProps = css`
@@ -54,14 +54,27 @@ const FlexProps = css`
 export const SectionContent = styled('div')`
     ${LeftContentPadding};
     ${props => props.columns && FlexProps};
+    margin-top: 25px;
 `;
 
 export const SectionLeftColumn = styled('div')`
-    width: 420px;
+    width: 285px;
 `;
 
 export const SectionRightColumn = styled('div')`
-    padding-left: 10px;
-    background-color: red;
+    padding-left: 45px;
     flex-grow: 1;
+    flex-basis: 0;
+`;
+
+export const ShadowItem = css`
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12.5px 40px rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+    transition: all 0.2s;
+
+    :hover {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+            0 24px 60px rgba(0, 0, 0, 0.07);
+        transform: translateY(-4px);
+    }
 `;

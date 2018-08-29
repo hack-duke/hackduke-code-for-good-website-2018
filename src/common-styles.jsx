@@ -1,6 +1,11 @@
 import { css } from 'emotion';
+import styled from 'react-emotion';
 
 const MAX_WIDTH = '1400px';
+
+export const PrimaryFont = css`
+    font-family: 'Inconsolata', monospace;
+`;
 
 export const SectionBase = props => css`
     max-width: ${MAX_WIDTH};
@@ -17,15 +22,42 @@ export const SectionBase = props => css`
     }
 `;
 
-export const SectionContent = css`
-    font-family: 'Inconsolata', monospace;
+const LeftContentPadding = css`
     padding-left: 20px;
-    display: inline-block;
 `;
 
 export const SectionTitle = css`
-    ${SectionContent};
+    ${PrimaryFont};
+    ${LeftContentPadding};
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 3px;
+`;
+
+export const SectionTextContent = styled('p')`
+    ${PrimaryFont};
+    display: inline-block;
+    font-size: 1.33em;
+    color: #3b3e6e;
+    text-align: justify;
+`;
+
+const FlexProps = css`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const SectionContent = styled('div')`
+    ${LeftContentPadding};
+    ${props => props.columns && FlexProps};
+`;
+
+export const SectionLeftColumn = styled('div')`
+    width: 420px;
+`;
+
+export const SectionRightColumn = styled('div')`
+    padding-left: 10px;
+    background-color: red;
+    flex-grow: 1;
 `;

@@ -50,7 +50,9 @@ export default () => (
         <LandingContent>
             <Logo />
             <div>October 13th - 14th</div>
-            <SignupButton href="https://duke.edu/">SIGN UP</SignupButton>
+            <SignupButton href="https://hackduke.typeform.com/to/IVgGQl">
+                SIGN UP
+            </SignupButton>
         </LandingContent>
     </Container>
 );

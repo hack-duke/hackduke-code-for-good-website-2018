@@ -1,16 +1,18 @@
 import { css } from 'emotion';
 
+const MAX_WIDTH = '1400px';
+
 export const SectionBase = props => css`
-    max-width: 1366px;
+    max-width: ${MAX_WIDTH};
     margin: auto;
     height: ${props.height};
     background-repeat: no-repeat;
     background-position: center top;
     padding: 0 144px;
-    background-size: 1366px ${props.height};
+    background-size: ${MAX_WIDTH} ${props.height};
     position: relative;
 
-    @media screen and (max-width: 1380px) {
+    @media screen and (max-width: ${MAX_WIDTH}) {
         background-position: left top;
     }
 `;

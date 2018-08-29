@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import Home from './home-bg.svg';
 import LogoImage from './hackduke-logo.png';
 
-import { SectionBase, ShadowItem } from '../common-styles';
+import { PrimaryFont, SectionBase, ShadowItem } from '../common-styles';
 
 const Container = styled('div')`
     ${SectionBase({ height: '900px' })}
@@ -12,8 +12,8 @@ const Container = styled('div')`
 `;
 
 const LandingContent = styled('div')`
+    ${PrimaryFont};
     padding-top: 140px;
-    font-family: 'Inconsolata';
     font-size: 1.5em;
     line-height: 1.8em;
 `;
@@ -22,12 +22,15 @@ const Logo = () => <img src={LogoImage} height="270px" />;
 
 const SignupButton = styled('a')`
     background: #5c5299;
-    padding: 0 16px;
+    padding: 4px 24px;
     color: white;
     display: inline-block;
     margin-top: 8px;
     text-decoration: none;
     transition: all 0.2s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
     ${ShadowItem};
 
     :hover {

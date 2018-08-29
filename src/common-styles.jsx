@@ -7,6 +7,11 @@ export const PrimaryFont = css`
     font-family: 'Inconsolata', monospace;
 `;
 
+export const SecondaryText = css`
+    ${PrimaryFont};
+    text-align: justify;
+`;
+
 export const SectionBase = props => css`
     max-width: ${MAX_WIDTH};
     margin: auto;
@@ -35,11 +40,10 @@ export const SectionTitle = css`
 `;
 
 export const SectionTextContent = styled('p')`
-    ${PrimaryFont};
+    ${SecondaryText};
     display: inline-block;
     font-size: 1.33em;
     color: #3b3e6e;
-    text-align: justify;
 `;
 
 const FlexProps = css`

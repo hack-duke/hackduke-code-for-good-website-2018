@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Home from './HOME.svg';
+import Home from './home-bg.svg';
 import LogoImage from './hackduke-logo.png';
 
 import { SectionBase } from '../common-styles';

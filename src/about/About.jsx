@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 
 import { SectionBase, SectionTitle } from '../common-styles';
 
-import AboutLine from './ABOUTLINE.svg';
+import AboutLine from './about-line.svg';
 import AboutGraphic from './about-graphic.svg';
 
 const Container = styled('div')`

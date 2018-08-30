@@ -4,8 +4,6 @@ import styled from 'react-emotion';
 import {
     SectionBase,
     SectionContent,
-    SectionLeftColumn,
-    SectionRightColumn,
     SectionTextContent,
     SectionTitle
 } from '../common-styles';
@@ -36,14 +34,10 @@ export default () => (
         <SectionContent>
             <SectionTextContent>
                 HackDuke is the nation's premier hackathon for tech and social
-                good. We unite students passionate about changing the intention
-                and narrative behind how technology is used today to create
-                meaningful hacks in a 24-hour sprint. In the past, we've
-                supported hacks like a tool that diagnoses Alzheimers with a
-                snapshot of your eye, Arduinos that automatically separate
-                recyclables from trash using computer vision, or chloreopath
-                maps that display social mobility scores - the possibilities are
-                endless. Come learn, come discuss, and come code for good!
+                good. We unite students that are passionate about changing the
+                intention and narrative behind how technology is used today to
+                create meaningful hacks in a 24-hour sprint. Come learn, come
+                discuss, and come code for good!
             </SectionTextContent>
             <PrinciplesContainer>
                 <PrinciplesCard

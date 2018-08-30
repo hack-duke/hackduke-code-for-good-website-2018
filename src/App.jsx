@@ -5,6 +5,7 @@ import About from './about/About';
 import Tracks from './tracks/Tracks';
 import FAQs from './faqs/FAQs';
 import Sponsors from './sponsors/Sponsors';
+import Footer from './footer/Footer';
 
 export default () => (
     <React.Fragment>
@@ -13,5 +14,6 @@ export default () => (
         <Tracks />
         <FAQs />
         <Sponsors />
+        <Footer />
     </React.Fragment>
 );

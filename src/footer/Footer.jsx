@@ -20,7 +20,7 @@ const CenterContent = styled('div')`
 `;
 
 const RightLogo = styled('img')`
-    height: 80px;
+    height: 70px;
     align-self: center;
 `;
 

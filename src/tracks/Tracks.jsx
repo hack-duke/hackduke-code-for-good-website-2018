@@ -50,7 +50,9 @@ const TrackCTA = styled('a')`
     }
 `;
 
-const arrow = '\uD83E\uDC6A';
+// Figure out why this isn't working on macOS
+// const arrow = '\uD83E\uDC6A';
+const arrow = '';
 
 export default () => (
     <Container>

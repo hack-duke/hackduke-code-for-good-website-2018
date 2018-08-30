@@ -5,6 +5,7 @@ import Home from './home-bg.svg';
 import LogoImage from './hackduke-logo.png';
 
 import { PrimaryFont, SectionBase, ShadowItem } from '../common-styles';
+import Button from '../Button';
 
 const Container = styled('div')`
     ${SectionBase({ height: '900px' })}
@@ -50,9 +51,13 @@ export default () => (
         <LandingContent>
             <Logo />
             <div>October 13th - 14th</div>
-            <SignupButton href="https://hackduke.typeform.com/to/IVgGQl">
-                SIGN UP
-            </SignupButton>
+            <Button
+                background="#5c5299"
+                selectedBackground="#463f73"
+                href="https://hackduke.typeform.com/to/IVgGQl"
+            >
+                Sign up
+            </Button>
         </LandingContent>
     </Container>
 );

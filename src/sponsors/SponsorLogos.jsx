@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import AppianLogo from './img/appian.jpg';
+import AppianLogo from './img/appian.png';
 import ScimedLogo from './img/scimed.png';
 import WolframLogo from './img/wolfram.svg';
 
-import FuquaLogo from './img/fuqua.jpg';
-import PrattLogo from './img/pratt.jpg';
-import IIDLogo from './img/iid.jpg';
+import FuquaLogo from './img/fuqua.png';
+import PrattLogo from './img/pratt.png';
+import IIDLogo from './img/iid.png';
 
 import GlobalBankersLogo from './img/gbankers.png';
 import FifteenSeventeenLogo from './img/1517.png';

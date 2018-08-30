@@ -54,7 +54,7 @@ export default () => (
             <Button
                 background="#5c5299"
                 selectedBackground="#463f73"
-                href="https://hackduke.typeform.com/to/IVgGQl"
+                href="https://hackduke.org/apply/"
             >
                 Sign up
             </Button>

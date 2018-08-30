@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "dev": "parcel index.html",
-        "build": "parcel build --public-url / index.html",
+        "build": "parcel build --public-url / index.html && cp -r apply/ dist/",
         "heroku-postbuild": "npm run build",
         "start": "serve ./dist/"
     },

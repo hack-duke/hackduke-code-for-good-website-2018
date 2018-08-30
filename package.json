@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "parcel index.html",
         "build": "parcel build --public-url / index.html",
-        "postinstall": "npm run build",
+        "heroku-postbuild": "npm run build",
         "start": "serve ./dist/"
     },
     "repository": {

@@ -15,6 +15,10 @@ import FifteenSeventeenLogo from './img/1517.png';
 const LogoRow = styled('div')`
     display: flex;
     padding-bottom: 60px;
+
+    :last-child {
+        padding-bottom: 0;
+    }
 `;
 
 const LogoWrapper = styled('a')`
@@ -40,18 +44,27 @@ const Logo = ({ src, href }) => (
 export default () => (
     <React.Fragment>
         <LogoRow>
-            <Logo src={AppianLogo} />
-            <Logo src={ScimedLogo} />
-            <Logo src={WolframLogo} />
+            <Logo
+                src={AppianLogo}
+                href="https://careers.appian.com/careers-campus/"
+            />
+            <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
+            <Logo
+                src={WolframLogo}
+                href="http://www.wolfram.com/company/careers/students/"
+            />
         </LogoRow>
         <LogoRow>
-            <Logo src={FuquaLogo} />
-            <Logo src={PrattLogo} />
-            <Logo src={IIDLogo} />
+            <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
+            <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
+            <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
         </LogoRow>
         <LogoRow>
-            <Logo src={GlobalBankersLogo} />
-            <Logo src={FifteenSeventeenLogo} />
+            <Logo
+                src={GlobalBankersLogo}
+                href="https://www.globalbankers.com/"
+            />
+            <Logo src={FifteenSeventeenLogo} href="http://www.1517fund.com/" />
         </LogoRow>
     </React.Fragment>
 );

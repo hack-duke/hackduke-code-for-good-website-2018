@@ -55,6 +55,8 @@ const iconStyle = {
     style: { fontSize: '32px', margin: '0 8px', color: 'white' }
 };
 
+const year = new Date().getFullYear();
+
 export default () => (
     <FooterContainer>
         <LeftBadge
@@ -87,7 +89,7 @@ export default () => (
                         {...iconStyle}
                     />
                 </SocialLinks>
-                Copyright &copy; 2018 HackDuke.
+                Copyright &copy; {year} HackDuke.
             </CenterContent>
         </CenterContainer>
         <RightLogo href="https://mlh.io" target="_blank" rel="noopener">

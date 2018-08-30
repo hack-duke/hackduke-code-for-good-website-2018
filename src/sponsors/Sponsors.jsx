@@ -12,6 +12,7 @@ import {
 import Button from '../Button';
 
 import SponsorsLine from './sponsors-line.svg';
+import SponsorLogos from './SponsorLogos';
 
 const Container = styled('div')`
     ${SectionBase({ height: '800px' })}
@@ -22,12 +23,6 @@ const Container = styled('div')`
 const Title = styled('div')`
     ${SectionTitle};
     color: #f8aa5b;
-`;
-
-const SponsorPlaceholder = styled('div')`
-    height: 500px;
-    width: 100%;
-    background: #eee;
 `;
 
 export default () => (
@@ -50,7 +45,7 @@ export default () => (
                 </Button>
             </SectionLeftColumn>
             <SectionRightColumn>
-                <SponsorPlaceholder />
+                <SponsorLogos />
             </SectionRightColumn>
         </SectionContent>
     </Container>

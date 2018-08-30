@@ -34,11 +34,44 @@ const CenterContent = styled('div')`
     text-align: center;
 `;
 
+const SocialLinks = styled('div')`
+    margin: auto;
+    padding-bottom: 12px;
+    width: 300px;
+`;
+
+const iconStyle = {
+    style: { fontSize: '32px', margin: '0 8px', color: 'white' }
+};
+
 export default () => (
     <FooterContainer>
         <LeftBadge src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
         <CenterContainer>
-            <CenterContent>Copyright &copy;2018 HackDuke.</CenterContent>
+            <CenterContent>
+                <SocialLinks>
+                    <a
+                        href="mailto:hackers@hackduke.org"
+                        class="icon-mail-squared"
+                        {...iconStyle}
+                    />
+                    <a
+                        href="https://www.facebook.com/hackduke"
+                        target="_blank"
+                        rel="noopener"
+                        class="icon-facebook-squared"
+                        {...iconStyle}
+                    />
+                    <a
+                        href="https://twitter.com/hackduke"
+                        target="_blank"
+                        rel="noopener"
+                        class="icon-twitter-squared"
+                        {...iconStyle}
+                    />
+                </SocialLinks>
+                Copyright &copy;2018 HackDuke.
+            </CenterContent>
         </CenterContainer>
         <RightLogo src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg" />
     </FooterContainer>

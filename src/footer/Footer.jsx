@@ -12,6 +12,7 @@ const FooterContainer = styled('div')`
 
 const LeftBadge = styled('img')`
     height: 180px;
+    padding-right: 16px;
 `;
 
 const CenterContainer = styled('div')`
@@ -23,7 +24,7 @@ const CenterContainer = styled('div')`
 `;
 
 const RightLogo = styled('img')`
-    height: 70px;
+    height: 50px;
     align-self: center;
 `;
 

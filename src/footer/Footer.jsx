@@ -10,9 +10,15 @@ const FooterContainer = styled('div')`
     padding: 0 80px;
 `;
 
-const LeftBadge = styled('img')`
-    height: 180px;
+const LeftBadge = styled('a')`
+    width: 108px;
     padding-right: 16px;
+    align-self: flex-start;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 `;
 
 const CenterContainer = styled('div')`
@@ -23,9 +29,14 @@ const CenterContainer = styled('div')`
     color: white;
 `;
 
-const RightLogo = styled('img')`
-    height: 50px;
+const RightLogo = styled('a')`
+    width: 108px;
     align-self: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 `;
 
 const CenterContent = styled('div')`
@@ -46,7 +57,13 @@ const iconStyle = {
 
 export default () => (
     <FooterContainer>
-        <LeftBadge src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+        <LeftBadge
+            href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+            target="_blank"
+            rel="noopener"
+        >
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+        </LeftBadge>
         <CenterContainer>
             <CenterContent>
                 <SocialLinks>
@@ -73,6 +90,8 @@ export default () => (
                 Copyright &copy; 2018 HackDuke.
             </CenterContent>
         </CenterContainer>
-        <RightLogo src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg" />
+        <RightLogo href="https://mlh.io" target="_blank" rel="noopener">
+            <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg" />
+        </RightLogo>
     </FooterContainer>
 );

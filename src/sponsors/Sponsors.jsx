@@ -31,7 +31,7 @@ export default () => (
         <SectionContent columns={true}>
             <SectionLeftColumn>
                 <SectionTextContent>
-                    A big thank you to all our sponsors!
+                    A big thank you to all of our sponsors!
                 </SectionTextContent>
                 <SectionTextContent>
                     Interested in sponsoring?

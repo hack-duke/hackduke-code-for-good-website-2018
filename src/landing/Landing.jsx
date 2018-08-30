@@ -25,7 +25,7 @@ export default () => (
     <Container>
         <LandingContent>
             <Logo />
-            <div>October 13th - 14th</div>
+            <div>October 13th - 14th, 2018</div>
             <Button
                 background="#5c5299"
                 selectedBackground="#463f73"

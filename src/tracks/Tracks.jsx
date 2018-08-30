@@ -103,7 +103,7 @@ export default () => (
                 </TrackRow>
                 <TrackRow>
                     <TrackCard color="#D25C59" title="Health">
-                        The <b>Healthcare</b> track allows hackers to work with
+                        The <b>Health</b> track allows hackers to work with
                         various kinds of health related data, as well as connect
                         with mentors from the intersection of health and
                         technology. More than ever, technology today is in a

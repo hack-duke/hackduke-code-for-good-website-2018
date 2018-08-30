@@ -6,6 +6,9 @@ const MAX_WIDTH = '1400px';
 export const PrimaryFont = css`
     font-family: 'Inconsolata', monospace;
 `;
+export const TitleFont = css`
+    font-family: 'Open Sans', sans-serif;
+`;
 
 export const SecondaryText = css`
     ${PrimaryFont};
@@ -31,11 +34,10 @@ const LeftContentPadding = css`
 `;
 
 export const SectionTitle = css`
-    ${PrimaryFont};
+    ${TitleFont};
     ${LeftContentPadding};
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
-    letter-spacing: 3px;
 `;
 
 export const SectionTextContent = styled('p')`

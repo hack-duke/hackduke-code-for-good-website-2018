@@ -1,9 +1,9 @@
-import React from 'react';
 import styled from 'react-emotion';
 
-import { ShadowItem } from './common-styles';
+import { ShadowItem, TitleFont } from './common-styles';
 
 export default styled('a')`
+    ${TitleFont};
     background: ${props => props.background};
     padding: 12px 24px;
     color: white;
@@ -12,7 +12,6 @@ export default styled('a')`
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.2s;
-    font-family: 'Open Sans', sans-serif;
     /* Todo fix this */
     font-size: 16px;
     line-height: 20px;

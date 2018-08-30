@@ -21,31 +21,6 @@ const LandingContent = styled('div')`
 
 const Logo = () => <img src={LogoImage} height="270px" />;
 
-const SignupButton = styled('a')`
-    background: #5c5299;
-    padding: 4px 24px;
-    color: white;
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    transition: all 0.2s;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.75em;
-    font-weight: bold;
-    ${ShadowItem};
-
-    :hover {
-        transform: scale(1.05);
-        opacity: 0.9;
-    }
-
-    :active {
-        opacity: 1;
-        transform: scale(0.95);
-        background: #463f73;
-    }
-`;
-
 export default () => (
     <Container>
         <LandingContent>

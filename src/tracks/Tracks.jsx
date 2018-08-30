@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
+import { TitleFont } from '../common-styles';
+
 import {
     SectionBase,
     SectionContent,
@@ -32,7 +34,7 @@ const TrackRow = styled('div')`
 `;
 
 const TrackCTA = styled('a')`
-    font-family: 'Open Sans', sans-serif;
+    ${TitleFont};
     color: white;
     font-weight: bold;
     text-transform: uppercase;

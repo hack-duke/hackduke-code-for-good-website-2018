@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { SecondaryText } from '../common-styles';
+import { SecondaryText, TitleFont } from '../common-styles';
 
 const FAQItem = styled('div')``;
 
 const FAQTitle = styled('h2')`
-    font-family: 'Open Sans', sans-serif;
+    ${TitleFont};
     font-weight: bold;
     font-size: 1.5em;
 `;

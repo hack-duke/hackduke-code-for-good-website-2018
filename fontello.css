@@ -65,11 +65,3 @@
 .icon-facebook-squared:before {
     content: '\f308';
 } /* '' */
-
-[class^='icon-'].fade-on-hover {
-    transition: opacity 0.2s;
-}
-
-[class^='icon-'].fade-on-hover:hover {
-    opacity: 0.8;
-}

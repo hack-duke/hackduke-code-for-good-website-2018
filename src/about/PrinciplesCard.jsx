@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { SecondaryText, ShadowItem } from '../common-styles';
+import { SecondaryText, TitleFont, ShadowItem } from '../common-styles';
 
 const CardBase = styled('div')`
     flex-grow: 1;
@@ -16,7 +16,7 @@ const CardBase = styled('div')`
 `;
 
 const CardTitle = styled('span')`
-    font-family: 'Open Sans', sans-serif;
+    ${TitleFont};
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: bold;

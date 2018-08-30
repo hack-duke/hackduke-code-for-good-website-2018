@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { css } from 'emotion';
+
+import { TitleFont } from '../common-styles';
 
 const FooterContainer = styled('div')`
     display: block;
@@ -22,10 +25,10 @@ const LeftBadge = styled('a')`
 `;
 
 const CenterContainer = styled('div')`
+    ${TitleFont};
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
-    font-family: 'Open Sans', sans-serif;
     color: white;
 `;
 
@@ -51,9 +54,16 @@ const SocialLinks = styled('div')`
     width: 300px;
 `;
 
-const iconStyle = {
-    style: { fontSize: '32px', margin: '0 8px', color: 'white' }
-};
+const iconStyle = css`
+    font-size: 32px;
+    margin: 0 8px;
+    color: white;
+    transition: opacity 0.2s;
+
+    :hover {
+        opacity: 0.8;
+    }
+`;
 
 const year = new Date().getFullYear();
 
@@ -71,22 +81,22 @@ export default () => (
                 <SocialLinks>
                     <a
                         href="mailto:hackers@hackduke.org"
-                        className="icon-mail-squared fade-on-hover"
-                        {...iconStyle}
+                        className="icon-mail-squared"
+                        css={iconStyle}
                     />
                     <a
                         href="https://www.facebook.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        className="icon-facebook-squared fade-on-hover"
-                        {...iconStyle}
+                        className="icon-facebook-squared"
+                        css={iconStyle}
                     />
                     <a
                         href="https://twitter.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        className="icon-twitter-squared fade-on-hover"
-                        {...iconStyle}
+                        className="icon-twitter-squared"
+                        css={iconStyle}
                     />
                 </SocialLinks>
                 Copyright &copy; {year} HackDuke.

@@ -3,7 +3,9 @@
     "version": "0.0.1",
     "scripts": {
         "dev": "parcel index.html",
-        "build": "parcel build --public-url / index.html"
+        "build": "parcel build --public-url / index.html",
+        "postinstall": "npm run build",
+        "start": "serve ./dist/"
     },
     "repository": {
         "type": "git",
@@ -11,7 +13,7 @@
     },
     "author": "Yunyu Lin <mail@yunyul.in>",
     "license": "MIT",
-    "dependencies": {
+    "devDependencies": {
         "babel-plugin-emotion": "^9.2.6",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-env": "^1.7.0",
@@ -22,5 +24,8 @@
         "react": "^16.4.2",
         "react-dom": "^16.4.2",
         "react-emotion": "^9.2.6"
+    },
+    "dependencies": {
+        "serve": "^10.0.0"
     }
 }

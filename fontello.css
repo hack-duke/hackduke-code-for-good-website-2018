@@ -53,6 +53,9 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-right-open:before {
+    content: '\e800';
+} /* '' */
 .icon-mail-squared:before {
     content: '\f199';
 } /* '' */
@@ -63,10 +66,10 @@
     content: '\f308';
 } /* '' */
 
-[class^='icon-'] {
+[class^='icon-'].fade-on-hover {
     transition: opacity 0.2s;
 }
 
-[class^='icon-']:hover {
+[class^='icon-'].fade-on-hover:hover {
     opacity: 0.8;
 }

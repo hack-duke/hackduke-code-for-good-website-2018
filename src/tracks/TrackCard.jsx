@@ -33,7 +33,8 @@ const CardTitle = styled('div')`
 `;
 
 const CardContent = styled('div')`
-    ${SecondaryText} color: white;
+    ${SecondaryText};
+    color: white;
 `;
 
 export default class TrackCard extends React.PureComponent {

@@ -52,21 +52,21 @@ export default () => (
                 <SocialLinks>
                     <a
                         href="mailto:hackers@hackduke.org"
-                        class="icon-mail-squared"
+                        className="icon-mail-squared fade-on-hover"
                         {...iconStyle}
                     />
                     <a
                         href="https://www.facebook.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        class="icon-facebook-squared"
+                        className="icon-facebook-squared fade-on-hover"
                         {...iconStyle}
                     />
                     <a
                         href="https://twitter.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        class="icon-twitter-squared"
+                        className="icon-twitter-squared fade-on-hover"
                         {...iconStyle}
                     />
                 </SocialLinks>

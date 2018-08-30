@@ -50,10 +50,6 @@ const TrackCTA = styled('a')`
     }
 `;
 
-// Figure out why this isn't working on macOS
-// const arrow = '\uD83E\uDC6A';
-const arrow = '';
-
 export default () => (
     <Container>
         <Title>Tracks</Title>
@@ -84,7 +80,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects {arrow}
+                            See Projects <span className="icon-right-open" />
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#5C5299" title="Energy">
@@ -99,7 +95,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects {arrow}
+                            See Projects <span className="icon-right-open" />
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>
@@ -116,7 +112,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects {arrow}
+                            See Projects <span className="icon-right-open" />
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#FFAA5B" title="Education">
@@ -130,7 +126,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects {arrow}
+                            See Projects <span className="icon-right-open" />
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>

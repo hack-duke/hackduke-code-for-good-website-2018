@@ -1,6 +1,17 @@
 import React from 'react';
 import styled from 'react-emotion';
 
+import AppianLogo from './img/appian.jpg';
+import ScimedLogo from './img/scimed.png';
+import WolframLogo from './img/wolfram.svg';
+
+import FuquaLogo from './img/fuqua.jpg';
+import PrattLogo from './img/pratt.jpg';
+import IIDLogo from './img/iid.jpg';
+
+import GlobalBankersLogo from './img/gbankers.png';
+import FifteenSeventeenLogo from './img/1517.png';
+
 const LogoRow = styled('div')`
     display: flex;
     padding-bottom: 60px;
@@ -28,18 +39,18 @@ const Logo = ({ src }) => (
 export default () => (
     <React.Fragment>
         <LogoRow>
-            <Logo src="https://pbs.twimg.com/profile_images/796052901189730304/Dc5biqpQ_400x400.jpg" />
-            <Logo src="https://www.metalsrecyclingevent.com/wp-content/uploads/Scimed.gif" />
-            <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WolframCorporateLogo.svg/1200px-WolframCorporateLogo.svg.png" />
+            <Logo src={AppianLogo} />
+            <Logo src={ScimedLogo} />
+            <Logo src={WolframLogo} />
         </LogoRow>
         <LogoRow>
-            <Logo src="https://yt3.ggpht.com/a-/ACSszfFriTbBsAy9cX28clgC74DdDoNJJnjwaZ1BCA=s900-mo-c-c0xffffffff-rj-k-no" />
-            <Logo src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/2016_Logo_Edmund_T._Pratt_Jr._School_of_Engineering.jpeg/220px-2016_Logo_Edmund_T._Pratt_Jr._School_of_Engineering.jpeg" />
-            <Logo src="https://yt3.ggpht.com/a-/ACSszfFykW7WVt4A4-ozz3ED6i4UhERUjcoQSkwhgQ=s900-mo-c-c0xffffffff-rj-k-no" />
+            <Logo src={FuquaLogo} />
+            <Logo src={PrattLogo} />
+            <Logo src={IIDLogo} />
         </LogoRow>
         <LogoRow>
-            <Logo src="https://www.globalbankers.com/wp-content/uploads/2017/01/RGB_GB_Logo.png" />
-            <Logo src="https://static1.squarespace.com/static/58b3a3dce3df2844f57df3bb/t/5ab30133575d1f7020a1b07b/1535474960130/" />
+            <Logo src={GlobalBankersLogo} />
+            <Logo src={FifteenSeventeenLogo} />
         </LogoRow>
     </React.Fragment>
 );

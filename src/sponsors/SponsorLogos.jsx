@@ -17,11 +17,12 @@ const LogoRow = styled('div')`
     padding-bottom: 60px;
 `;
 
-const LogoWrapper = styled('div')`
+const LogoWrapper = styled('a')`
     flex-grow: 1;
     flex-basis: 0;
     height: 108px;
     text-align: center;
+    display: inline-block;
 `;
 
 const LogoImage = styled('img')`
@@ -30,8 +31,8 @@ const LogoImage = styled('img')`
     padding: 8px;
 `;
 
-const Logo = ({ src }) => (
-    <LogoWrapper>
+const Logo = ({ src, href }) => (
+    <LogoWrapper href={href} target="_blank" rel="noopener">
         <LogoImage src={src} />
     </LogoWrapper>
 );

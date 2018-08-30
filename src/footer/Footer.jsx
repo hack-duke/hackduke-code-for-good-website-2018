@@ -70,7 +70,7 @@ export default () => (
                         {...iconStyle}
                     />
                 </SocialLinks>
-                Copyright &copy;2018 HackDuke.
+                Copyright &copy; 2018 HackDuke.
             </CenterContent>
         </CenterContainer>
         <RightLogo src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg" />

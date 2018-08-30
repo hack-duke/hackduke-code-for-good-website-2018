@@ -7,7 +7,7 @@ const CardBase = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
     margin-right: 25px;
-    padding: 25px;
+    padding: 20px 25px;
     border-top: 6px solid ${props => props.color};
     ${ShadowItem};
     :last-child {

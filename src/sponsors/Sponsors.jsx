@@ -38,7 +38,7 @@ export default () => (
                 </SectionTextContent>
                 <Button
                     background="#f8aa5b"
-                    selectedBackground="#f8aa5b"
+                    selectedBackground="#CC8849"
                     href="mailto:sponsorship@hackduke.org"
                 >
                     Sponsor us

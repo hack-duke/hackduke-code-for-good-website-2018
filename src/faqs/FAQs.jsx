@@ -20,13 +20,24 @@ const Title = styled('div')`
 
 const FAQContainer = styled('div')`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media screen and (min-width: 1260px) {
+        flex-direction: row;
+    }
 `;
 
 const FAQColumn = styled('div')`
-    margin-right: 25px;
     flex-grow: 1;
     flex-basis: 0;
+
+    @media screen and (min-width: 1260px) {
+        margin-right: 25px;
+
+        :last-child {
+            margin-right: 0;
+        }
+    }
 `;
 
 const SponsorshipLink = styled('a')`

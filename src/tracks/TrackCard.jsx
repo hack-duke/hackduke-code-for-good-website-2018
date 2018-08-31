@@ -53,7 +53,7 @@ export default class TrackCard extends React.PureComponent {
         return (
             <CardBase
                 color={color}
-                showPointer={!this.state.opened}
+                showPointer={!opened}
                 onClick={this.setOpened}
             >
                 {opened ? (

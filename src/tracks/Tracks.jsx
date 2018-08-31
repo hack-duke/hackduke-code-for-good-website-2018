@@ -22,7 +22,7 @@ const Container = styled('div')`
         heightPx: 600,
         extHeightPx: 4096,
         backgroundImage: `url(${TracksLine}), url(${TracksLineExt})`
-    })} padding-top: 90px;
+    })};
     position: relative;
 `;
 

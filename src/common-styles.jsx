@@ -20,11 +20,24 @@ export const SectionBase = props => css`
     min-height: ${props.heightPx}px;
     background-repeat: no-repeat;
     background-position: center top, center ${props.heightPx - 1}px;
-    padding: 0 144px;
     background-size: ${MAX_WIDTH} ${props.heightPx}px
         ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}px`};
     position: relative;
-    background-image: ${props.backgroundImage};
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+
+    :first-child {
+        padding-top: 0;
+    }
+
+    @media screen and (min-width: 640px) {
+        background-image: ${props.backgroundImage};
+        padding-left: 144px;
+        padding-right: 144px;
+        padding-top: 87.5px;
+    }
 
     @media screen and (max-width: ${MAX_WIDTH}) {
         background-position: left top, left ${props.heightPx - 1}px;
@@ -32,7 +45,9 @@ export const SectionBase = props => css`
 `;
 
 const LeftContentPadding = css`
-    padding-left: 20px;
+    @media screen and (min-width: 640px) {
+        padding-left: 20px;
+    }
 `;
 
 export const SectionTitle = css`

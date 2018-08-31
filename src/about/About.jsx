@@ -18,7 +18,6 @@ const Container = styled('div')`
         extHeightPx: 4096,
         backgroundImage: `url(${AboutLine}), url(${AboutLineExt})`
     })};
-    padding-top: 90px;
 `;
 
 const Title = styled('div')`

@@ -19,7 +19,6 @@ const Container = styled('div')`
         heightPx: 800,
         backgroundImage: `url(${SponsorsLine})`
     })};
-    padding-top: 90px;
     padding-bottom: 90px;
 `;
 

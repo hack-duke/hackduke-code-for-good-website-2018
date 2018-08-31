@@ -14,7 +14,11 @@ import FifteenSeventeenLogo from './img/1517.png';
 
 const LogoRow = styled('div')`
     display: flex;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
+
+    @media screeen and (min-width: 640px) {
+        padding-bottom: 60px;
+    }
 
     :last-child {
         padding-bottom: 0;

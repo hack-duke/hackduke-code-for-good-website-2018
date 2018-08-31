@@ -18,6 +18,8 @@ export default styled('a')`
     font-weight: bold;
     ${ShadowItem};
 
+    transition: all 0.2s;
+
     :hover {
         transform: scale(1.05);
         opacity: 0.9;

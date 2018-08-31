@@ -15,8 +15,10 @@ import SponsorsLine from './sponsors-line.svg';
 import SponsorLogos from './SponsorLogos';
 
 const Container = styled('div')`
-    ${SectionBase({ heightPx: 800 })}
-    background-image: url(${SponsorsLine});
+    ${SectionBase({
+        heightPx: 800,
+        backgroundImage: `url(${SponsorsLine})`
+    })};
     padding-top: 90px;
     padding-bottom: 90px;
 `;

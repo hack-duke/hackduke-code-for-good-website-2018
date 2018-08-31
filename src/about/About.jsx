@@ -13,8 +13,11 @@ import AboutLineExt from './about-line-ext.svg';
 import PrinciplesCard from './PrinciplesCard';
 
 const Container = styled('div')`
-    ${SectionBase({ heightPx: 600, extHeightPx: 1840 })}
-    background-image: url(${AboutLine}), url(${AboutLineExt});
+    ${SectionBase({
+        heightPx: 600,
+        extHeightPx: 4096,
+        backgroundImage: `url(${AboutLine}), url(${AboutLineExt})`
+    })};
     padding-top: 90px;
 `;
 

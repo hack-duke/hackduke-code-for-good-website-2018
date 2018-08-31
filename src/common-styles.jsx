@@ -22,8 +22,9 @@ export const SectionBase = props => css`
     background-position: center top, center ${props.heightPx - 1}px;
     padding: 0 144px;
     background-size: ${MAX_WIDTH} ${props.heightPx}px
-        ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}`};
+        ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}px`};
     position: relative;
+    background-image: ${props.backgroundImage};
 
     @media screen and (max-width: ${MAX_WIDTH}) {
         background-position: left top, left ${props.heightPx - 1}px;

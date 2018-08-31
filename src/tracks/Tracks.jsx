@@ -18,9 +18,11 @@ import TracksLineExt from './tracks-line-ext.svg';
 import TrackCard from './TrackCard';
 
 const Container = styled('div')`
-    ${SectionBase({ heightPx: 600, extHeightPx: 1840 })}
-    background-image: url(${TracksLine}), url(${TracksLineExt});
-    padding-top: 90px;
+    ${SectionBase({
+        heightPx: 600,
+        extHeightPx: 4096,
+        backgroundImage: `url(${TracksLine}), url(${TracksLineExt})`
+    })} padding-top: 90px;
     position: relative;
 `;
 

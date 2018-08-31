@@ -4,8 +4,9 @@ import styled from 'react-emotion';
 import Home from './home-bg.svg';
 import LogoImage from './hackduke-logo.png';
 
-import { PrimaryFont, SectionBase, ShadowItem } from '../common-styles';
+import { PrimaryFont, SectionBase } from '../common-styles';
 import Button from '../Button';
+import Divider from '../Divider';
 
 const Container = styled('div')`
     ${SectionBase({ heightPx: 900, backgroundImage: `url(${Home})` })};
@@ -43,6 +44,7 @@ export default () => (
     <Container>
         <LandingContent>
             <Logo src={LogoImage} />
+            <Divider color="#5c5299" />
             <DateText>October 13th - 14th, 2018</DateText>
             <Button
                 background="#5c5299"

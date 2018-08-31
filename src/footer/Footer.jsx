@@ -39,6 +39,7 @@ const LeftBadge = styled('a')`
 
 const CenterContainer = styled('div')`
     ${TitleFont};
+    font-weight: bold;
     display: flex;
     flex-grow: 1;
     flex-basis: 0;

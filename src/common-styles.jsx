@@ -7,7 +7,7 @@ export const PrimaryFont = css`
     font-family: 'Inconsolata', monospace;
 `;
 export const TitleFont = css`
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Larsseit', sans-serif;
 `;
 
 export const SecondaryText = css`

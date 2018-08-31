@@ -88,7 +88,11 @@ export const SectionLeftColumn = styled('div')`
 export const SectionRightColumn = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
-    padding-top: 40px;
+    padding-top: 20px;
+
+    @media screen and (min-width: 640px) {
+        padding-top: 40px;
+    }
 
     @media screen and (min-width: 1260px) {
         padding-top: 0;

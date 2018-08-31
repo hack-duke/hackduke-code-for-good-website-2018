@@ -21,7 +21,8 @@ export const SectionBase = props => css`
     background-repeat: no-repeat;
     background-position: center top, center ${props.heightPx - 1}px;
     padding: 0 144px;
-    background-size: ${MAX_WIDTH} ${props.heightPx}px, ${MAX_WIDTH} 1840px;
+    background-size: ${MAX_WIDTH} ${props.heightPx}px
+        ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}`};
     position: relative;
 
     @media screen and (max-width: ${MAX_WIDTH}) {

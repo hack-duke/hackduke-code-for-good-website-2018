@@ -8,7 +8,7 @@ import FAQsLineExt from './faqs-line-ext.svg';
 import FAQItem from './FAQItem';
 
 const Container = styled('div')`
-    ${SectionBase({ heightPx: 600 })}
+    ${SectionBase({ heightPx: 600, extHeightPx: 1840 })}
     background-image: url(${FAQsLine}), url(${FAQsLineExt});
     padding-top: 90px;
 `;

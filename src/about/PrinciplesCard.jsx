@@ -28,7 +28,6 @@ const CardBase = styled('div')`
 const CardTitle = styled('span')`
     ${TitleFont};
     font-size: 1.5em;
-    text-transform: uppercase;
     font-weight: bold;
     color: ${props => props.color};
 `;

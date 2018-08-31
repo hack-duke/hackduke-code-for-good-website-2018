@@ -17,11 +17,6 @@ export const SecondaryText = css`
 export const SectionBase = props => css`
     max-width: ${MAX_WIDTH};
     margin: auto;
-    min-height: ${props.heightPx}px;
-    background-repeat: no-repeat;
-    background-position: center top, center ${props.heightPx - 1}px;
-    background-size: ${MAX_WIDTH} ${props.heightPx}px
-        ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}px`};
     position: relative;
 
     padding-left: 20px;
@@ -33,7 +28,14 @@ export const SectionBase = props => css`
     }
 
     @media screen and (min-width: 640px) {
+        min-height: ${props.heightPx}px;
+
         background-image: ${props.backgroundImage};
+        background-repeat: no-repeat;
+        background-position: center top, center ${props.heightPx - 1}px;
+        background-size: ${MAX_WIDTH} ${props.heightPx}px
+            ${props.extHeightPx && `, ${MAX_WIDTH} ${props.extHeightPx}px`};
+
         padding-left: 144px;
         padding-right: 144px;
         padding-top: 87.5px;

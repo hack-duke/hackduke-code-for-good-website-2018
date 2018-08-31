@@ -14,6 +14,7 @@ const Container = styled('div')`
 const LandingContent = styled('div')`
     ${PrimaryFont};
     padding-top: 140px;
+    padding-bottom: 140px;
     font-size: 1.5em;
     line-height: 1.8em;
 `;

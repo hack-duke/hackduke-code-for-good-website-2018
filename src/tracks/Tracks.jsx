@@ -32,6 +32,11 @@ const Title = styled('div')`
 
 const TrackRow = styled('div')`
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 960px) {
+        flex-direction: row;
+    }
 `;
 
 const TrackCTA = styled('a')`

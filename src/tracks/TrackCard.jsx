@@ -4,18 +4,21 @@ import styled from 'react-emotion';
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 
 const CardBase = styled('div')`
-    flex-grow: 1;
-    flex-basis: 0;
     display: flex;
     height: 285px;
     margin-bottom: 25px;
-    margin-right: 25px;
     padding: 25px;
     position: relative;
     cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
 
-    :last-child {
-        margin-right: 0;
+    @media screen and (min-width: 960px) {
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-right: 25px;
+
+        :last-child {
+            margin-right: 0;
+        }
     }
 
     ${ShadowItem};

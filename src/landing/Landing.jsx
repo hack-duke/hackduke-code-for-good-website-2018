@@ -9,14 +9,25 @@ import Button from '../Button';
 
 const Container = styled('div')`
     ${SectionBase({ heightPx: 900, backgroundImage: `url(${Home})` })};
+    display: flex;
+    height: 100vh;
+
+    @media screen and (min-width: 640px) {
+        display: block;
+        height: auto;
+    }
 `;
 
 const LandingContent = styled('div')`
     ${PrimaryFont};
-    padding-top: 140px;
-    padding-bottom: 140px;
     font-size: 1.5em;
     line-height: 1.8em;
+    margin: auto 0;
+
+    @media screen and (min-width: 640px) {
+        margin: 0;
+        padding-top: 140px;
+    }
 `;
 
 const Logo = styled('img')`

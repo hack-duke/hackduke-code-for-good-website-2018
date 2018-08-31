@@ -18,13 +18,20 @@ const LandingContent = styled('div')`
     line-height: 1.8em;
 `;
 
-const Logo = () => <img src={LogoImage} height="270px" />;
+const Logo = styled('img')`
+    max-width: 315px;
+    width: 100%;
+`;
+
+const DateText = styled('div')`
+    padding-bottom: 0.5em;
+`;
 
 export default () => (
     <Container>
         <LandingContent>
-            <Logo />
-            <div>October 13th - 14th, 2018</div>
+            <Logo src={LogoImage} />
+            <DateText>October 13th - 14th, 2018</DateText>
             <Button
                 background="#5c5299"
                 selectedBackground="#463f73"

@@ -10,7 +10,11 @@ const FooterContainer = styled('div')`
     display: flex;
     flex-direction: row;
     height: 225px;
-    padding: 0 80px;
+    padding: 0;
+
+    @media screen and (min-width: 640px) {
+        padding: 0 80px;
+    }
 `;
 
 const HideOnMobile = css`

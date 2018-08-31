@@ -14,9 +14,12 @@ import FifteenSeventeenLogo from './img/1517.png';
 
 const LogoRow = styled('div')`
     display: flex;
-    padding-bottom: 20px;
 
-    @media screeen and (min-width: 640px) {
+    @media screen and (min-width: 400px) {
+        padding-bottom: 15px;
+    }
+
+    @media screen and (min-width: 640px) {
         padding-bottom: 60px;
     }
 
@@ -31,18 +34,20 @@ const LogoWrapper = styled('a')`
     height: 108px;
     text-align: center;
     display: inline-block;
-`;
-
-const LogoImage = styled('img')`
-    max-width: 100%;
-    max-height: 100%;
-    padding: 8px;
+    background-image: url(${props => props.backgroundImage});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 8px;
 `;
 
 const Logo = ({ src, href }) => (
-    <LogoWrapper href={href} target="_blank" rel="noopener">
-        <LogoImage src={src} />
-    </LogoWrapper>
+    <LogoWrapper
+        href={href}
+        target="_blank"
+        rel="noopener"
+        backgroundImage={src}
+    />
 );
 
 export default () => (

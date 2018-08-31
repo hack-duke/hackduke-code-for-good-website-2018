@@ -26,7 +26,11 @@ const Title = styled('div')`
 const PrinciplesContainer = styled('div')`
     margin-top: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media screen and (min-width: 1260px) {
+        flex-direction: row;
+    }
 `;
 
 export default () => (

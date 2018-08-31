@@ -83,7 +83,7 @@ export const SectionRightColumn = styled('div')`
 export const ShadowItem = css`
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12.5px 40px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    transition: all 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
 
     :hover {
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),

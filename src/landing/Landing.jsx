@@ -8,7 +8,7 @@ import { PrimaryFont, SectionBase, ShadowItem } from '../common-styles';
 import Button from '../Button';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '900px' })}
+    ${SectionBase({ heightPx: 900 })}
     background-image: url(${Home});
 `;
 

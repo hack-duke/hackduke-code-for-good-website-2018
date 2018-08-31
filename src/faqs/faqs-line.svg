@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 800"><defs><style>.f606ec52-386f-463e-b778-c6616f6680a3{fill:url(#560798ca-ad44-441b-87c1-33d0e2cfc8c8);}</style><linearGradient id="560798ca-ad44-441b-87c1-33d0e2cfc8c8" x1="103.3" y1="800" x2="103.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f8aa5b"/><stop offset="1" stop-color="#f16a43"/></linearGradient></defs><title>faqs-line</title><g id="74c03b88-223b-4a8b-8523-302727166a35" data-name="Layer 2"><path class="f606ec52-386f-463e-b778-c6616f6680a3" d="M125.3,116.5a21.577,21.577,0,0,0-14.8252-20.32V0h-15V96.41a21.3237,21.3237,0,0,0,0,40.1792V800h15V136.82A21.577,21.577,0,0,0,125.3,116.5Zm-22,13.5a13.5089,13.5089,0,1,1,14-13.5A13.7721,13.7721,0,0,1,103.3,130Z"/></g></svg>
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="600" viewBox="0 0 1400 600">
+    <defs>
+        <style>.a{fill:url(#a);}</style>
+        <linearGradient id="a" x1="103.3" y1="600" x2="103.3" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f8aa5b" />
+            <stop offset="1" stop-color="#f16a43" />
+        </linearGradient>
+    </defs>
+    <title>about-line</title>
+    <path class="a" d="M125.3,116.5a21.577,21.577,0,0,0-14.8252-20.32V0h-15V96.41a21.3237,21.3237,0,0,0,0,40.1792V600h15V136.82A21.577,21.577,0,0,0,125.3,116.5Zm-22,13.5a13.5089,13.5089,0,1,1,14-13.5A13.7721,13.7721,0,0,1,103.3,130Z" />
+</svg>

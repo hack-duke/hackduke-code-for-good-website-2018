@@ -14,11 +14,12 @@ import {
 } from '../common-styles';
 
 import TracksLine from './tracks-line.svg';
+import TracksLineExt from './tracks-line-ext.svg';
 import TrackCard from './TrackCard';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '800px' })}
-    background-image: url(${TracksLine});
+    ${SectionBase({ heightPx: 600 })}
+    background-image: url(${TracksLine}), url(${TracksLineExt});
     padding-top: 90px;
     position: relative;
 `;

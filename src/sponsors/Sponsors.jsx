@@ -37,13 +37,15 @@ export default () => (
                 <SectionTextContent>
                     Interested in sponsoring?
                 </SectionTextContent>
-                <Button
-                    background="#f8aa5b"
-                    selectedBackground="#CC8849"
-                    href="mailto:sponsorship@hackduke.org"
-                >
-                    Sponsor us
-                </Button>
+                <SectionTextContent>
+                    <Button
+                        background="#f8aa5b"
+                        selectedBackground="#CC8849"
+                        href="mailto:sponsorship@hackduke.org"
+                    >
+                        Sponsor us
+                    </Button>
+                </SectionTextContent>
             </SectionLeftColumn>
             <SectionRightColumn>
                 <SponsorLogos />

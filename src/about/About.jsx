@@ -24,7 +24,7 @@ const Title = styled('div')`
 `;
 
 const PrinciplesContainer = styled('div')`
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
 `;

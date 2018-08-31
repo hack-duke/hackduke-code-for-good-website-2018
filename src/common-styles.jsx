@@ -43,7 +43,6 @@ export const SectionTitle = css`
 
 export const SectionTextContent = styled('p')`
     ${SecondaryText};
-    display: inline-block;
     font-size: 1.33em;
     color: #3b3e6e;
     margin-top: 0;
@@ -51,7 +50,11 @@ export const SectionTextContent = styled('p')`
 
 const FlexProps = css`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media screen and (min-width: 1260px) {
+        flex-direction: row;
+    }
 `;
 
 export const SectionContent = styled('div')`
@@ -61,13 +64,20 @@ export const SectionContent = styled('div')`
 `;
 
 export const SectionLeftColumn = styled('div')`
-    width: 285px;
+    @media screen and (min-width: 1260px) {
+        width: 285px;
+    }
 `;
 
 export const SectionRightColumn = styled('div')`
-    padding-left: 40px;
     flex-grow: 1;
     flex-basis: 0;
+    padding-top: 40px;
+
+    @media screen and (min-width: 1260px) {
+        padding-top: 0;
+        padding-left: 40px;
+    }
 `;
 
 export const ShadowItem = css`

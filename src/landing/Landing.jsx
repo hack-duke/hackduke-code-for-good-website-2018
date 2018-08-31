@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Home from './home-bg.svg';
+import HomeMobile from './home-bg-mobile.svg';
 import LogoImage from './hackduke-logo.svg';
 
 import { PrimaryFont, SectionBase } from '../common-styles';
@@ -9,7 +10,11 @@ import Button from '../Button';
 import Divider from '../Divider';
 
 const Container = styled('div')`
-    ${SectionBase({ heightPx: 900, backgroundImage: `url(${Home})` })};
+    ${SectionBase({
+        heightPx: 900,
+        backgroundImage: `url(${Home})`,
+        mobileBackgroundImage: `url(${HomeMobile})`
+    })};
     display: flex;
     height: 100vh;
 

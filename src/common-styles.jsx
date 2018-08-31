@@ -17,15 +17,15 @@ export const SecondaryText = css`
 export const SectionBase = props => css`
     max-width: ${MAX_WIDTH};
     margin: auto;
-    height: ${props.height};
+    min-height: ${props.heightPx}px;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center top, center ${props.heightPx - 1}px;
     padding: 0 144px;
-    background-size: ${MAX_WIDTH} ${props.height};
+    background-size: ${MAX_WIDTH} ${props.heightPx}px, ${MAX_WIDTH} 1840px;
     position: relative;
 
     @media screen and (max-width: ${MAX_WIDTH}) {
-        background-position: left top;
+        background-position: left top, left ${props.heightPx - 1}px;
     }
 `;
 

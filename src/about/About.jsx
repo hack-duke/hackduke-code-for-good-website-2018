@@ -9,11 +9,12 @@ import {
 } from '../common-styles';
 
 import AboutLine from './about-line.svg';
+import AboutLineExt from './about-line-ext.svg';
 import PrinciplesCard from './PrinciplesCard';
 
 const Container = styled('div')`
-    ${SectionBase({ height: '800px' })}
-    background-image: url(${AboutLine});
+    ${SectionBase({ heightPx: 600 })}
+    background-image: url(${AboutLine}), url(${AboutLineExt});
     padding-top: 90px;
 `;
 

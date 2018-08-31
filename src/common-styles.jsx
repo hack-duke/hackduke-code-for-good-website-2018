@@ -12,6 +12,7 @@ export const TitleFont = css`
 
 export const SecondaryText = css`
     ${PrimaryFont};
+    color: #2b2b2b;
 `;
 
 export const SectionBase = props => css`
@@ -66,7 +67,6 @@ export const SectionTitle = css`
 export const SectionTextContent = styled('p')`
     ${SecondaryText};
     font-size: 1.33em;
-    color: #3b3e6e;
     margin-top: 0;
 `;
 

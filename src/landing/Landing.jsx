@@ -5,7 +5,7 @@ import Home from './home-bg.svg';
 import HomeMobile from './home-bg-mobile.svg';
 import LogoImage from './hackduke-logo.svg';
 
-import { PrimaryFont, SectionBase } from '../common-styles';
+import { SectionBase, SecondaryText } from '../common-styles';
 import Button from '../Button';
 import Divider from '../Divider';
 
@@ -25,7 +25,7 @@ const Container = styled('div')`
 `;
 
 const LandingContent = styled('div')`
-    ${PrimaryFont};
+    ${SecondaryText};
     font-size: 1.5em;
     line-height: 1.8em;
     margin: auto 0;

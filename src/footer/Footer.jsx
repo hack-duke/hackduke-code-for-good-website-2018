@@ -13,10 +13,19 @@ const FooterContainer = styled('div')`
     padding: 0 80px;
 `;
 
+const HideOnMobile = css`
+    display: none;
+
+    @media screen and (min-width: 640px) {
+        display: inline-block;
+    }
+`;
+
 const LeftBadge = styled('a')`
     width: 108px;
     padding-right: 16px;
     align-self: flex-start;
+    ${HideOnMobile};
 
     img {
         max-width: 100%;
@@ -35,6 +44,7 @@ const CenterContainer = styled('div')`
 const RightLogo = styled('a')`
     width: 108px;
     align-self: center;
+    ${HideOnMobile};
 
     img {
         max-width: 100%;

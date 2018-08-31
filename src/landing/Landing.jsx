@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Home from './home-bg.svg';
-import HomeMobile from './home-bg-mobile.svg';
+import HomeMobileTop from './home-bg-mobile-top.svg';
+import HomeMobileBottom from './home-bg-mobile.svg';
 import LogoImage from './hackduke-logo.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
@@ -13,7 +14,7 @@ const Container = styled('div')`
     ${SectionBase({
         heightPx: 900,
         backgroundImage: `url(${Home})`,
-        mobileBackgroundImage: `url(${HomeMobile})`
+        mobileBackgroundImage: `url(${HomeMobileTop}), url(${HomeMobileBottom})`
     })};
     display: flex;
     height: 100vh;

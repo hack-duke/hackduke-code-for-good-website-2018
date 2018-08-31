@@ -30,7 +30,7 @@ export const SectionBase = props => css`
 
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right bottom;
+    background-position: right top, right bottom;
     background-image: ${props.mobileBackgroundImage || 'none'};
 
     @media screen and (min-width: 640px) {

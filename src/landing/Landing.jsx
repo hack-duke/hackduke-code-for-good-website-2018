@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Home from './home-bg.svg';
-import LogoImage from './hackduke-logo.png';
+import LogoImage from './hackduke-logo.svg';
 
 import { PrimaryFont, SectionBase } from '../common-styles';
 import Button from '../Button';

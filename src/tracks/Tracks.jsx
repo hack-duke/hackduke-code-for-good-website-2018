@@ -53,6 +53,14 @@ const TrackCTA = styled('a')`
     }
 `;
 
+const iconTranslate = css`
+    transform: translateY(0.033em);
+    display: inline-block;
+`;
+const RightArrow = () => (
+    <span className="icon-right-open" css={iconTranslate} />
+);
+
 export default () => (
     <Container>
         <Title>Tracks</Title>
@@ -83,7 +91,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects <span className="icon-right-open" />
+                            See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#5C5299" title="Energy">
@@ -98,7 +106,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects <span className="icon-right-open" />
+                            See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>
@@ -115,7 +123,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects <span className="icon-right-open" />
+                            See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard color="#FFAA5B" title="Education">
@@ -129,7 +137,7 @@ export default () => (
                             target="_blank"
                             rel="noopener"
                         >
-                            See Projects <span className="icon-right-open" />
+                            See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
                 </TrackRow>

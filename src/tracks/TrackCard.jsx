@@ -23,6 +23,10 @@ const CardBase = styled('div')`
 
     ${ShadowItem};
     background: ${props => props.color};
+
+    :hover {
+        opacity: 0.95;
+    }
 `;
 
 const CardTitle = styled('div')`

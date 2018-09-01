@@ -10,6 +10,7 @@ import {
     SectionTextContent
 } from '../common-styles';
 import Button from '../Button';
+import Divider from '../Divider';
 
 import SponsorsLine from './sponsors-line.svg';
 import SponsorLogos from './SponsorLogos';
@@ -22,14 +23,21 @@ const Container = styled('div')`
     padding-bottom: 90px;
 `;
 
+const titleColor = '#f8aa5b';
+
 const Title = styled('div')`
     ${SectionTitle};
-    color: #f8aa5b;
+    color: #2b2b2b;
+
+    @media screen and (min-width: 640px) {
+        color: ${titleColor};
+    }
 `;
 
 export default () => (
     <Container>
         <Title>Sponsors</Title>
+        <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent columns={true}>
             <SectionLeftColumn>
                 <SectionTextContent>

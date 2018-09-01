@@ -12,6 +12,7 @@ import {
     SectionTextContent,
     SectionTitle
 } from '../common-styles';
+import Divider from '../Divider';
 
 import TracksLine from './tracks-line.svg';
 import TracksLineExt from './tracks-line-ext.svg';
@@ -26,10 +27,16 @@ const Container = styled('div')`
     position: relative;
 `;
 
+const titleColor = '#5f76cb';
+
 const Title = styled('div')`
     ${SectionTitle};
-    color: #5f76cb;
-    display: block;
+    color: #2b2b2b;
+    padding-top: 0.333em;
+
+    @media screen and (min-width: 640px) {
+        color: ${titleColor};
+    }
 `;
 
 const TrackRow = styled('div')`
@@ -71,6 +78,7 @@ const RightArrow = () => (
 export default () => (
     <Container>
         <Title>Tracks</Title>
+        <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent columns={true}>
             <SectionLeftColumn>
                 <SectionTextContent>

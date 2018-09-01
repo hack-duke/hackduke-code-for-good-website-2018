@@ -7,6 +7,7 @@ import {
     SectionTextContent,
     SectionTitle
 } from '../common-styles';
+import Divider from '../Divider';
 
 import AboutLine from './about-line.svg';
 import AboutLineExt from './about-line-ext.svg';
@@ -20,9 +21,15 @@ const Container = styled('div')`
     })};
 `;
 
+const titleColor = '#3a3d6d';
+
 const Title = styled('div')`
     ${SectionTitle};
-    color: #3a3d6d;
+    color: #2b2b2b;
+
+    @media screen and (min-width: 640px) {
+        color: ${titleColor};
+    }
 `;
 
 const PrinciplesContainer = styled('div')`
@@ -38,6 +45,7 @@ const PrinciplesContainer = styled('div')`
 export default () => (
     <Container>
         <Title>About</Title>
+        <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent>
             <SectionTextContent>
                 HackDuke is the nation's premier hackathon for tech and social

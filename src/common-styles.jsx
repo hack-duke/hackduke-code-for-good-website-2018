@@ -111,7 +111,6 @@ export const ShadowItem = css`
     border-radius: 6px;
     transition: box-shadow 0.2s, transform 0.2s, opacity 0.2s,
         background-color 0.2s;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 
     :hover {

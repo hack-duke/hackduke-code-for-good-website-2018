@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 
 import Home from './home-bg.svg';
 import HomeMobileTop from './home-bg-mobile-top.svg';
-import HomeMobileBottom from './home-bg-mobile.svg';
+import HomeMobileBottom from './home-bg-mobile-bottom.svg';
 import LogoImage from './hackduke-logo.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
@@ -30,6 +30,7 @@ const LandingContent = styled('div')`
     font-size: 1.5em;
     line-height: 1.8em;
     margin: auto 0;
+    width: 100%;
 
     @media screen and (min-width: 640px) {
         margin: 0;
@@ -38,12 +39,19 @@ const LandingContent = styled('div')`
 `;
 
 const Logo = styled('img')`
-    max-width: 315px;
     width: 100%;
+
+    @media screen and (min-width: 480px) {
+        max-width: 315px;
+    }
 `;
 
 const DateText = styled('div')`
-    padding-bottom: 0.5em;
+    padding-bottom: 0.33em;
+
+    @media screen and (min-width: 480px) {
+        padding-bottom: 0.5em;
+    }
 `;
 
 export default () => (

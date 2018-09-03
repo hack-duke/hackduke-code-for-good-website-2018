@@ -106,16 +106,34 @@ export const SectionRightColumn = styled('div')`
     }
 `;
 
+// Optimized shadow rendering
+// See https://alligator.io/css/transition-box-shadows/
 export const ShadowItem = css`
+    position: relative;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12.5px 40px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    transition: box-shadow 0.2s, transform 0.2s, opacity 0.2s,
-        background-color 0.2s;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
     -webkit-tap-highlight-color: transparent;
 
+    ::after {
+        position: absolute;
+        content: '';
+        border-radius: 5px;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.07);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
     :hover {
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-            0 24px 60px rgba(0, 0, 0, 0.15);
         transform: translateY(-4px);
+    }
+
+    :hover::after {
+        opacity: 1;
     }
 `;

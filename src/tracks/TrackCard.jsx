@@ -7,8 +7,6 @@ import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 const CardBase = styled('div')`
     height: 285px;
     margin-bottom: 25px;
-    position: relative;
-    overflow: hidden;
     cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
 
     @media screen and (min-width: 960px) {
@@ -37,6 +35,11 @@ const fillParent = css`
     right: 0;
 `;
 
+const CardClipBounds = styled('div')`
+    ${fillParent};
+    overflow: hidden;
+`;
+
 const CardTitle = styled('div')`
     ${TitleFont};
     ${fillParent};
@@ -50,7 +53,7 @@ const CardTitle = styled('div')`
     justify-content: center;
 
     opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props => `translateY(${props.visible ? '0' : '-120px'})`};
+    transform: ${props => `translateY(${props.visible ? '0' : '-144px'})`};
     transition: opacity 0.2s, transform 0.2s;
 `;
 
@@ -62,7 +65,7 @@ const CardContent = styled('div')`
 
     pointer-events: ${props => (props.visible ? 'auto' : 'none')};
     opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props => `translateY(${props.visible ? '0' : '120px'})`};
+    transform: ${props => `translateY(${props.visible ? '0' : '144px'})`};
     transition: opacity 0.2s, transform 0.2s;
 `;
 
@@ -82,8 +85,10 @@ export default class TrackCard extends React.PureComponent {
                 showPointer={!opened}
                 onClick={this.setOpened}
             >
-                <CardTitle visible={!opened}>{title}</CardTitle>
-                <CardContent visible={opened}>{children}</CardContent>
+                <CardClipBounds>
+                    <CardTitle visible={!opened}>{title}</CardTitle>
+                    <CardContent visible={opened}>{children}</CardContent>
+                </CardClipBounds>
             </CardBase>
         );
     }

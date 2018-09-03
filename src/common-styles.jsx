@@ -130,7 +130,9 @@ export const ShadowItem = css`
     }
 
     :hover {
-        transform: translateY(-4px);
+        @media screen and (min-width: 640px) {
+            transform: translateY(-4px);
+        }
     }
 
     :hover::after {

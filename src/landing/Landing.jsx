@@ -65,7 +65,7 @@ export default () => (
                 selectedBackground="#463f73"
                 href="https://hackduke.org/apply/"
             >
-                Sign up
+                Apply
             </Button>
         </LandingContent>
     </Container>

@@ -40,6 +40,11 @@ const CardClipBounds = styled('div')`
     overflow: hidden;
 `;
 
+const cubicEaseOutTransition = css`
+    transition: opacity 0.33s cubic-bezier(0.19, 1, 0.22, 1),
+        transform 0.33s cubic-bezier(0.19, 1, 0.22, 1);
+`;
+
 const CardTitle = styled('div')`
     ${TitleFont};
     ${fillParent};
@@ -54,7 +59,7 @@ const CardTitle = styled('div')`
 
     opacity: ${props => (props.visible ? 1 : 0)};
     transform: ${props => `translateY(${props.visible ? '0' : '-144px'})`};
-    transition: opacity 0.2s, transform 0.2s;
+    ${cubicEaseOutTransition};
 `;
 
 const CardContent = styled('div')`
@@ -66,7 +71,7 @@ const CardContent = styled('div')`
     pointer-events: ${props => (props.visible ? 'auto' : 'none')};
     opacity: ${props => (props.visible ? 1 : 0)};
     transform: ${props => `translateY(${props.visible ? '0' : '144px'})`};
-    transition: opacity 0.2s, transform 0.2s;
+    ${cubicEaseOutTransition};
 `;
 
 export default class TrackCard extends React.PureComponent {

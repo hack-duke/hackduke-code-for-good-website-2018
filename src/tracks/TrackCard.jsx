@@ -4,8 +4,10 @@ import { css } from 'emotion';
 
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 
+const CardHeight = '285px';
+
 const CardBase = styled('div')`
-    height: 285px;
+    height: ${CardHeight};
     margin-bottom: 25px;
     cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
 
@@ -41,8 +43,8 @@ const CardClipBounds = styled('div')`
 `;
 
 const cubicEaseOutTransition = css`
-    transition: opacity 0.33s cubic-bezier(0.19, 1, 0.22, 1),
-        transform 0.33s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+        transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 `;
 
 const CardTitle = styled('div')`
@@ -58,7 +60,8 @@ const CardTitle = styled('div')`
     justify-content: center;
 
     opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props => `translateY(${props.visible ? '0' : '-144px'})`};
+    transform: ${props =>
+        `translateY(${props.visible ? '0' : `-${CardHeight}`})`};
     ${cubicEaseOutTransition};
 `;
 
@@ -70,7 +73,7 @@ const CardContent = styled('div')`
 
     pointer-events: ${props => (props.visible ? 'auto' : 'none')};
     opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props => `translateY(${props.visible ? '0' : '144px'})`};
+    transform: ${props => `translateY(${props.visible ? '0' : CardHeight})`};
     ${cubicEaseOutTransition};
 `;
 

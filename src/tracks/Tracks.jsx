@@ -102,7 +102,7 @@ export default () => (
                         is built on the principle that everyone should have the
                         capacity to reach their full potential.
                         <TrackCTA
-                            href="https://hackduke.tumblr.com/tagged/inequality"
+                            href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=poverty+and+inequality"
                             target="_blank"
                             rel="noopener"
                         >
@@ -117,7 +117,7 @@ export default () => (
                         for resource extraction, the use of green energy and
                         enforcing environmental policy.
                         <TrackCTA
-                            href="http://hackduke.tumblr.com/tagged/energy-&-environment"
+                            href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=environment"
                             target="_blank"
                             rel="noopener"
                         >
@@ -134,7 +134,7 @@ export default () => (
                         prime position to improve the quality, efficiency, and
                         accessibility of health care.
                         <TrackCTA
-                            href="http://hackduke.tumblr.com/tagged/health-&-wellness"
+                            href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=health+and+wellness"
                             target="_blank"
                             rel="noopener"
                         >
@@ -148,7 +148,7 @@ export default () => (
                         projects aim to increase visibility of technology and to
                         introduce basic skills to the public.
                         <TrackCTA
-                            href="http://hackduke.tumblr.com/tagged/education"
+                            href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=education"
                             target="_blank"
                             rel="noopener"
                         >

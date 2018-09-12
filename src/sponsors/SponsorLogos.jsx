@@ -11,6 +11,7 @@ import IIDLogo from './img/iid.png';
 
 import GlobalBankersLogo from './img/gbankers.png';
 import FifteenSeventeenLogo from './img/1517.png';
+import CapitalOneLogo from './img/capital-one.svg';
 
 const LogoRow = styled('div')`
     display: flex;
@@ -74,6 +75,7 @@ export default () => (
                 href="https://www.globalbankers.com/"
             />
             <Logo src={FifteenSeventeenLogo} href="http://www.1517fund.com/" />
+            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
         </LogoRow>
     </React.Fragment>
 );

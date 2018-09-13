@@ -2,15 +2,14 @@ import React from 'react';
 
 import styled from 'react-emotion';
 
-import { HideOnMobile, TitleFont, ShadowBase } from './common-styles';
+import { MAX_WIDTH, HideOnMobile, TitleFont } from './common-styles';
 
-const navHeightPx = 54;
+const navHeightPx = 60;
 const fullShadowScrollOffset = 320;
 
 const Nav = styled('div')`
     ${HideOnMobile};
     ${TitleFont};
-    ${ShadowBase(0.05)};
     position: fixed;
     top: 0;
     left: 0;
@@ -21,14 +20,43 @@ const Nav = styled('div')`
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
     :after {
-        position: fixed;
+        position: absolute;
         content: '';
         top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         height: ${navHeightPx}px;
         z-index: -1;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.075);
         opacity: ${props => props.shadowOpacity};
+    }
+`;
+
+const NavItemsWrapper = styled('div')`
+    max-width: ${MAX_WIDTH};
+    margin: 0 auto;
+    padding-left: 144px;
+    height: 100%;
+`;
+
+const NavItem = styled('a')`
+    ${TitleFont};
+    color: #2b2b2b;
+    height: 100%;
+    font-size: 1.1em;
+    line-height: 3.333em;
+    display: inline-block;
+    margin-right: 15px;
+    width: 80px;
+    text-align: center;
+    border-bottom: 0px solid ${props => props.color};
+    transition: border-bottom 0.1s;
+    cursor: pointer;
+    text-decoration: none;
+
+    :hover {
+        border-bottom: 6px solid ${props => props.color};
     }
 `;
 
@@ -50,10 +78,19 @@ export default class Navbar extends React.PureComponent {
     }
 
     render() {
+        const { navItems } = this.props;
         const { scrollOffset } = this.state;
         return (
             <React.Fragment>
-                <Nav shadowOpacity={scrollOffset / fullShadowScrollOffset} />
+                <Nav shadowOpacity={scrollOffset / fullShadowScrollOffset}>
+                    <NavItemsWrapper>
+                        {navItems.map(({ title, id, titleColor }) => (
+                            <NavItem color={titleColor} href={`#${id}`}>
+                                {title}
+                            </NavItem>
+                        ))}
+                    </NavItemsWrapper>
+                </Nav>
                 <Spacer />
             </React.Fragment>
         );

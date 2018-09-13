@@ -10,27 +10,32 @@ import Footer from './footer/Footer';
 
 const sections = [
     {
-        title: 'Welcome',
+        title: 'Home',
+        id: 'landing',
         titleColor: '#5c5299',
         Component: Landing
     },
     {
         title: 'About',
+        id: 'about',
         titleColor: '#3a3d6d',
         Component: About
     },
     {
         title: 'Tracks',
+        id: 'tracks',
         titleColor: '#5f76cb',
         Component: Tracks
     },
     {
         title: 'FAQs',
+        id: 'faqs',
         titleColor: '#f16a43',
         Component: FAQs
     },
     {
         title: 'Sponsors',
+        id: 'sponsors',
         titleColor: '#f8aa5b',
         Component: Sponsors
     }
@@ -39,12 +44,8 @@ const sections = [
 export default () => (
     <React.Fragment>
         <Navbar navItems={sections} />
-        {sections.map(({ title, titleColor, Component }) => (
-            <Component
-                id={title.toLowerCase()}
-                key={title}
-                titleColor={titleColor}
-            />
+        {sections.map(({ title, id, titleColor, Component }) => (
+            <Component id={id} key={title} titleColor={titleColor} />
         ))}
         <Footer />
     </React.Fragment>

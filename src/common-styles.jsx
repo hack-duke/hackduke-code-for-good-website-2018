@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import styled from 'react-emotion';
 
-const MAX_WIDTH = '1400px';
+export const MAX_WIDTH = '1400px';
 
 export const PrimaryFont = css`
     font-family: 'Inconsolata', monospace;
@@ -136,7 +136,7 @@ export const ShadowItem = css`
 export const HideOnMobile = css`
     display: none;
 
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 768px) {
         display: inline-block;
     }
 `;

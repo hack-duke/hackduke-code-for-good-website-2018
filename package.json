@@ -22,6 +22,7 @@
         "emotion": "^9.2.6",
         "parcel-bundler": "^1.9.7",
         "react": "^16.4.2",
+        "react-anchor-link-smooth-scroll": "^1.0.11",
         "react-dom": "^16.4.2",
         "react-emotion": "^9.2.6"
     },

@@ -4,10 +4,9 @@ import styled from 'react-emotion';
 import {
     SectionBase,
     SectionContent,
-    SectionTextContent,
-    SectionTitle
+    SectionTextContent
 } from '../common-styles';
-import Divider from '../Divider';
+import SectionTitle from '../SectionTitle';
 
 import AboutLine from './about-line.svg';
 import AboutLineExt from './about-line-ext.svg';
@@ -21,17 +20,6 @@ const Container = styled('div')`
     })};
 `;
 
-const titleColor = '#3a3d6d';
-
-const Title = styled('div')`
-    ${SectionTitle};
-    color: #2b2b2b;
-
-    @media screen and (min-width: 640px) {
-        color: ${titleColor};
-    }
-`;
-
 const PrinciplesContainer = styled('div')`
     margin-top: 40px;
     display: flex;
@@ -42,10 +30,9 @@ const PrinciplesContainer = styled('div')`
     }
 `;
 
-export default () => (
-    <Container>
-        <Title>About</Title>
-        <Divider color={titleColor} hideOnDesktop={true} />
+export default ({ id, titleColor }) => (
+    <Container id={id}>
+        <SectionTitle titleColor={titleColor}>About</SectionTitle>
         <SectionContent>
             <SectionTextContent>
                 HackDuke is the nation's premier hackathon for tech and social
@@ -60,10 +47,10 @@ export default () => (
                     titleColor="#3649A3"
                 >
                     The core principle behind hacking for social good is
-                    collaboration, and HackDuke's project tracks provide various
+                    collaboration. HackDuke's project tracks provide various
                     avenues for participants to collaborate with each other,
-                    with initiatives at their university, and with community
-                    organizations.
+                    with university-supported initiatives, and with local
+                    community organizations.
                 </PrinciplesCard>
                 <PrinciplesCard
                     title="Using tech to further social good"

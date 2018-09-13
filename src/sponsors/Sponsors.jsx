@@ -4,13 +4,12 @@ import styled from 'react-emotion';
 import {
     SectionBase,
     SectionContent,
-    SectionTitle,
     SectionLeftColumn,
     SectionRightColumn,
     SectionTextContent
 } from '../common-styles';
 import Button from '../Button';
-import Divider from '../Divider';
+import SectionTitle from '../SectionTitle';
 
 import SponsorsLine from './sponsors-line.svg';
 import SponsorLogos from './SponsorLogos';
@@ -23,21 +22,9 @@ const Container = styled('div')`
     padding-bottom: 90px;
 `;
 
-const titleColor = '#f8aa5b';
-
-const Title = styled('div')`
-    ${SectionTitle};
-    color: #2b2b2b;
-
-    @media screen and (min-width: 640px) {
-        color: ${titleColor};
-    }
-`;
-
-export default () => (
-    <Container>
-        <Title>Sponsors</Title>
-        <Divider color={titleColor} hideOnDesktop={true} />
+export default ({ id, titleColor }) => (
+    <Container id={id}>
+        <SectionTitle titleColor={titleColor}>Sponsors</SectionTitle>
         <SectionContent columns={true}>
             <SectionLeftColumn>
                 <SectionTextContent>

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { SectionBase, SectionContent, SectionTitle } from '../common-styles';
-import Divider from '../Divider';
+import { SectionBase, SectionContent } from '../common-styles';
+import SectionTitle from '../SectionTitle';
 
 import FAQsLine from './faqs-line.svg';
 import FAQsLineExt from './faqs-line-ext.svg';
@@ -14,17 +14,6 @@ const Container = styled('div')`
         extHeightPx: 4096,
         backgroundImage: `url(${FAQsLine}), url(${FAQsLineExt})`
     })};
-`;
-
-const titleColor = '#f16a43';
-
-const Title = styled('div')`
-    ${SectionTitle};
-    color: #2b2b2b;
-
-    @media screen and (min-width: 640px) {
-        color: ${titleColor};
-    }
 `;
 
 const FAQContainer = styled('div')`
@@ -54,10 +43,9 @@ const SponsorshipLink = styled('a')`
     color: black !important;
 `;
 
-export default () => (
-    <Container>
-        <Title>FAQs</Title>
-        <Divider color={titleColor} hideOnDesktop={true} />
+export default ({ id, titleColor }) => (
+    <Container id={id}>
+        <SectionTitle titleColor={titleColor}>FAQs</SectionTitle>
         <SectionContent>
             <FAQContainer>
                 <FAQColumn>

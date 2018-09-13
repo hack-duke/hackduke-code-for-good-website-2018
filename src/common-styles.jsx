@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import styled from 'react-emotion';
 
-const MAX_WIDTH = '1400px';
+export const MAX_WIDTH = '1400px';
 
 export const PrimaryFont = css`
     font-family: 'Inconsolata', monospace;
@@ -51,17 +51,10 @@ export const SectionBase = props => css`
     }
 `;
 
-const LeftContentPadding = css`
+export const LeftContentPadding = css`
     @media screen and (min-width: 640px) {
         padding-left: 20px;
     }
-`;
-
-export const SectionTitle = css`
-    ${TitleFont};
-    ${LeftContentPadding};
-    font-size: 2.5em;
-    font-weight: bold;
 `;
 
 export const SectionTextContent = styled('p')`
@@ -137,5 +130,13 @@ export const ShadowItem = css`
 
     :hover::after {
         opacity: 1;
+    }
+`;
+
+export const HideOnMobile = css`
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: inline-block;
     }
 `;

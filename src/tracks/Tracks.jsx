@@ -80,8 +80,8 @@ const RightArrow = () => (
     <span className="icon-right-open" css={iconTranslate} />
 );
 
-export default () => (
-    <Container>
+export default ({ id }) => (
+    <Container id={id}>
         <Title>Tracks</Title>
         <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent columns={true}>

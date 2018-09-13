@@ -54,8 +54,8 @@ const DateText = styled('div')`
     }
 `;
 
-export default () => (
-    <Container>
+export default ({ id }) => (
+    <Container id={id}>
         <LandingContent>
             <Logo src={LogoImage} />
             <Divider color="#5c5299" />

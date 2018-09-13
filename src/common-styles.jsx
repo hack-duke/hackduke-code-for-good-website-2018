@@ -139,3 +139,11 @@ export const ShadowItem = css`
         opacity: 1;
     }
 `;
+
+export const HideOnMobile = css`
+    display: none;
+
+    @media screen and (min-width: 640px) {
+        display: inline-block;
+    }
+`;

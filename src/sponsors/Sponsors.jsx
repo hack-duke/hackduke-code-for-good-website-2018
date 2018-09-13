@@ -34,8 +34,8 @@ const Title = styled('div')`
     }
 `;
 
-export default () => (
-    <Container>
+export default ({ id }) => (
+    <Container id={id}>
         <Title>Sponsors</Title>
         <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent columns={true}>

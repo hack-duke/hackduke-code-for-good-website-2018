@@ -54,8 +54,8 @@ const SponsorshipLink = styled('a')`
     color: black !important;
 `;
 
-export default () => (
-    <Container>
+export default ({ id }) => (
+    <Container id={id}>
         <Title>FAQs</Title>
         <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent>

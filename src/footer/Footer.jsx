@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
-import { TitleFont } from '../common-styles';
+import { TitleFont, HideOnMobile } from '../common-styles';
 
 const FooterContainer = styled('div')`
     display: block;
@@ -14,14 +14,6 @@ const FooterContainer = styled('div')`
 
     @media screen and (min-width: 640px) {
         padding: 0 80px;
-    }
-`;
-
-const HideOnMobile = css`
-    display: none;
-
-    @media screen and (min-width: 640px) {
-        display: inline-block;
     }
 `;
 

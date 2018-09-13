@@ -42,8 +42,8 @@ const PrinciplesContainer = styled('div')`
     }
 `;
 
-export default () => (
-    <Container>
+export default ({ id }) => (
+    <Container id={id}>
         <Title>About</Title>
         <Divider color={titleColor} hideOnDesktop={true} />
         <SectionContent>

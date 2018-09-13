@@ -7,7 +7,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { MAX_WIDTH, HideOnMobile, TitleFont } from './common-styles';
 
 const navHeightPx = 60;
-const fullShadowScrollOffset = 320;
+const fullShadowScrollOffset = 90;
 
 const Nav = styled('div')`
     ${HideOnMobile};
@@ -17,9 +17,7 @@ const Nav = styled('div')`
     left: 0;
     right: 0;
     height: ${navHeightPx}px;
-    background-color: white;
     z-index: 64;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
     :after {
         position: absolute;
@@ -29,9 +27,10 @@ const Nav = styled('div')`
         right: 0;
         width: 100%;
         height: ${navHeightPx}px;
+        background-color: white;
         z-index: -1;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.075);
-        opacity: ${props => props.shadowOpacity};
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.075);
+        opacity: ${props => props.backgroundOpacity};
     }
 `;
 
@@ -60,11 +59,6 @@ const NavItem = ({ color }) => css`
     :hover {
         border-bottom: 6px solid ${color};
     }
-`;
-
-const Spacer = styled('div')`
-    ${HideOnMobile};
-    height: ${navHeightPx}px;
 `;
 
 class NavContents extends React.PureComponent {
@@ -103,10 +97,9 @@ export default class Navbar extends React.PureComponent {
         const { scrollOffset } = this.state;
         return (
             <React.Fragment>
-                <Nav shadowOpacity={scrollOffset / fullShadowScrollOffset}>
+                <Nav backgroundOpacity={scrollOffset / fullShadowScrollOffset}>
                     <NavContents {...this.props} />
                 </Nav>
-                <Spacer />
             </React.Fragment>
         );
     }

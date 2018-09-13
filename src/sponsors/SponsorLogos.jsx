@@ -42,9 +42,9 @@ const LogoWrapper = styled('a')`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 8px;
     background-origin: content-box;
-    padding: 6px;
+    padding: 12px;
+    padding-top: 0;
 `;
 
 const Logo = ({ src, href }) => (

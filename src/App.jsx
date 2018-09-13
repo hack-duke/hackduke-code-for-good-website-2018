@@ -45,7 +45,7 @@ export default () => (
     <React.Fragment>
         <Navbar navItems={sections} />
         {sections.map(({ title, id, titleColor, Component }) => (
-            <Component id={id} key={title} titleColor={titleColor} />
+            <Component id={id} key={id} titleColor={titleColor} />
         ))}
         <Footer />
     </React.Fragment>

@@ -137,6 +137,6 @@ export const HideOnMobile = css`
     display: none;
 
     @media screen and (min-width: 768px) {
-        display: inline-block;
+        display: block;
     }
 `;

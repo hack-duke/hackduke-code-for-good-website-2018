@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from 'emotion';
 import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import detectPassiveEvents from 'detect-passive-events';
 
 import { MAX_WIDTH, HideOnMobile, TitleFont } from './common-styles';
 
@@ -85,7 +86,11 @@ export default class Navbar extends React.PureComponent {
 
     componentDidMount() {
         this.updateScrollOffset();
-        window.addEventListener('scroll', this.updateScrollOffset);
+        window.addEventListener(
+            'scroll',
+            this.updateScrollOffset,
+            detectPassiveEvents.hasSupport ? { passive: true } : false
+        );
     }
 
     componentWillUnmount() {

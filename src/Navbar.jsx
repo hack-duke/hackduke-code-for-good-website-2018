@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { MAX_WIDTH, HideOnMobile, TitleFont } from './common-styles';
 
-const navHeightPx = 60;
+const navHeightPx = 72;
 const fullShadowScrollOffset = 90;
 
 const Nav = styled('div')`
@@ -46,10 +46,9 @@ const NavItem = ({ color }) => css`
     color: #2b2b2b;
     height: 100%;
     font-size: 1.1em;
-    line-height: 3.333em;
+    line-height: ${navHeightPx}px;
     display: inline-block;
-    margin-right: 15px;
-    width: 80px;
+    margin-right: 50px;
     text-align: center;
     border-bottom: 0px solid ${color};
     transition: border-bottom 0.1s;

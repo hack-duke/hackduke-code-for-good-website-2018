@@ -59,11 +59,11 @@ const TitleWrapper = styled('div')`
 `;
 
 const Icon = styled('img')`
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 `;
 
 const CardContent = styled('div')`

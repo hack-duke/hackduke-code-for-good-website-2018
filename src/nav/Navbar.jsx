@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import detectPassiveEvents from 'detect-passive-events';
 
-import { MAX_WIDTH, HideOnMobile, TitleFont } from './common-styles';
+import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 
 const navHeightPx = 72;
 const fullShadowScrollOffset = 90;
@@ -110,6 +110,6 @@ export default class Navbar extends React.PureComponent {
 
     updateScrollOffset = () =>
         this.setState({
-            scrollOffset: Math.min(window.scrollY, fullShadowScrollOffset)
+            scrollOffset: window.scrollY
         });
 }

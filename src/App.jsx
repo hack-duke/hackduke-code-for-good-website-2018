@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from './Navbar';
+import Navbar from './nav/Navbar';
 import Landing from './landing/Landing';
 import About from './about/About';
 import Tracks from './tracks/Tracks';

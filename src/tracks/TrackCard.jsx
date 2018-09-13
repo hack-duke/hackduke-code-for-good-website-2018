@@ -4,10 +4,10 @@ import { css } from 'emotion';
 
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 
-const CardHeight = '285px';
+const cardHeight = '285px';
 
 const CardBase = styled('div')`
-    height: ${CardHeight};
+    height: ${cardHeight};
     margin-bottom: 25px;
     cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
 
@@ -47,34 +47,40 @@ const cubicEaseOutTransition = css`
         transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 `;
 
-const CardTitle = styled('div')`
+const TitleWrapper = styled('div')`
     ${TitleFont};
-    ${fillParent};
-    text-transform: uppercase;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: white;
-    pointer-events: none;
+    font-size: 1.75em;
     display: flex;
-    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
+`;
 
-    opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props =>
-        `translateY(${props.visible ? '0' : `-${CardHeight}`})`};
-    ${cubicEaseOutTransition};
+const Icon = styled('img')`
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
 `;
 
 const CardContent = styled('div')`
-    ${SecondaryText};
     ${fillParent};
     padding: 25px;
     color: white;
 
     pointer-events: ${props => (props.visible ? 'auto' : 'none')};
     opacity: ${props => (props.visible ? 1 : 0)};
-    transform: ${props => `translateY(${props.visible ? '0' : CardHeight})`};
+    transform: ${props =>
+        `translateY(${props.visible ? '0' : props.translateY})`};
     ${cubicEaseOutTransition};
+`;
+
+const CardTextStyle = css`
+    ${SecondaryText};
+    color: white;
 `;
 
 export default class TrackCard extends React.PureComponent {
@@ -86,7 +92,7 @@ export default class TrackCard extends React.PureComponent {
 
     render() {
         const { opened } = this.state;
-        const { color, title, children } = this.props;
+        const { color, icon, title, children } = this.props;
         return (
             <CardBase
                 color={color}
@@ -94,8 +100,22 @@ export default class TrackCard extends React.PureComponent {
                 onClick={this.setOpened}
             >
                 <CardClipBounds>
-                    <CardTitle visible={!opened}>{title}</CardTitle>
-                    <CardContent visible={opened}>{children}</CardContent>
+                    <CardContent
+                        visible={!opened}
+                        translateY={`-${cardHeight}`}
+                    >
+                        <TitleWrapper>
+                            <Icon src={icon} />
+                            {title}
+                        </TitleWrapper>
+                    </CardContent>
+                    <CardContent
+                        visible={opened}
+                        css={CardTextStyle}
+                        translateY={cardHeight}
+                    >
+                        {children}
+                    </CardContent>
                 </CardClipBounds>
             </CardBase>
         );

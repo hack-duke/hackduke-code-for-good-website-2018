@@ -18,6 +18,11 @@ import TracksLine from './tracks-line.svg';
 import TracksLineExt from './tracks-line-ext.svg';
 import TrackCard from './TrackCard';
 
+import InequalityIcon from './icons/inequality.svg';
+import EnergyIcon from './icons/energy.svg';
+import HealthIcon from './icons/health.svg';
+import EducationIcon from './icons/education.svg';
+
 const Container = styled('div')`
     ${SectionBase({
         heightPx: 600,
@@ -94,7 +99,11 @@ export default () => (
             </SectionLeftColumn>
             <SectionRightColumn>
                 <TrackRow>
-                    <TrackCard color="#3549A2" title="Inequality">
+                    <TrackCard
+                        color="#3549A2"
+                        title="Inequality"
+                        icon={InequalityIcon}
+                    >
                         The <b>Inequality</b> track targets problems regarding
                         both social and economic inequality. Whether it is
                         creating solutions to bridge the income gap, or finding
@@ -109,7 +118,7 @@ export default () => (
                             See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
-                    <TrackCard color="#5C5299" title="Energy">
+                    <TrackCard color="#5C5299" title="Energy" icon={EnergyIcon}>
                         The <b>Energy</b> track encompasses a technical
                         perspective to deal with large issues impacting energy
                         use, allocation and environmental regulations. This
@@ -126,7 +135,7 @@ export default () => (
                     </TrackCard>
                 </TrackRow>
                 <TrackRow>
-                    <TrackCard color="#D25C59" title="Health">
+                    <TrackCard color="#D25C59" title="Health" icon={HealthIcon}>
                         The <b>Health</b> track allows hackers to work with
                         various kinds of health related data, as well as connect
                         with mentors from the intersection of health and
@@ -141,7 +150,11 @@ export default () => (
                             See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
-                    <TrackCard color="#FFAA5B" title="Education">
+                    <TrackCard
+                        color="#FFAA5B"
+                        title="Education"
+                        icon={EducationIcon}
+                    >
                         The <b>Education</b> track pairs hackers with educators,
                         reaching out to all levels of subjects and skills. In
                         addition to Education events sponsored by HackDuke,

@@ -9,10 +9,9 @@ import {
     SectionContent,
     SectionLeftColumn,
     SectionRightColumn,
-    SectionTextContent,
-    SectionTitle
+    SectionTextContent
 } from '../common-styles';
-import Divider from '../Divider';
+import SectionTitle from '../SectionTitle';
 
 import TracksLine from './tracks-line.svg';
 import TracksLineExt from './tracks-line-ext.svg';
@@ -30,18 +29,6 @@ const Container = styled('div')`
         backgroundImage: `url(${TracksLine}), url(${TracksLineExt})`
     })};
     position: relative;
-`;
-
-const titleColor = '#5f76cb';
-
-const Title = styled('div')`
-    ${SectionTitle};
-    color: #2b2b2b;
-    padding-top: 0.333em;
-
-    @media screen and (min-width: 640px) {
-        color: ${titleColor};
-    }
 `;
 
 const TrackRow = styled('div')`
@@ -80,10 +67,9 @@ const RightArrow = () => (
     <span className="icon-right-open" css={iconTranslate} />
 );
 
-export default ({ id }) => (
+export default ({ id, titleColor }) => (
     <Container id={id}>
-        <Title>Tracks</Title>
-        <Divider color={titleColor} hideOnDesktop={true} />
+        <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
         <SectionContent columns={true}>
             <SectionLeftColumn>
                 <SectionTextContent>

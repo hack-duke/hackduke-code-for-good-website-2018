@@ -12,27 +12,27 @@ export default class App extends React.Component {
     sections = [
         {
             title: 'Welcome',
-            color: '#5c5299',
+            titleColor: '#5c5299',
             Component: Landing
         },
         {
             title: 'About',
-            color: '#3a3d6d',
+            titleColor: '#3a3d6d',
             Component: About
         },
         {
             title: 'Tracks',
-            color: '#5f76cb',
+            titleColor: '#5f76cb',
             Component: Tracks
         },
         {
             title: 'FAQs',
-            color: '#f16a43',
+            titleColor: '#f16a43',
             Component: FAQs
         },
         {
             title: 'Sponsors',
-            color: '#f8aa5b',
+            titleColor: '#f8aa5b',
             Component: Sponsors
         }
     ];
@@ -41,8 +41,12 @@ export default class App extends React.Component {
         return (
             <React.Fragment>
                 <Navbar navItems={this.sections} />
-                {this.sections.map(({ title, Component }) => (
-                    <Component key={title} id={title.toLowerCase()} />
+                {this.sections.map(({ title, titleColor, Component }) => (
+                    <Component
+                        id={title.toLowerCase()}
+                        key={title}
+                        titleColor={titleColor}
+                    />
                 ))}
                 <Footer />
             </React.Fragment>

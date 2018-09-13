@@ -51,17 +51,10 @@ export const SectionBase = props => css`
     }
 `;
 
-const LeftContentPadding = css`
+export const LeftContentPadding = css`
     @media screen and (min-width: 640px) {
         padding-left: 20px;
     }
-`;
-
-export const SectionTitle = css`
-    ${TitleFont};
-    ${LeftContentPadding};
-    font-size: 2.5em;
-    font-weight: bold;
 `;
 
 export const SectionTextContent = styled('p')`

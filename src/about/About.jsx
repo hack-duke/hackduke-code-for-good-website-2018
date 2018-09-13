@@ -4,10 +4,9 @@ import styled from 'react-emotion';
 import {
     SectionBase,
     SectionContent,
-    SectionTextContent,
-    SectionTitle
+    SectionTextContent
 } from '../common-styles';
-import Divider from '../Divider';
+import SectionTitle from '../SectionTitle';
 
 import AboutLine from './about-line.svg';
 import AboutLineExt from './about-line-ext.svg';
@@ -21,17 +20,6 @@ const Container = styled('div')`
     })};
 `;
 
-const titleColor = '#3a3d6d';
-
-const Title = styled('div')`
-    ${SectionTitle};
-    color: #2b2b2b;
-
-    @media screen and (min-width: 640px) {
-        color: ${titleColor};
-    }
-`;
-
 const PrinciplesContainer = styled('div')`
     margin-top: 40px;
     display: flex;
@@ -42,10 +30,9 @@ const PrinciplesContainer = styled('div')`
     }
 `;
 
-export default ({ id }) => (
+export default ({ id, titleColor }) => (
     <Container id={id}>
-        <Title>About</Title>
-        <Divider color={titleColor} hideOnDesktop={true} />
+        <SectionTitle titleColor={titleColor}>About</SectionTitle>
         <SectionContent>
             <SectionTextContent>
                 HackDuke is the nation's premier hackathon for tech and social

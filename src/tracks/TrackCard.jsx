@@ -56,6 +56,7 @@ const TitleWrapper = styled('div')`
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    pointer-events: none;
 `;
 
 const Icon = styled('img')`

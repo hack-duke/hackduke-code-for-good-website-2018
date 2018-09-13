@@ -11,6 +11,10 @@ import IIDLogo from './img/iid.png';
 
 import GlobalBankersLogo from './img/gbankers.png';
 import CapitalOneLogo from './img/capital-one.svg';
+import EquitasLogo from './img/equitas-logo.png';
+
+import MicrosoftLogo from './img/microsoft.svg';
+import OptumLogo from './img/optum-logo.svg';
 
 const LogoRow = styled('div')`
     display: flex;
@@ -20,7 +24,7 @@ const LogoRow = styled('div')`
     }
 
     @media screen and (min-width: 640px) {
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
 
     :last-child {
@@ -39,6 +43,8 @@ const LogoWrapper = styled('a')`
     background-repeat: no-repeat;
     background-position: center;
     margin: 8px;
+    background-origin: content-box;
+    padding: 6px;
 `;
 
 const Logo = ({ src, href }) => (
@@ -69,11 +75,19 @@ export default () => (
             <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
         </LogoRow>
         <LogoRow>
+            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
+            <Logo src={OptumLogo} href="https://www.optum.com/" />
+            <Logo
+                src={MicrosoftLogo}
+                href="https://careers.microsoft.com/us/en/students-and-graduates"
+            />
+        </LogoRow>
+        <LogoRow>
+            <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
             <Logo
                 src={GlobalBankersLogo}
                 href="https://www.globalbankers.com/"
             />
-            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
         </LogoRow>
     </React.Fragment>
 );

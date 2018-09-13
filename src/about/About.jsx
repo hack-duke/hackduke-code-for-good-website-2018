@@ -60,9 +60,10 @@ export default () => (
                     titleColor="#3649A3"
                 >
                     The core principle behind hacking for social good is
-                    collaboration, and HackDuke's project tracks provide an
-                    avenue to collaborate with each other, with initiatives at
-                    their university and with community organizations.
+                    collaboration, and HackDuke's project tracks provide various
+                    avenues for participants to collaborate with each other,
+                    with initiatives at their university, and with community
+                    organizations.
                 </PrinciplesCard>
                 <PrinciplesCard
                     title="Using tech to further social good"

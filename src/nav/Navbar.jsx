@@ -50,7 +50,7 @@ const NavItemsWrapper = styled('div')`
     height: 100%;
 `;
 
-const navItem = ({ color }) => css`
+const navItem = ({ active, color }) => css`
     ${TitleFont};
     color: #2b2b2b;
     height: 100%;
@@ -59,8 +59,8 @@ const navItem = ({ color }) => css`
     display: inline-block;
     margin-right: 50px;
     text-align: center;
-    border-bottom: 0px solid ${color};
-    transition: border-bottom 0.1s;
+    border-bottom: ${active ? 6 : 0}px solid ${active ? color : 'transparent'};
+    transition: border-bottom 0.2s;
     cursor: pointer;
     text-decoration: none;
 
@@ -71,14 +71,17 @@ const navItem = ({ color }) => css`
 
 class NavContents extends React.PureComponent {
     render() {
-        const { navItems } = this.props;
+        const { activeItemID, navItems } = this.props;
         return (
             <NavItemsWrapper>
                 {navItems.map(({ title, id, titleColor }) => (
                     <AnchorLink
                         offset={navHeightPx / 2}
                         key={id}
-                        css={navItem({ color: titleColor })}
+                        css={navItem({
+                            active: activeItemID === id,
+                            color: titleColor
+                        })}
                         href={`#${id}`}
                     >
                         {title}

@@ -28,7 +28,6 @@ const Container = styled('div')`
 const LandingContent = styled('div')`
     ${SecondaryText};
     font-size: 1.5em;
-    line-height: 1.8em;
     margin: auto 0;
     width: 100%;
 
@@ -47,10 +46,11 @@ const Logo = styled('img')`
 `;
 
 const DateText = styled('div')`
-    padding-bottom: 0.33em;
+    padding: 0.5em 0;
+    padding-top: 0.25em;
 
-    @media screen and (min-width: 480px) {
-        padding-bottom: 0.5em;
+    @media screen and (min-width: 768px) {
+        padding-top: 0.5em;
     }
 `;
 
@@ -58,7 +58,11 @@ export default ({ id }) => (
     <Container id={id}>
         <LandingContent>
             <Logo src={LogoImage} />
-            <Divider color="#5c5299" />
+            <Divider
+                color="#5c5299"
+                hideOnDesktop={true}
+                maxDisplayWidth={768}
+            />
             <DateText>October 13th - 14th, 2018</DateText>
             <Button
                 background="#5c5299"

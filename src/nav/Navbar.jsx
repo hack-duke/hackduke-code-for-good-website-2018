@@ -9,7 +9,7 @@ import memoize from 'memoize-one';
 import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 
 const navHeightPx = 72;
-const fullShadowScrollOffset = 90;
+const fullShadowScrollOffset = navHeightPx;
 
 const navStyle = css`
     ${HideOnMobile};

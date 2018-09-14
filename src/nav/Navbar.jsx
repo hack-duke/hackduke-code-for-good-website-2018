@@ -30,7 +30,8 @@ const Nav = styled('div')`
         height: ${navHeightPx}px;
         background-color: white;
         z-index: -1;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 40px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
+            0 0 40px rgba(0, 0, 0, 0.075);
         opacity: ${props => props.backgroundOpacity};
     }
 `;

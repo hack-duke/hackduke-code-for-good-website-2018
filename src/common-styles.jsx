@@ -103,7 +103,8 @@ export const SectionRightColumn = styled('div')`
 // See https://alligator.io/css/transition-box-shadows/
 export const ShadowItem = css`
     position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12.5px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
+        0 12.5px 40px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
     -webkit-tap-highlight-color: transparent;

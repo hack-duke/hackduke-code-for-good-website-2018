@@ -4,13 +4,14 @@ import { css } from 'emotion';
 import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import detectPassiveEvents from 'detect-passive-events';
+import memoize from 'memoize-one';
 
 import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 
 const navHeightPx = 72;
 const fullShadowScrollOffset = 90;
 
-const Nav = styled('div')`
+const navStyle = css`
     ${HideOnMobile};
     ${TitleFont};
     position: fixed;
@@ -32,8 +33,14 @@ const Nav = styled('div')`
         z-index: -1;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
             0 0 40px rgba(0, 0, 0, 0.075);
-        opacity: ${props => props.backgroundOpacity};
     }
+`;
+
+const navBackgroundOpacity = backgroundOpacity => css`
+    :after {
+        opacity: ${backgroundOpacity};
+    }
+}
 `;
 
 const NavItemsWrapper = styled('div')`
@@ -43,7 +50,7 @@ const NavItemsWrapper = styled('div')`
     height: 100%;
 `;
 
-const NavItem = ({ color }) => css`
+const navItem = ({ color }) => css`
     ${TitleFont};
     color: #2b2b2b;
     height: 100%;
@@ -71,7 +78,7 @@ class NavContents extends React.PureComponent {
                     <AnchorLink
                         offset={navHeightPx / 2}
                         key={id}
-                        css={NavItem({ color: titleColor })}
+                        css={navItem({ color: titleColor })}
                         href={`#${id}`}
                     >
                         {title}
@@ -83,34 +90,56 @@ class NavContents extends React.PureComponent {
 }
 
 export default class Navbar extends React.PureComponent {
-    state = { scrollOffset: 0 };
+    state = { activeItemID: this.props.navItems[0].id, scrollOffset: 0 };
 
     componentDidMount() {
-        this.updateScrollOffset();
+        this.handleScroll();
         window.addEventListener(
             'scroll',
-            this.updateScrollOffset,
+            this.handleScroll,
             detectPassiveEvents.hasSupport ? { passive: true } : false
         );
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.updateScrollOffset);
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
     render() {
-        const { scrollOffset } = this.state;
+        const { activeItemID, scrollOffset } = this.state;
         return (
-            <React.Fragment>
-                <Nav backgroundOpacity={scrollOffset / fullShadowScrollOffset}>
-                    <NavContents {...this.props} />
-                </Nav>
-            </React.Fragment>
+            <div
+                // Optimization - only recompute opacity style on scroll
+                className={[
+                    navStyle,
+                    navBackgroundOpacity(
+                        Math.min(scrollOffset, fullShadowScrollOffset) /
+                            fullShadowScrollOffset
+                    )
+                ].join(' ')}
+            >
+                <NavContents activeItemID={activeItemID} {...this.props} />
+            </div>
         );
     }
 
-    updateScrollOffset = () =>
+    getItemRefNodes = memoize(navItems =>
+        navItems.map(({ id }) => [id, document.getElementById(id)])
+    );
+
+    handleScroll = () => {
         this.setState({
             scrollOffset: window.scrollY
         });
+
+        for (const [id, itemRefNode] of [
+            ...this.getItemRefNodes(this.props.navItems)
+        ].reverse()) {
+            const { top } = itemRefNode.getBoundingClientRect();
+            if (top < navHeightPx) {
+                this.setState({ activeItemID: id });
+                break;
+            }
+        }
+    };
 }

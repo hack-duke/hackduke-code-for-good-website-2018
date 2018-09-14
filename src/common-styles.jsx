@@ -112,7 +112,7 @@ export const ShadowItem = css`
     ::after {
         position: absolute;
         content: '';
-        border-radius: 5px;
+        border-radius: 6px;
         z-index: -1;
         top: 0;
         left: 0;

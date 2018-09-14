@@ -20,6 +20,10 @@ export default styled('a')`
     ${ShadowItem};
     border-radius: 26px;
 
+    ::after {
+        border-radius: 26px;
+    }
+
     :hover {
         transform: scale(1.05);
         opacity: 0.9;

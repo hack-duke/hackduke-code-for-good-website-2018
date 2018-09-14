@@ -30,15 +30,19 @@ const LandingContent = styled('div')`
     font-size: 1.5em;
     margin: auto 0;
     width: 100%;
+    padding-bottom: 40px;
 
     @media screen and (min-width: 640px) {
         margin: 0;
-        padding-top: 140px;
+        padding-top: 122px;
+        padding-bottom: 0;
     }
 `;
 
 const Logo = styled('img')`
     width: 100%;
+    margin-bottom: 1.5em;
+    display: block;
 
     @media screen and (min-width: 480px) {
         max-width: 315px;
@@ -46,30 +50,20 @@ const Logo = styled('img')`
 `;
 
 const DateText = styled('div')`
-    padding: 0.5em 0;
-    padding-top: 0.25em;
-
-    @media screen and (min-width: 768px) {
-        padding-top: 0.5em;
-    }
+    padding-bottom: 1.5em;
 `;
 
 export default ({ id }) => (
     <Container id={id}>
         <LandingContent>
-            <Logo src={LogoImage} />
-            <Divider
-                color="#5c5299"
-                hideOnDesktop={true}
-                maxDisplayWidth={768}
-            />
             <DateText>October 13th - 14th, 2018</DateText>
+            <Logo src={LogoImage} />
             <Button
                 background="#5c5299"
                 selectedBackground="#463f73"
                 href="https://hackduke.org/apply/"
             >
-                Apply
+                Apply now
             </Button>
         </LandingContent>
     </Container>

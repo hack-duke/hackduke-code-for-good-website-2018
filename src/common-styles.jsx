@@ -101,18 +101,18 @@ export const SectionRightColumn = styled('div')`
 
 // Optimized shadow rendering
 // See https://alligator.io/css/transition-box-shadows/
-export const ShadowItem = css`
+export const ShadowItem = ({ radius }) => css`
     position: relative;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
         0 12.5px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
+    border-radius: ${radius || 6}px;
     transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
     -webkit-tap-highlight-color: transparent;
 
     ::after {
         position: absolute;
         content: '';
-        border-radius: 6px;
+        border-radius: ${radius || 6}px;
         z-index: -1;
         top: 0;
         left: 0;

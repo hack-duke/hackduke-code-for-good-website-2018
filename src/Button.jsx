@@ -17,12 +17,7 @@ export default styled('a')`
     font-weight: bold;
     min-width: 180px;
     text-align: center;
-    ${ShadowItem};
-    border-radius: 26px;
-
-    ::after {
-        border-radius: 26px;
-    }
+    ${ShadowItem({ radius: 26 })};
 
     :hover {
         transform: scale(1.05);

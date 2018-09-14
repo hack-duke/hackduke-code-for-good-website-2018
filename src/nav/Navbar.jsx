@@ -52,19 +52,21 @@ const NavItemsWrapper = styled('div')`
 
 const navItem = ({ active, color }) => css`
     ${TitleFont};
-    color: #2b2b2b;
+    color: ${active ? color : '#2b2b2b'};
     height: 100%;
     font-size: 1.1em;
     line-height: ${navHeightPx}px;
+    font-weight: bold;
     display: inline-block;
     margin-right: 50px;
     text-align: center;
     border-bottom: ${active ? 6 : 0}px solid ${active ? color : 'transparent'};
-    transition: border-bottom 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
     cursor: pointer;
     text-decoration: none;
 
     :hover {
+        color: ${color};
         border-bottom: 6px solid ${color};
     }
 `;

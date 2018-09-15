@@ -9,6 +9,7 @@ import {
     SectionTextContent
 } from '../common-styles';
 import Button from '../Button';
+import { YELLOW_PRESSABLE } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import SponsorsLine from './sponsors-line.svg';
@@ -35,8 +36,7 @@ export default ({ id, titleColor }) => (
                 </SectionTextContent>
                 <SectionTextContent>
                     <Button
-                        background="#f8aa5b"
-                        selectedBackground="#CC8849"
+                        material={YELLOW_PRESSABLE}
                         href="mailto:sponsorship@hackduke.org"
                     >
                         Sponsor us

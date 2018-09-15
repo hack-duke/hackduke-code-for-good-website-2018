@@ -101,13 +101,20 @@ export const SectionRightColumn = styled('div')`
 
 // Optimized shadow rendering
 // See https://alligator.io/css/transition-box-shadows/
-export const ShadowItem = ({ radius }) => css`
+export const ShadowItem = ({
+    background,
+    pressedBackground,
+    baseShadow,
+    hoverShadow,
+    radius
+}) => css`
     position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
-        0 12.5px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: ${baseShadow ||
+        '0 1px 2px rgba(0, 0, 0, 0.0333), 0 12.5px 40px rgba(0, 0, 0, 0.1)'};
     border-radius: ${radius || 6}px;
     transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
     -webkit-tap-highlight-color: transparent;
+    background-color: ${background || 'white'};
 
     ::after {
         position: absolute;
@@ -118,12 +125,13 @@ export const ShadowItem = ({ radius }) => css`
         left: 0;
         width: 100%;
         height: 100%;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.07);
+        box-shadow: ${hoverShadow || '0 24px 60px rgba(0, 0, 0, 0.07)'};
         opacity: 0;
         transition: opacity 0.2s;
     }
 
     :hover {
+        opacity: 0.9;
         @media screen and (min-width: 640px) {
             transform: translateY(-4px);
         }
@@ -132,6 +140,14 @@ export const ShadowItem = ({ radius }) => css`
     :hover::after {
         opacity: 1;
     }
+
+    ${pressedBackground &&
+        css`
+            :active {
+                opacity: 1;
+                background-color: ${pressedBackground};
+            }
+        `};
 `;
 
 export const HideOnMobile = css`

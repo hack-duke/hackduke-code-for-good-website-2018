@@ -7,8 +7,8 @@ import HomeMobileBottom from './home-bg-mobile-bottom.svg';
 import LogoImage from './hackduke-logo.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
+import { PURPLE_PRESSABLE } from '../materials';
 import Button from '../Button';
-import Divider from '../Divider';
 
 const Container = styled('div')`
     ${SectionBase({
@@ -59,8 +59,7 @@ export default ({ id }) => (
             <DateText>October 13th - 14th, 2018</DateText>
             <Logo src={LogoImage} />
             <Button
-                background="#5c5299"
-                selectedBackground="#463f73"
+                material={PURPLE_PRESSABLE}
                 href="https://hackduke.org/apply/"
             >
                 Apply now

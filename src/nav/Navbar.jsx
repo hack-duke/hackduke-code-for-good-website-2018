@@ -5,7 +5,6 @@ import styled from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import detectPassiveEvents from 'detect-passive-events';
 import memoize from 'memoize-one';
-import throttle from 'throttleit';
 
 import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 
@@ -133,7 +132,7 @@ export default class Navbar extends React.PureComponent {
         navItems.map(({ id }) => [id, document.getElementById(id)])
     );
 
-    handleScroll = throttle(() => {
+    handleScroll = () => {
         this.setState({
             scrollOffset: window.scrollY
         });
@@ -147,5 +146,5 @@ export default class Navbar extends React.PureComponent {
                 break;
             }
         }
-    }, 16);
+    };
 }

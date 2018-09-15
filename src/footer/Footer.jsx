@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { css } from 'emotion';
+import { cx, css } from 'emotion';
 
 import { TitleFont, HideOnMobile } from '../common-styles';
 
@@ -66,6 +66,7 @@ const iconStyle = css`
     margin: 0 8px;
     color: white;
     transition: opacity 0.2s;
+    text-decoration: none;
 
     :hover {
         opacity: 0.8;
@@ -88,22 +89,19 @@ export default () => (
                 <SocialLinks>
                     <a
                         href="mailto:hackers@hackduke.org"
-                        className="icon-mail-squared"
-                        css={iconStyle}
+                        className={cx(iconStyle, 'icon-mail-squared')}
                     />
                     <a
                         href="https://www.facebook.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        className="icon-facebook-squared"
-                        css={iconStyle}
+                        className={cx(iconStyle, 'icon-facebook-squared')}
                     />
                     <a
                         href="https://twitter.com/hackduke"
                         target="_blank"
                         rel="noopener"
-                        className="icon-twitter-squared"
-                        css={iconStyle}
+                        className={cx(iconStyle, 'icon-twitter-squared')}
                     />
                 </SocialLinks>
                 Copyright &copy; {year} HackDuke.

@@ -21,12 +21,7 @@ const CardBase = styled('div')`
         }
     }
 
-    ${ShadowItem};
-    background: ${props => props.color};
-
-    :hover {
-        opacity: 0.95;
-    }
+    ${props => ShadowItem(props.material)};
 `;
 
 const fillParent = css`
@@ -93,10 +88,10 @@ export default class TrackCard extends React.PureComponent {
 
     render() {
         const { opened } = this.state;
-        const { color, icon, title, children } = this.props;
+        const { material, icon, title, children } = this.props;
         return (
             <CardBase
-                color={color}
+                material={material}
                 showPointer={!opened}
                 onClick={this.setOpened}
             >

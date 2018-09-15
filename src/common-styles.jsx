@@ -131,7 +131,7 @@ export const ShadowItem = ({
     }
 
     :hover {
-        opacity: 0.9;
+        opacity: 0.9333;
         @media screen and (min-width: 640px) {
             transform: translateY(-4px);
         }

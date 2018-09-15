@@ -11,6 +11,7 @@ import {
     SectionRightColumn,
     SectionTextContent
 } from '../common-styles';
+import { BLUE, RED, PURPLE, YELLOW } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import TracksLine from './tracks-line.svg';
@@ -86,7 +87,7 @@ export default ({ id, titleColor }) => (
             <SectionRightColumn>
                 <TrackRow>
                     <TrackCard
-                        color="#3549A2"
+                        material={BLUE}
                         title="Inequality"
                         icon={InequalityIcon}
                     >
@@ -104,7 +105,11 @@ export default ({ id, titleColor }) => (
                             See Projects <RightArrow />
                         </TrackCTA>
                     </TrackCard>
-                    <TrackCard color="#5C5299" title="Energy" icon={EnergyIcon}>
+                    <TrackCard
+                        material={PURPLE}
+                        title="Energy"
+                        icon={EnergyIcon}
+                    >
                         The <b>Energy</b> track encompasses a technical
                         perspective to deal with large issues impacting energy
                         use, allocation and environmental regulations. This
@@ -121,7 +126,7 @@ export default ({ id, titleColor }) => (
                     </TrackCard>
                 </TrackRow>
                 <TrackRow>
-                    <TrackCard color="#D25C59" title="Health" icon={HealthIcon}>
+                    <TrackCard material={RED} title="Health" icon={HealthIcon}>
                         The <b>Health</b> track allows hackers to work with
                         various kinds of health related data, as well as connect
                         with mentors from the intersection of health and
@@ -137,7 +142,7 @@ export default ({ id, titleColor }) => (
                         </TrackCTA>
                     </TrackCard>
                     <TrackCard
-                        color="#FFAA5B"
+                        material={YELLOW}
                         title="Education"
                         icon={EducationIcon}
                     >

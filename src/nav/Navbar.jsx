@@ -11,7 +11,7 @@ import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 const navHeightPx = 72;
 const fullShadowScrollOffset = navHeightPx;
 
-const navStyle = css`
+const Nav = styled('div')`
     ${HideOnMobile};
     ${TitleFont};
     position: fixed;
@@ -20,27 +20,6 @@ const navStyle = css`
     right: 0;
     height: ${navHeightPx}px;
     z-index: 64;
-
-    :after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: ${navHeightPx}px;
-        background-color: white;
-        z-index: -1;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333),
-            0 0 40px rgba(0, 0, 0, 0.075);
-    }
-`;
-
-const navBackgroundOpacity = backgroundOpacity => css`
-    :after {
-        opacity: ${backgroundOpacity};
-    }
-}
 `;
 
 const NavItemsWrapper = styled('div')`
@@ -94,7 +73,28 @@ class NavContents extends React.PureComponent {
     }
 }
 
-export default class Navbar extends React.PureComponent {
+const navBackgroundStyle = css`
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: ${navHeightPx}px;
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333), 0 0 40px rgba(0, 0, 0, 0.075);
+`;
+
+class NavBackground extends React.PureComponent {
+    render() {
+        // Scrolling optimization - bypass Emotion for background opacity
+        const { opacity } = this.props;
+        return <div className={navBackgroundStyle} style={{ opacity }} />;
+    }
+}
+
+export default class Navbar extends React.Component {
     state = { activeItemID: this.props.navItems[0].id, scrollOffset: 0 };
 
     componentDidMount() {
@@ -112,19 +112,15 @@ export default class Navbar extends React.PureComponent {
 
     render() {
         const { activeItemID, scrollOffset } = this.state;
+        const navBackgroundOpacity = Math.min(
+            scrollOffset / fullShadowScrollOffset,
+            1
+        );
         return (
-            <div
-                // Optimization - only recompute opacity style on scroll
-                className={[
-                    navStyle,
-                    navBackgroundOpacity(
-                        Math.min(scrollOffset, fullShadowScrollOffset) /
-                            fullShadowScrollOffset
-                    )
-                ].join(' ')}
-            >
+            <Nav>
                 <NavContents activeItemID={activeItemID} {...this.props} />
-            </div>
+                <NavBackground opacity={navBackgroundOpacity} />
+            </Nav>
         );
     }
 

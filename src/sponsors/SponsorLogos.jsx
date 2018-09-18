@@ -15,6 +15,7 @@ import EquitasLogo from './img/equitas-logo.png';
 
 import MicrosoftLogo from './img/microsoft.svg';
 import OptumLogo from './img/optum-logo.svg';
+import InnovationCoLabLogo from './img/innovation-colab.png';
 
 const LogoRow = styled('div')`
     display: flex;
@@ -70,11 +71,6 @@ export default () => (
             />
         </LogoRow>
         <LogoRow>
-            <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
-            <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
-            <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
-        </LogoRow>
-        <LogoRow>
             <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
             <Logo src={OptumLogo} href="https://www.optum.com/" />
             <Logo
@@ -88,6 +84,12 @@ export default () => (
                 src={GlobalBankersLogo}
                 href="https://www.globalbankers.com/"
             />
+            <Logo src={InnovationCoLabLogo} href={InnovationCoLabLogo} />
+        </LogoRow>
+        <LogoRow>
+            <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
+            <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
+            <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
         </LogoRow>
     </React.Fragment>
 );

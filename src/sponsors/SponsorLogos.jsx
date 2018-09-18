@@ -69,7 +69,10 @@ export default () => (
                 src={AppianLogo}
                 href="https://careers.appian.com/careers-campus/"
             />
-            <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
+            <Logo
+                src={WolframLogo}
+                href="http://www.wolfram.com/company/careers/students/"
+            />
             <Logo
                 src={GoogleLogo}
                 href="https://careers.google.com/students/"
@@ -89,11 +92,7 @@ export default () => (
         </LogoRow>
         <LogoRow>
             <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
-
-            <Logo
-                src={WolframLogo}
-                href="http://www.wolfram.com/company/careers/students/"
-            />
+            <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
             <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
         </LogoRow>
         <LogoRow>
@@ -101,8 +100,7 @@ export default () => (
                 src={GlobalBankersLogo}
                 href="https://www.globalbankers.com/"
             />
-
-            <Logo src={InnovationCoLabLogo} href={InnovationCoLabLogo} />
+            <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
         </LogoRow>
         <LogoRow>
             <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import AppianLogo from './img/appian.png';
+import AppianLogo from './img/appian-logo.svg';
 import ScimedLogo from './img/scimed.png';
 import WolframLogo from './img/wolfram.svg';
 

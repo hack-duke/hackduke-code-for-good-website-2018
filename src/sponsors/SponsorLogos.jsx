@@ -22,9 +22,11 @@ import GoogleLogo from './img/google-logo.svg';
 
 const LogoRow = styled('div')`
     display: flex;
+    padding-bottom: 10px;
+    max-height: 108px;
 
-    @media screen and (min-width: 400px) {
-        padding-bottom: 15px;
+    @media screen and (min-width: 480px) {
+        padding-bottom: 25px;
     }
 
     @media screen and (min-width: 1024px) {
@@ -39,25 +41,24 @@ const LogoRow = styled('div')`
 const LogoWrapper = styled('a')`
     flex-grow: 1;
     flex-basis: 0;
-    height: 108px;
     text-align: center;
-    display: inline-block;
-    background-image: url(${props => props.backgroundImage});
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-origin: content-box;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
     padding-top: 0;
 `;
 
+const LogoImage = styled('img')`
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+`;
+
 const Logo = ({ src, href }) => (
-    <LogoWrapper
-        href={href}
-        target="_blank"
-        rel="noopener"
-        backgroundImage={src}
-    />
+    <LogoWrapper href={href} target="_blank" rel="noopener">
+        <LogoImage src={src} />
+    </LogoWrapper>
 );
 
 export default () => (

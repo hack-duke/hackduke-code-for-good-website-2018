@@ -17,6 +17,9 @@ import MicrosoftLogo from './img/microsoft.svg';
 import OptumLogo from './img/optum-logo.svg';
 import InnovationCoLabLogo from './img/innovation-colab.png';
 
+import FacebookLogo from './img/fb-family.svg';
+import GoogleLogo from './img/google-logo.svg';
+
 const LogoRow = styled('div')`
     display: flex;
 
@@ -66,11 +69,19 @@ export default () => (
             />
             <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
             <Logo
+                src={GoogleLogo}
+                href="https://careers.google.com/students/"
+            />
+            <Logo
                 src={WolframLogo}
                 href="http://www.wolfram.com/company/careers/students/"
             />
         </LogoRow>
         <LogoRow>
+            <Logo
+                src={FacebookLogo}
+                href="https://www.facebook.com/careers/students-and-grads/"
+            />
             <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
             <Logo src={OptumLogo} href="https://www.optum.com/" />
             <Logo

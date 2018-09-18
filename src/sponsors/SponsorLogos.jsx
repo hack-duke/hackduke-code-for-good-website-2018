@@ -27,7 +27,7 @@ const LogoRow = styled('div')`
         padding-bottom: 15px;
     }
 
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
         padding-bottom: 30px;
     }
 
@@ -72,18 +72,14 @@ export default () => (
                 src={GoogleLogo}
                 href="https://careers.google.com/students/"
             />
-            <Logo
-                src={WolframLogo}
-                href="http://www.wolfram.com/company/careers/students/"
-            />
         </LogoRow>
         <LogoRow>
             <Logo
                 src={FacebookLogo}
                 href="https://www.facebook.com/careers/students-and-grads/"
             />
-            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
             <Logo src={OptumLogo} href="https://www.optum.com/" />
+
             <Logo
                 src={MicrosoftLogo}
                 href="https://careers.microsoft.com/us/en/students-and-graduates"
@@ -91,10 +87,19 @@ export default () => (
         </LogoRow>
         <LogoRow>
             <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
+
+            <Logo
+                src={WolframLogo}
+                href="http://www.wolfram.com/company/careers/students/"
+            />
+            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
+        </LogoRow>
+        <LogoRow>
             <Logo
                 src={GlobalBankersLogo}
                 href="https://www.globalbankers.com/"
             />
+
             <Logo src={InnovationCoLabLogo} href={InnovationCoLabLogo} />
         </LogoRow>
         <LogoRow>

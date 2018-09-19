@@ -4,6 +4,8 @@ import { cx, css } from 'emotion';
 
 import { TitleFont, HideOnMobile, MAX_WIDTH } from '../common-styles';
 
+import TrustBadgeImage from './mlh-trust-badge-2019.svg';
+
 const FooterContainer = styled('div')`
     display: block;
     background-color: #3a3d6d;
@@ -15,25 +17,29 @@ const FooterContainer = styled('div')`
 
 const MLHBadge = styled('a')`
     width: 100px;
-    align-self: flex-start;
-    ${HideOnMobile};
+    ${HideOnMobile({ minWidth: 960 })};
+    position: absolute;
+    right: 144px;
 
     img {
         max-width: 100%;
         max-height: 100%;
     }
+
+    /* Hack - workaround weird subpixel rendering */
+    transform: translateY(-0.5px);
 `;
 
 const CenterContainer = styled('div')`
     ${TitleFont};
-    font-weight: bold;
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
     color: white;
+    font-weight: bold;
     max-width: ${MAX_WIDTH};
     margin: 0 auto;
-    padding: 0 144px;
+    position: relative;
 `;
 
 const CenterContent = styled('div')`
@@ -48,9 +54,7 @@ const SocialLinks = styled('div')`
     width: 300px;
 `;
 
-const iconStyle = css`
-    font-size: 32px;
-    margin: 0 8px;
+const footerLink = css`
     color: white;
     transition: opacity 0.2s;
     text-decoration: none;
@@ -58,6 +62,12 @@ const iconStyle = css`
     :hover {
         opacity: 0.8;
     }
+`;
+
+const iconStyle = css`
+    font-size: 32px;
+    margin: 0 8px;
+    ${footerLink};
 `;
 
 const year = new Date().getFullYear();
@@ -84,14 +94,22 @@ export default () => (
                         className={cx(iconStyle, 'icon-twitter-squared')}
                     />
                 </SocialLinks>
-                Copyright &copy; {year} HackDuke.
+                &copy; HackDuke {year} &mdash;{' '}
+                <a
+                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    css={footerLink}
+                >
+                    Code of Conduct
+                </a>
             </CenterContent>
             <MLHBadge
                 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
                 target="_blank"
                 rel="noopener"
             >
-                <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+                <img src={TrustBadgeImage} />
             </MLHBadge>
         </CenterContainer>
     </FooterContainer>

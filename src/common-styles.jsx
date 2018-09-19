@@ -150,10 +150,10 @@ export const ShadowItem = ({
         `};
 `;
 
-export const HideOnMobile = css`
+export const HideOnMobile = ({ minWidth }) => css`
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: ${minWidth || 768}px) {
         display: block;
     }
 `;

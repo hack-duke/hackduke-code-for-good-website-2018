@@ -22,7 +22,7 @@ import GoogleLogo from './img/google-logo.svg';
 
 const LogoRow = styled('div')`
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     max-height: 108px;
 
     @media screen and (min-width: 480px) {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import { cx, css } from 'emotion';
 
-import { TitleFont, HideOnMobile } from '../common-styles';
+import { TitleFont, HideOnMobile, MAX_WIDTH } from '../common-styles';
 
 const FooterContainer = styled('div')`
     display: block;
@@ -11,15 +11,10 @@ const FooterContainer = styled('div')`
     flex-direction: row;
     height: 225px;
     padding: 0;
-
-    @media screen and (min-width: 640px) {
-        padding: 0 80px;
-    }
 `;
 
-const LeftBadge = styled('a')`
-    width: 108px;
-    padding-right: 16px;
+const MLHBadge = styled('a')`
+    width: 100px;
     align-self: flex-start;
     ${HideOnMobile};
 
@@ -36,17 +31,9 @@ const CenterContainer = styled('div')`
     flex-grow: 1;
     flex-basis: 0;
     color: white;
-`;
-
-const RightLogo = styled('a')`
-    width: 108px;
-    align-self: center;
-    ${HideOnMobile};
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+    max-width: ${MAX_WIDTH};
+    margin: 0 auto;
+    padding: 0 144px;
 `;
 
 const CenterContent = styled('div')`
@@ -77,13 +64,6 @@ const year = new Date().getFullYear();
 
 export default () => (
     <FooterContainer>
-        <LeftBadge
-            href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
-            target="_blank"
-            rel="noopener"
-        >
-            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
-        </LeftBadge>
         <CenterContainer>
             <CenterContent>
                 <SocialLinks>
@@ -106,9 +86,13 @@ export default () => (
                 </SocialLinks>
                 Copyright &copy; {year} HackDuke.
             </CenterContent>
+            <MLHBadge
+                href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+                target="_blank"
+                rel="noopener"
+            >
+                <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+            </MLHBadge>
         </CenterContainer>
-        <RightLogo href="https://mlh.io" target="_blank" rel="noopener">
-            <img src="https://static.mlh.io/brand-assets/logo/official/mlh-logo-white.svg" />
-        </RightLogo>
     </FooterContainer>
 );

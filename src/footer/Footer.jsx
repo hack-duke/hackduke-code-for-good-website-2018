@@ -104,13 +104,6 @@ export default () => (
                     Code of Conduct
                 </a>
             </CenterContent>
-            <MLHBadge
-                href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
-                target="_blank"
-                rel="noopener"
-            >
-                <img src={TrustBadgeImage} />
-            </MLHBadge>
         </CenterContainer>
     </FooterContainer>
 );

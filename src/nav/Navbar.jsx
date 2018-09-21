@@ -25,7 +25,7 @@ const Nav = styled('div')`
 const NavItemsWrapper = styled('div')`
     max-width: ${MAX_WIDTH};
     margin: 0 auto;
-    padding-left: 144px;
+    padding: 0 144px;
     height: 100%;
 `;
 
@@ -37,7 +37,7 @@ const navItem = ({ active, color }) => css`
     line-height: ${navHeightPx}px;
     font-weight: bold;
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 40px;
     text-align: center;
     border-bottom: ${active ? 6 : 0}px solid ${active ? color : 'transparent'};
     transition: color 0.2s, border-bottom 0.2s;
@@ -47,6 +47,16 @@ const navItem = ({ active, color }) => css`
     :hover {
         color: ${color};
         border-bottom: 6px solid ${color};
+    }
+`;
+
+const MLHBadge = styled('img')`
+    width: 100px;
+    position: absolute;
+    right: 22px;
+
+    @media screen and (min-width: 1600px) {
+        right: 50px;
     }
 `;
 
@@ -68,6 +78,13 @@ class NavContents extends React.PureComponent {
                         {title}
                     </AnchorLink>
                 ))}
+                <a
+                    href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <MLHBadge src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+                </a>
             </NavItemsWrapper>
         );
     }

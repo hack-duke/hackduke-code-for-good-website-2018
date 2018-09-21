@@ -70,43 +70,43 @@ const RightArrow = () => (
 
 export default ({ id, titleColor }) => (
     <Container id={id}>
-        <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
-        <SectionContent columns={true}>
-            <SectionLeftColumn>
-                <SectionTextContent>
-                    HackDuke emphasizes its commitment to social good through
-                    four unique project tracks. Tracks enable members to
-                    collaborate while providing an alleyway to partnership with
-                    peers, local organizations, nonprofits and universities to
-                    continue working towards the cause.
-                </SectionTextContent>
-                <SectionTextContent>
-                    Select a track for more info!
-                </SectionTextContent>
-            </SectionLeftColumn>
-            <SectionRightColumn>
-                <TrackRow>
-                    <TrackCard
-                        material={BLUE}
-                        title="Inequality"
-                        icon={InequalityIcon}
-                    >
-                        The <b>Inequality</b> track targets problems regarding
-                        both social and economic inequality. Whether it is
-                        creating solutions to bridge the income gap, or finding
-                        ways to reduce disparities in gender or race, this track
-                        is built on the principle that everyone should have the
-                        capacity to reach their full potential.
-                        <TrackCTA
-                            href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=poverty+and+inequality"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            See Projects <RightArrow />
-                        </TrackCTA>
-                    </TrackCard>
-                    <TrackCard
-                        material={PURPLE}
+      <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
+      <SectionContent columns={true}>
+        <SectionLeftColumn>
+          <SectionTextContent>
+            HackDuke emphasizes its commitment to social good through
+            four unique project tracks. Tracks enable members to
+            collaborate while providing an alleyway to partnership with
+            peers, local organizations, nonprofits and universities to
+            continue working towards the cause.
+          </SectionTextContent>
+          <SectionTextContent>
+            Select a track for more info!
+          </SectionTextContent>
+        </SectionLeftColumn>
+        <SectionRightColumn>
+          <TrackRow>
+            <TrackCard
+              material={BLUE}
+              title="Inequality"
+              icon={InequalityIcon}
+            >
+              The <b>Inequality</b> track targets problems regarding
+              both social and economic inequality. Whether it is
+              creating solutions to bridge the income gap, or finding
+              ways to reduce disparities in gender or race, this track
+              is built on the principle that everyone should have the
+              capacity to reach their full potential.
+              <TrackCTA
+                href="https://hackduke-2017.devpost.com/submissions/search?utf8=%E2%9C%93&filter%5Btrack%5D%5B%5D=poverty+and+inequality"
+                target="_blank"
+                rel="noopener"
+              >
+                See Projects <RightArrow />
+              </TrackCTA>
+            </TrackCard>
+            <TrackCard
+              material={PURPLE}
                         title="Energy"
                         icon={EnergyIcon}
                     >

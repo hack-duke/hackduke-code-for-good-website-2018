@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="600" viewBox="0 0 1400 600">
-    <defs>
-        <style>.a{fill:url(#a);}</style>
-        <linearGradient id="a" x1="103.3" y1="600" x2="103.3" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#f16a43" />
-            <stop offset="1" stop-color="#5f76cb" />
-        </linearGradient>
-    </defs>
-    <title>about-line</title>
-    <path class="a" d="M125.3,116.5a21.577,21.577,0,0,0-14.8252-20.32V0h-15V96.41a21.3237,21.3237,0,0,0,0,40.1792V600h15V136.82A21.577,21.577,0,0,0,125.3,116.5Zm-22,13.5a13.5089,13.5089,0,1,1,14-13.5A13.7721,13.7721,0,0,1,103.3,130Z" />
+  <defs>
+    <style>.a{fill:url(#a);}</style>
+    <linearGradient id="a" x1="103.3" y1="600" x2="103.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A94A64" />
+      <stop offset="1" stop-color="#5f76cb" />
+    </linearGradient>
+  </defs>
+  <title>about-line</title>
+  <path class="a" d="M125.3,116.5a21.577,21.577,0,0,0-14.8252-20.32V0h-15V96.41a21.3237,21.3237,0,0,0,0,40.1792V600h15V136.82A21.577,21.577,0,0,0,125.3,116.5Zm-22,13.5a13.5089,13.5089,0,1,1,14-13.5A13.7721,13.7721,0,0,1,103.3,130Z" />
 </svg>

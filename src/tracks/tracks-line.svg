@@ -3,7 +3,7 @@
   <defs>
     <style>.a{fill:url(#a);}</style>
     <linearGradient id="a" x1="103.3" y1="600" x2="103.3" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f16a43" />
+      <stop offset="0" stop-color="#A94A64" />
       <stop offset="1" stop-color="#5f76cb" />
     </linearGradient>
   </defs>

@@ -1,34 +1,39 @@
 {
-    "name": "hackduke-code-for-good-website-2018",
-    "version": "0.0.1",
-    "scripts": {
-        "dev": "parcel index.html",
-        "build": "parcel build --public-url / index.html && cp -r apply/ dist/",
-        "heroku-postbuild": "npm run build",
-        "start": "serve ./dist/"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/hack-duke/hackduke-code-for-good-website-2018.git"
-    },
-    "author": "Yunyu Lin <mail@yunyul.in>",
-    "license": "MIT",
-    "devDependencies": {
-        "babel-plugin-emotion": "^9.2.6",
-        "babel-plugin-transform-class-properties": "^6.24.1",
-        "babel-preset-env": "^1.7.0",
-        "babel-preset-react": "^6.24.1",
-        "babel-preset-stage-2": "^6.24.1",
-        "parcel-bundler": "^1.9.7"
-    },
-    "dependencies": {
-        "detect-passive-events": "^1.0.4",
-        "emotion": "^9.2.6",
-        "memoize-one": "^4.0.2",
-        "react": "^16.4.2",
-        "react-anchor-link-smooth-scroll": "^1.0.11",
-        "react-dom": "^16.4.2",
-        "react-emotion": "^9.2.6",
-        "serve": "^10.0.0"
-    }
+  "name": "hackduke-code-for-good-website-2018",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "parcel index.html",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "build": "parcel build --public-url / index.html && cp -r apply/ dist/",
+    "precommit": "pretty-quick --staged",
+    "heroku-postbuild": "npm run build",
+    "start": "serve ./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hack-duke/hackduke-code-for-good-website-2018.git"
+  },
+  "author": "Yunyu Lin <mail@yunyul.in>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-emotion": "^9.2.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "husky": "^0.14.3",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0"
+  },
+  "dependencies": {
+    "detect-passive-events": "^1.0.4",
+    "emotion": "^9.2.6",
+    "memoize-one": "^4.0.2",
+    "react": "^16.4.2",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-dom": "^16.4.2",
+    "react-emotion": "^9.2.6",
+    "serve": "^10.0.0"
+  }
 }

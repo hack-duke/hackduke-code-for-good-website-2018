@@ -21,91 +21,85 @@ import FacebookLogo from './img/fb-family.svg';
 import GoogleLogo from './img/google-logo.svg';
 
 const LogoRow = styled('div')`
-    display: flex;
-    padding-bottom: 15px;
-    max-height: 108px;
+  display: flex;
+  padding-bottom: 15px;
+  max-height: 108px;
 
-    @media screen and (min-width: 480px) {
-        padding-bottom: 25px;
-    }
+  @media screen and (min-width: 480px) {
+    padding-bottom: 25px;
+  }
 
-    @media screen and (min-width: 1024px) {
-        padding-bottom: 30px;
-    }
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 30px;
+  }
 
-    :last-child {
-        padding-bottom: 0;
-    }
+  :last-child {
+    padding-bottom: 0;
+  }
 `;
 
 const LogoWrapper = styled('a')`
-    flex-grow: 1;
-    flex-basis: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    padding-top: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 0;
 `;
 
 const LogoImage = styled('img')`
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    user-drag: none;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  user-drag: none;
 `;
 
 const Logo = ({ src, href }) => (
-    <LogoWrapper href={href} target="_blank" rel="noopener">
-        <LogoImage src={src} />
-    </LogoWrapper>
+  <LogoWrapper href={href} target="_blank" rel="noopener">
+    <LogoImage src={src} />
+  </LogoWrapper>
 );
 
 export default () => (
-    <React.Fragment>
-        <LogoRow>
-            <Logo
-                src={AppianLogo}
-                href="https://careers.appian.com/careers-campus/"
-            />
-            <Logo
-                src={WolframLogo}
-                href="http://www.wolfram.com/company/careers/students/"
-            />
-            <Logo
-                src={GoogleLogo}
-                href="https://careers.google.com/students/"
-            />
-        </LogoRow>
-        <LogoRow>
-            <Logo
-                src={FacebookLogo}
-                href="https://www.facebook.com/careers/students-and-grads/"
-            />
-            <Logo src={OptumLogo} href="https://www.optum.com/" />
+  <React.Fragment>
+    <LogoRow>
+      <Logo
+        src={AppianLogo}
+        href="https://careers.appian.com/careers-campus/"
+      />
+      <Logo
+        src={WolframLogo}
+        href="http://www.wolfram.com/company/careers/students/"
+      />
+      <Logo src={GoogleLogo} href="https://careers.google.com/students/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        src={FacebookLogo}
+        href="https://www.facebook.com/careers/students-and-grads/"
+      />
+      <Logo src={OptumLogo} href="https://www.optum.com/" />
 
-            <Logo
-                src={MicrosoftLogo}
-                href="https://careers.microsoft.com/us/en/students-and-graduates"
-            />
-        </LogoRow>
-        <LogoRow>
-            <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
-            <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
-            <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
-        </LogoRow>
-        <LogoRow>
-            <Logo
-                src={GlobalBankersLogo}
-                href="https://www.globalbankers.com/"
-            />
-            <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
-        </LogoRow>
-        <LogoRow>
-            <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
-            <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
-            <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
-        </LogoRow>
-    </React.Fragment>
+      <Logo
+        src={MicrosoftLogo}
+        href="https://careers.microsoft.com/us/en/students-and-graduates"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
+      <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
+      <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo src={GlobalBankersLogo} href="https://www.globalbankers.com/" />
+      <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
+      <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
+      <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
+    </LogoRow>
+  </React.Fragment>
 );

@@ -17,10 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.6",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
     "husky": "^0.14.3",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.3",

@@ -19,6 +19,7 @@ import InnovationCoLabLogo from './img/innovation-colab.png';
 
 import FacebookLogo from './img/fb-family.svg';
 import GoogleLogo from './img/google-logo.svg';
+import PalantirLogo from './img/palantir-logo.svg';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -88,12 +89,13 @@ export default () => (
       />
     </LogoRow>
     <LogoRow>
-      <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
-      <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
+      <Logo src={PalantirLogo} href="https://www.palantir.com/students/" />
       <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
+      <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
     </LogoRow>
     <LogoRow>
       <Logo src={GlobalBankersLogo} href="https://www.globalbankers.com/" />
+      <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
       <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
     </LogoRow>
     <LogoRow>

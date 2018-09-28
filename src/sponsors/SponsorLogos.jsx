@@ -13,7 +13,7 @@ import GlobalBankersLogo from './img/gbankers.png';
 import CapitalOneLogo from './img/capital-one.svg';
 import EquitasLogo from './img/equitas-logo.png';
 
-import MicrosoftLogo from './img/microsoft.svg';
+import MicrosoftLogo from './img/microsoft-logo.svg';
 import OptumLogo from './img/optum-logo.svg';
 import InnovationCoLabLogo from './img/innovation-colab.png';
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { renderStylesToString } from 'emotion-server';
 
 export default {
+  inlineCss: true,
   renderToHtml: (render, Comp) =>
     renderStylesToString(render(React.createElement(Comp))),
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (

@@ -8,6 +8,9 @@ import FAQs from './faqs/FAQs';
 import Sponsors from './sponsors/Sponsors';
 import Footer from './footer/Footer';
 
+import './assets/css/app.css';
+import './assets/css/fontello.css';
+
 const sections = [
   {
     title: 'Home',

@@ -1,4 +1,4 @@
 {
-  "presets": ["react-app"],
-  "plugins": ["emotion", "transform-class-properties"]
+  "extends": "react-static/.babelrc",
+  "plugins": ["emotion"]
 }

@@ -2,9 +2,10 @@
   "name": "hackduke-code-for-good-website-2018",
   "version": "0.0.1",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "react-static start",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "build": "parcel build --public-url / index.html && cp -r apply/ dist/",
+    "build": "react-static build",
+    "stage": "react-static build --staging",
     "precommit": "pretty-quick --staged",
     "heroku-postbuild": "npm run build",
     "start": "serve ./dist/"
@@ -17,11 +18,11 @@
   "license": "MIT",
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.6",
-    "babel-preset-react-app": "^3.1.2",
+    "emotion-server": "^9.2.10",
     "husky": "^0.14.3",
-    "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.3",
-    "pretty-quick": "^1.7.0"
+    "pretty-quick": "^1.7.0",
+    "react-static": "^5.9.8"
   },
   "dependencies": {
     "detect-passive-events": "^1.0.4",
@@ -31,6 +32,6 @@
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",
-    "serve": "^10.0.0"
+    "serve": "^10.0.2"
   }
 }

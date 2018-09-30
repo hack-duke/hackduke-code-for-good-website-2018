@@ -21,6 +21,8 @@ import FacebookLogo from './img/fb-family.svg';
 import GoogleLogo from './img/google-logo.svg';
 import PalantirLogo from './img/palantir-logo.svg';
 
+import StickerMuleLogo from './img/stickermule.svg';
+
 const LogoRow = styled('div')`
   display: flex;
   padding-bottom: 15px;
@@ -94,9 +96,15 @@ export default () => (
       <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
     </LogoRow>
     <LogoRow>
+      <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
+      <Logo
+        src={StickerMuleLogo}
+        href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"
+      />
+    </LogoRow>
+    <LogoRow>
       <Logo src={GlobalBankersLogo} href="https://www.globalbankers.com/" />
       <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
-      <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
     </LogoRow>
     <LogoRow>
       <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />

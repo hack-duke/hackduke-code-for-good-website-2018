@@ -59,11 +59,9 @@ export default class ScheduleItemCard extends React.PureComponent {
         <CardTitle color={titleColor}>
           <div>
             <Day onClick={() => this.changeDay(true)} active={firstDay}>
-              {' '}
               Saturday 10/3
             </Day>
             <Day onClick={() => this.changeDay(false)} active={!firstDay}>
-              {' '}
               Sunday 10/4
             </Day>
           </div>

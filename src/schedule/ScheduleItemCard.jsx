@@ -37,9 +37,40 @@ const CardText = styled('p')`
   font-size: 1.25em;
 `;
 
-export default ({ title, children, titleColor, textColor }) => (
-  <CardBase color={titleColor}>
-    <CardTitle color={titleColor}>{title}</CardTitle>
-    <CardText color={textColor}>{children}</CardText>
-  </CardBase>
-);
+export default class ScheduleItemCard extends React.PureComponent {
+  state = {
+    firstDay: true
+  };
+
+  changeDay = firstDay => {
+    this.setState({ firstDay: firstDay });
+  };
+
+  render() {
+    const { firstDay } = this.state;
+    const { title, children, titleColor, textColor } = this.props;
+    return (
+      <CardBase color={titleColor}>
+        <CardTitle color={titleColor}>
+          <div>
+            <h3 onClick={() => this.changeDay(true)}>
+              {firstDay ? <u> Saturday 10/3 </u> : 'Saturday 10/3'}
+            </h3>
+            <h3 onClick={() => this.changeDay(false)}>
+              {firstDay ? 'Sunday 10/4' : <u> Sunday 10/4</u>}
+            </h3>
+          </div>
+        </CardTitle>
+        <CardText color={textColor}>
+          {firstDay
+            ? children[0].map(event => (
+                <div>{event.time + ': \t' + event.name}</div>
+              ))
+            : children[1].map(event => (
+                <div>{event.time + ': \t' + event.name}</div>
+              ))}
+        </CardText>
+      </CardBase>
+    );
+  }
+}

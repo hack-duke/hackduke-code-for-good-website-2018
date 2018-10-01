@@ -30,6 +30,18 @@ const PrinciplesContainer = styled('div')`
   }
 `;
 
+const schedule = [
+  [
+    { time: '9:00AM - 10:00AM', name: 'first event here!' },
+    { time: '10:00AM - 11:00AM', name: 'second event here!' }
+  ],
+  [
+    { time: '12:00AM - 1:00PM', name: 'third event here!' },
+    { time: '1:00PM - 2:00PM', name: 'fourth second event here!' },
+    { time: '2:00PM - 3:00PM', name: 'fifth second event here!' }
+  ]
+];
+
 export default ({ id, titleColor }) => (
   <Container id={id}>
     <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
@@ -38,16 +50,7 @@ export default ({ id, titleColor }) => (
         This is the schedule! Woohoo! Get ~groovy~
       </SectionTextContent>
       <PrinciplesContainer>
-        <ScheduleItemCard title="Event 1" titleColor="#3649A3">
-          This is an event. Try to contain your excitement, please.
-        </ScheduleItemCard>
-        <ScheduleItemCard title="Event 2" titleColor="#A94A64">
-          Oh my goodness! Another event!? You betcha.
-        </ScheduleItemCard>
-        <ScheduleItemCard title="Event 3" titleColor="#FFAA5B">
-          At this point I know what you're thinking. Yes, this is incredible.
-          No, you aren't dreaming.
-        </ScheduleItemCard>
+        <ScheduleItemCard titleColor="#3649A3">{schedule}</ScheduleItemCard>
       </PrinciplesContainer>
     </SectionContent>
   </Container>

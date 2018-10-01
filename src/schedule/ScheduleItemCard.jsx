@@ -37,6 +37,11 @@ const CardText = styled('p')`
   font-size: 1.25em;
 `;
 
+const Day = styled('h3')`
+  ${TitleFont};
+  text-decoration: ${props => (props.active ? 'underline' : '')};
+`;
+
 export default class ScheduleItemCard extends React.PureComponent {
   state = {
     firstDay: true
@@ -54,10 +59,10 @@ export default class ScheduleItemCard extends React.PureComponent {
         <CardTitle color={titleColor}>
           <div>
             <h3 onClick={() => this.changeDay(true)}>
-              {firstDay ? <u> Saturday 10/3 </u> : 'Saturday 10/3'}
+              <Day active={firstDay}> Saturday 10/3</Day>
             </h3>
             <h3 onClick={() => this.changeDay(false)}>
-              {firstDay ? 'Sunday 10/4' : <u> Sunday 10/4</u>}
+              <Day active={!firstDay}> Sunday 10/4</Day>
             </h3>
           </div>
         </CardTitle>

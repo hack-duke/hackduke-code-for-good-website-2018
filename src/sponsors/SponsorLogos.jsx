@@ -22,6 +22,7 @@ import GoogleLogo from './img/google-logo.svg';
 import PalantirLogo from './img/palantir-logo.svg';
 
 import StickerMuleLogo from './img/stickermule.svg';
+import EpicLogo from './img/epic.png';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -97,6 +98,7 @@ export default () => (
     </LogoRow>
     <LogoRow>
       <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
+      <Logo src={EpicLogo} href="https://careers.epic.com/" />
       <Logo
         src={StickerMuleLogo}
         href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"

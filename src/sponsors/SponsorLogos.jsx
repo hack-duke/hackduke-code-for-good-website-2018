@@ -21,6 +21,9 @@ import FacebookLogo from './img/fb-family.svg';
 import GoogleLogo from './img/google-logo.svg';
 import PalantirLogo from './img/palantir-logo.svg';
 
+import StickerMuleLogo from './img/stickermule.svg';
+import EpicLogo from './img/epic.png';
+
 const LogoRow = styled('div')`
   display: flex;
   padding-bottom: 15px;
@@ -57,9 +60,9 @@ const LogoImage = styled('img')`
   user-drag: none;
 `;
 
-const Logo = ({ src, href }) => (
+const Logo = ({ alt, src, href }) => (
   <LogoWrapper href={href} target="_blank" rel="noopener">
-    <LogoImage src={src} />
+    <LogoImage alt={alt} src={src} />
   </LogoWrapper>
 );
 
@@ -67,10 +70,12 @@ export default () => (
   <React.Fragment>
     <LogoRow>
       <Logo
+        alt="Appian"
         src={AppianLogo}
         href="https://careers.appian.com/careers-campus/"
       />
       <Logo
+        alt="Wolfram"
         src={WolframLogo}
         href="http://www.wolfram.com/company/careers/students/"
       />
@@ -78,30 +83,71 @@ export default () => (
     </LogoRow>
     <LogoRow>
       <Logo
+        alt="Facebook"
         src={FacebookLogo}
         href="https://www.facebook.com/careers/students-and-grads/"
       />
-      <Logo src={OptumLogo} href="https://www.optum.com/" />
-
+      <Logo alt="Optum" src={OptumLogo} href="https://www.optum.com/" />
       <Logo
+        alt="Microsoft"
         src={MicrosoftLogo}
         href="https://careers.microsoft.com/us/en/students-and-graduates"
       />
     </LogoRow>
     <LogoRow>
-      <Logo src={PalantirLogo} href="https://www.palantir.com/students/" />
-      <Logo src={CapitalOneLogo} href="https://campus.capitalone.com/" />
-      <Logo src={EquitasLogo} href="https://www.equitasls.com/" />
+      <Logo
+        alt="Palantir"
+        src={PalantirLogo}
+        href="https://www.palantir.com/students/"
+      />
+      <Logo
+        alt="Capital One"
+        src={CapitalOneLogo}
+        href="https://campus.capitalone.com/"
+      />
+      <Logo alt="Equitas" src={EquitasLogo} href="https://www.equitasls.com/" />
     </LogoRow>
     <LogoRow>
-      <Logo src={GlobalBankersLogo} href="https://www.globalbankers.com/" />
-      <Logo src={ScimedLogo} href="http://www.scimedsolutions.com/" />
-      <Logo src={InnovationCoLabLogo} href="https://colab.duke.edu/" />
+      <Logo
+        alt="Innovation Co-Lab"
+        src={InnovationCoLabLogo}
+        href="https://colab.duke.edu/"
+      />
+      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
+      <Logo
+        alt="StickerMule"
+        src={StickerMuleLogo}
+        href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"
+      />
     </LogoRow>
     <LogoRow>
-      <Logo src={FuquaLogo} href="https://www.fuqua.duke.edu/" />
-      <Logo src={PrattLogo} href="https://pratt.duke.edu/" />
-      <Logo src={IIDLogo} href="https://bigdata.duke.edu/" />
+      <Logo
+        alt="Global Bankers"
+        src={GlobalBankersLogo}
+        href="https://www.globalbankers.com/"
+      />
+      <Logo
+        alt="SciMed Solutions"
+        src={ScimedLogo}
+        href="http://www.scimedsolutions.com/"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="Fuqua School of Business"
+        src={FuquaLogo}
+        href="https://www.fuqua.duke.edu/"
+      />
+      <Logo
+        alt="Pratt School of Engineering"
+        src={PrattLogo}
+        href="https://pratt.duke.edu/"
+      />
+      <Logo
+        alt="Information Initiative at Duke"
+        src={IIDLogo}
+        href="https://bigdata.duke.edu/"
+      />
     </LogoRow>
   </React.Fragment>
 );

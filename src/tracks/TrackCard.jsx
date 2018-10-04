@@ -98,7 +98,7 @@ export default class TrackCard extends React.PureComponent {
         <CardClipBounds>
           <CardContent visible={!opened} translateY={`-${cardHeight}`}>
             <TitleWrapper>
-              <Icon src={icon} />
+              <Icon src={icon} aria-hidden="true" />
               {title}
             </TitleWrapper>
           </CardContent>

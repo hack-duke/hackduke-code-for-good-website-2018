@@ -83,7 +83,10 @@ class NavContents extends React.PureComponent {
           target="_blank"
           rel="noopener"
         >
-          <MLHBadge src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" />
+          <MLHBadge
+            alt="Major League Hacking 2019 Hackathon Season"
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg"
+          />
         </a>
       </NavItemsWrapper>
     );

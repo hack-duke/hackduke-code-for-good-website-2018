@@ -78,16 +78,19 @@ export default () => (
       <CenterContent>
         <SocialLinks>
           <a
+            aria-label="Contact Us"
             href="mailto:hackers@hackduke.org"
             className={cx(iconStyle, 'icon-mail-squared')}
           />
           <a
+            aria-label="Facebook"
             href="https://www.facebook.com/hackduke"
             target="_blank"
             rel="noopener"
             className={cx(iconStyle, 'icon-facebook-squared')}
           />
           <a
+            aria-label="Twitter"
             href="https://twitter.com/hackduke"
             target="_blank"
             rel="noopener"

@@ -4,7 +4,10 @@ import styled from 'react-emotion';
 import {
   SectionBase,
   SectionContent,
-  SectionTextContent
+  SectionTextContent,
+  SectionLeftColumn,
+  SectionRightColumn,
+  PrimaryFont
 } from '../common-styles';
 import SectionTitle from '../SectionTitle';
 
@@ -20,38 +23,79 @@ const Container = styled('div')`
   })};
 `;
 
-const PrinciplesContainer = styled('div')`
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 1260px) {
-    flex-direction: row;
-  }
+const Day = styled('h3')`
+  ${PrimaryFont};
+  color: ${props => (props.active ? props.activeColor : 'auto')};
+  text-decoration: ${props => (props.active ? 'underline' : 'none')};
+  text-underline-position: under;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 1em;
 `;
 
-const schedule = [
-  [
-    { time: '9:00AM - 10:00AM', name: 'first event here!' },
-    { time: '10:00AM - 11:00AM', name: 'second event here!' }
-  ],
-  [
-    { time: '12:00AM - 1:00PM', name: 'third event here!' },
-    { time: '1:00PM - 2:00PM', name: 'fourth second event here!' },
-    { time: '2:00PM - 3:00PM', name: 'fifth second event here!' }
-  ]
-];
+const locale = 'en-US';
 
-export default ({ id, titleColor }) => (
-  <Container id={id}>
-    <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
-    <SectionContent>
-      <SectionTextContent>
-        This is the schedule! Woohoo! Get ~groovy~
-      </SectionTextContent>
-      <PrinciplesContainer>
-        <ScheduleItemCard titleColor="#3649A3">{schedule}</ScheduleItemCard>
-      </PrinciplesContainer>
-    </SectionContent>
-  </Container>
-);
+const formatDate = date =>
+  `${date.toLocaleDateString(locale, {
+    weekday: 'long'
+  })}, ${date.toLocaleDateString('en-US', {
+    month: 'long'
+  })} ${date.getDate()}`;
+
+export default class Schedule extends React.Component {
+  state = {
+    selectedDayIndex: 0,
+    schedule: [
+      {
+        // Months are zero-indexed for whatever reason
+        // This is a historical artifact from the Java (yes, Java) APIs
+        date: new Date(2018, 9, 13),
+        events: [
+          { time: '9:00AM - 10:00AM', name: 'first event here!' },
+          { time: '10:00AM - 11:00AM', name: 'second event here!' }
+        ]
+      },
+      {
+        date: new Date(2018, 9, 14),
+        events: [
+          { time: '12:00AM - 1:00PM', name: 'third event here!' },
+          { time: '1:00PM - 2:00PM', name: 'fourth second event here!' },
+          { time: '2:00PM - 3:00PM', name: 'fifth second event here!' }
+        ]
+      }
+    ]
+  };
+
+  render() {
+    const { id, titleColor } = this.props;
+    const { selectedDayIndex, schedule } = this.state;
+
+    return (
+      <Container id={id}>
+        <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
+        <SectionContent columns={true}>
+          <SectionLeftColumn>
+            <SectionTextContent>
+              {schedule.map(({ date, events }, i) => (
+                <Day
+                  active={i === selectedDayIndex}
+                  activeColor={titleColor}
+                  key={date}
+                  onClick={() => this.setState({ selectedDayIndex: i })}
+                >
+                  {formatDate(date)}
+                </Day>
+              ))}
+            </SectionTextContent>
+          </SectionLeftColumn>
+          <SectionRightColumn>
+            <ScheduleItemCard
+              titleColor={titleColor}
+              events={schedule[selectedDayIndex].events}
+            />
+          </SectionRightColumn>
+        </SectionContent>
+      </Container>
+    );
+  }
+}

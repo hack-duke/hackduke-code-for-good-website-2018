@@ -57,7 +57,7 @@ export const LeftContentPadding = css`
   }
 `;
 
-export const SectionTextContent = styled('p')`
+export const SectionTextContent = styled('div')`
   ${SecondaryText};
   font-size: 1.33em;
   margin-top: 0;

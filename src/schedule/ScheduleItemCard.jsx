@@ -36,7 +36,7 @@ const EventTime = styled('div')`
   flex-grow: 0;
   flex-shrink: 0;
   text-align: right;
-  background: linear-gradient(90deg, #fdfdfd, #fafafa);
+  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8);
   font-weight: bold;
   color: #555;
   ${rowItemPadding};

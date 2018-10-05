@@ -27,13 +27,14 @@ const Day = styled('h3')`
   ${PrimaryFont};
   color: ${props => (props.active ? props.activeColor : 'auto')};
   text-decoration: ${props => (props.active ? 'underline' : 'none')};
+  transition: ${props => (props.active ? 'none' : 'color 0.2s')};
   text-underline-position: under;
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 1em;
 
   :hover {
-    color: ${props => (props.active ? 'auto' : '#4b4b4b')};
+    color: ${props => (props.active ? 'auto' : '#5f5f5f')};
   }
 
   :last-child {
@@ -87,7 +88,7 @@ export default class Schedule extends React.Component {
           {
             time: '2:00PM - 3:00PM',
             name: 'fifth second event here!',
-            locations: ['asdasdsd']
+            locations: ['asdasdsd', 'asdasdsdiji']
           }
         ]
       }

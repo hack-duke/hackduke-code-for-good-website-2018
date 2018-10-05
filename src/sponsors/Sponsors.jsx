@@ -29,16 +29,16 @@ export default ({ id, titleColor }) => (
     <SectionContent columns={true}>
       <SectionLeftColumn>
         <SectionTextContent>
-          A big thank you to all of our sponsors!
-        </SectionTextContent>
-        <SectionTextContent>Interested in sponsoring?</SectionTextContent>
-        <SectionTextContent>
-          <Button
-            material={YELLOW_PRESSABLE}
-            href="mailto:sponsorship@hackduke.org"
-          >
-            Sponsor us
-          </Button>
+          <p>A big thank you to all of our sponsors!</p>
+          <p>Interested in sponsoring?</p>
+          <p>
+            <Button
+              material={YELLOW_PRESSABLE}
+              href="mailto:sponsorship@hackduke.org"
+            >
+              Sponsor us
+            </Button>
+          </p>
         </SectionTextContent>
       </SectionLeftColumn>
       <SectionRightColumn>

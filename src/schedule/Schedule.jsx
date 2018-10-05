@@ -31,6 +31,14 @@ const Day = styled('h3')`
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 1em;
+
+  :hover {
+    color: ${props => (props.active ? 'auto' : '#4b4b4b')};
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const locale = 'en-US';
@@ -51,16 +59,36 @@ export default class Schedule extends React.Component {
         // This is a historical artifact from the Java (yes, Java) APIs
         date: new Date(2018, 9, 13),
         events: [
-          { time: '9:00AM - 10:00AM', name: 'first event here!' },
-          { time: '10:00AM - 11:00AM', name: 'second event here!' }
+          {
+            time: '9:00AM - 10:00AM',
+            name: 'first event here!',
+            locations: ['Schiciano Atrium']
+          },
+          {
+            time: '10:00AM - 11:00AM',
+            name: 'second event here!',
+            locations: ['Reynolds Theatre']
+          }
         ]
       },
       {
         date: new Date(2018, 9, 14),
         events: [
-          { time: '12:00AM - 1:00PM', name: 'third event here!' },
-          { time: '1:00PM - 2:00PM', name: 'fourth second event here!' },
-          { time: '2:00PM - 3:00PM', name: 'fifth second event here!' }
+          {
+            time: '12:00AM - 1:00PM',
+            name: 'third event here!',
+            locations: ['asdasds']
+          },
+          {
+            time: '1:00PM - 2:00PM',
+            name: 'fourth second event here!',
+            locations: ['asdsds']
+          },
+          {
+            time: '2:00PM - 3:00PM',
+            name: 'fifth second event here!',
+            locations: ['asdasdsd']
+          }
         ]
       }
     ]

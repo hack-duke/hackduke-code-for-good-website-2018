@@ -60,7 +60,9 @@ export const LeftContentPadding = css`
 export const SectionTextContent = styled('div')`
   ${SecondaryText};
   font-size: 1.33em;
-  margin-top: 0;
+  > p {
+    margin-top: 0;
+  }
 `;
 
 const FlexProps = css`

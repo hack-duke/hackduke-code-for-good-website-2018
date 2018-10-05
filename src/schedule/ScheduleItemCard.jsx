@@ -4,13 +4,16 @@ import { css } from 'emotion';
 
 import { SecondaryText, TitleFont, ShadowItem } from '../common-styles';
 
+const dateColSize = '210px';
+
 const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 25px;
   padding: 0;
-  overflow: hidden;
   border-top: 6px solid ${props => props.color};
+  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) no-repeat;
+  background-size: ${dateColSize};
   ${ShadowItem};
 
   :last-child {
@@ -32,13 +35,11 @@ const rowItemPadding = css`
 `;
 
 const EventTime = styled('div')`
-  flex-basis: 210px;
+  flex-basis: ${dateColSize};
   flex-grow: 0;
   flex-shrink: 0;
   text-align: right;
-  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8);
   font-weight: bold;
-  color: #555;
   ${rowItemPadding};
 `;
 
@@ -48,10 +49,16 @@ const EventDetails = styled('div')`
 
 const EventDetailsText = styled('div')`
   display: block;
-  font-weight: ${props => (props.primary ? 'bold' : 'auto')};
-  margin-bottom: ${props => (props.primary ? '0.33em' : 'auto')};
-  color: ${props => (props.primary ? props.primaryColor : '#888')};
-  font-size: ${props => (props.primary ? 'auto' : '0.9em')};
+  font-size: 0.9em;
+  color: #555;
+  ${props =>
+    props.primary &&
+    css`
+      font-weight: bold;
+      margin-bottom: 0.33em;
+      font-size: 1em;
+      color: ${props.primaryColor};
+    `};
 `;
 
 const EventRow = styled('div')`

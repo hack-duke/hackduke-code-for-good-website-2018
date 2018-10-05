@@ -32,9 +32,8 @@ const rowItemPadding = css`
 `;
 
 const EventTime = styled('div')`
-  width: 220px;
+  width: 210px;
   background: linear-gradient(90deg, #fdfdfd, #fafafa);
-  text-align: right;
   font-weight: bold;
   color: #555;
   ${rowItemPadding};

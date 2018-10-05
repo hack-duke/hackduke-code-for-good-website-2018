@@ -61,14 +61,35 @@ export default class Schedule extends React.Component {
         date: new Date(2018, 9, 13),
         events: [
           {
-            time: '9:00AM - 10:00AM',
-            name: 'first event here!',
+            time: '9:00AM - 10:45AM',
+            name: 'Check-in',
             locations: ['Schiciano Atrium']
           },
           {
-            time: '10:00AM - 11:00AM',
-            name: 'second event here!',
+            time: '11:00AM - 12:15PM',
+            name: 'Opening Ceremony',
             locations: ['Reynolds Theatre']
+          },
+          {
+            time: '12:30PM - 1:00PM',
+            name: 'Track Mentor Talks',
+            locations: [
+              'Scichiano A: Education',
+              'Scichiano B: Health',
+              'Hudson 207: Energy',
+              'Hudson 208: Inequality'
+            ]
+          },
+          {
+            time: '1:00PM - 2:00PM',
+            name: 'Lunch',
+            locations: ['CIEMAS 1st floor']
+          },
+          { time: '2:00PM', name: 'Hacking Commences' },
+          {
+            time: '2:00PM - 2:30PM',
+            name: 'Team Formation Help',
+            locations: ['CIEMAS']
           }
         ]
       },

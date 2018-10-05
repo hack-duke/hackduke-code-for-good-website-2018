@@ -28,7 +28,7 @@ const CardBase = styled('div')`
 `;
 
 const rowItemPadding = css`
-  padding: 20px 30px;
+  padding: 10px 30px;
 `;
 
 const EventTime = styled('div')`
@@ -47,7 +47,7 @@ const EventDetails = styled('div')`
 const EventDetailsText = styled('div')`
   display: block;
   font-weight: ${props => (props.primary ? 'bold' : 'auto')};
-  margin-bottom: ${props => (props.primary ? '0.5em' : 'auto')};
+  margin-bottom: ${props => (props.primary ? '0.33em' : 'auto')};
   color: ${props => (props.primary ? props.primaryColor : '#888')};
   font-size: ${props => (props.primary ? 'auto' : '0.9em')};
 `;
@@ -57,6 +57,15 @@ const EventRow = styled('div')`
   ${TitleFont};
   color: #2b2b2b;
   font-size: 1.1em;
+  line-height: 1.44em;
+
+  :first-child > div {
+    padding-top: 20px;
+  }
+
+  :last-child > div {
+    padding-bottom: 20px;
+  }
 `;
 
 export default ({ titleColor, events }) => (
@@ -68,9 +77,10 @@ export default ({ titleColor, events }) => (
           <EventDetailsText primary={true} primaryColor={titleColor}>
             {name}
           </EventDetailsText>
-          {locations.map(loc => (
-            <EventDetailsText key={loc}>{loc}</EventDetailsText>
-          ))}
+          {locations &&
+            locations.map(loc => (
+              <EventDetailsText key={loc}>{loc}</EventDetailsText>
+            ))}
         </EventDetails>
       </EventRow>
     ))}

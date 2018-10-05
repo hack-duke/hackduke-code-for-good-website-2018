@@ -2,40 +2,37 @@ import React from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
-import { SecondaryText, TitleFont, ShadowItem } from '../common-styles';
+import { TitleFont, ShadowItem } from '../common-styles';
 
-const dateColSize = '210px';
+const dateColWidth = '185px';
+const dateColFullWidth = '210px';
 
 const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
-  margin-bottom: 25px;
   padding: 0;
   border-top: 6px solid ${props => props.color};
   background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) no-repeat;
-  background-size: ${dateColSize};
   ${ShadowItem};
 
-  :last-child {
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: 1260px) {
-    margin-bottom: 0;
-    margin-right: 25px;
-
-    :last-child {
-      margin-right: 0;
-    }
+  background-size: ${dateColWidth};
+  @media screen and (min-width: 900px) {
+    background-size: ${dateColFullWidth};
   }
 `;
 
 const rowItemPadding = css`
-  padding: 10px 30px;
+  padding: 10px 20px;
+  @media screen and (min-width: 900px) {
+    padding: 10px 30px;
+  }
 `;
 
 const EventTime = styled('div')`
-  flex-basis: ${dateColSize};
+  flex-basis: ${dateColWidth};
+  @media screen and (min-width: 900px) {
+    flex-basis: ${dateColFullWidth};
+  }
   flex-grow: 0;
   flex-shrink: 0;
   text-align: right;

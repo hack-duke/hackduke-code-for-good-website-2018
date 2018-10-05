@@ -32,7 +32,9 @@ const rowItemPadding = css`
 `;
 
 const EventTime = styled('div')`
-  width: 210px;
+  flex-basis: 210px;
+  flex-grow: 0;
+  flex-shrink: 0;
   text-align: right;
   background: linear-gradient(90deg, #fdfdfd, #fafafa);
   font-weight: bold;

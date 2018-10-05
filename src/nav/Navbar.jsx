@@ -26,6 +26,7 @@ const NavItemsWrapper = styled('div')`
   max-width: ${MAX_WIDTH};
   margin: 0 auto;
   padding: 0 144px;
+  padding-right: 0;
   height: 100%;
 `;
 

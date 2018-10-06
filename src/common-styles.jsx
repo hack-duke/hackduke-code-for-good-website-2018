@@ -63,6 +63,15 @@ export const SectionTextContent = styled('div')`
   > p {
     margin-top: 0;
   }
+
+  ${props =>
+    props.sticky &&
+    css`
+      @media screen and (min-width: 1260px) {
+        position: sticky;
+        top: 120px;
+      }
+    `};
 `;
 
 const FlexProps = css`

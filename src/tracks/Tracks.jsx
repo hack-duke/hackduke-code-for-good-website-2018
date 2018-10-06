@@ -74,12 +74,15 @@ export default ({ id, titleColor }) => (
     <SectionContent columns={true}>
       <SectionLeftColumn>
         <SectionTextContent>
-          HackDuke emphasizes its commitment to social good through four unique
-          project tracks. Tracks enable members to collaborate while providing
-          an alleyway to partnership with peers, local organizations, nonprofits
-          and universities to continue working towards the cause.
+          <p>
+            HackDuke emphasizes its commitment to social good through four
+            unique project tracks. Tracks enable members to collaborate while
+            providing an alleyway to partnership with peers, local
+            organizations, nonprofits and universities to continue working
+            towards the cause.
+          </p>
+          <p>Select a track for more info!</p>
         </SectionTextContent>
-        <SectionTextContent>Select a track for more info!</SectionTextContent>
       </SectionLeftColumn>
       <SectionRightColumn>
         <TrackRow>

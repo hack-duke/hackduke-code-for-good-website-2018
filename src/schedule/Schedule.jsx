@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { css } from 'emotion';
 
 import {
   SectionBase,
@@ -193,7 +194,7 @@ export default class Schedule extends React.Component {
         <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
         <SectionContent columns={true}>
           <SectionLeftColumn>
-            <SectionTextContent>
+            <SectionTextContent sticky={true}>
               {schedule.map(({ date, events }, i) => (
                 <Day
                   active={i === selectedDayIndex}

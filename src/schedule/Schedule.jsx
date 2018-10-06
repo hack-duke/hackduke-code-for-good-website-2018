@@ -90,6 +90,46 @@ export default class Schedule extends React.Component {
             time: '2:00PM - 2:30PM',
             name: 'Team Formation Help',
             locations: ['CIEMAS']
+          },
+          {
+            time: '2:00PM - 8:00PM',
+            name: 'Frisbee, Football, Volleyball',
+            locations: ['Harrington Quad']
+          },
+          {
+            time: '2:30PM - 6:30PM',
+            name: 'Workshops & Talks',
+            locations: ['Hudson']
+          },
+          {
+            time: '3:00PM - 5:00PM',
+            name: 'Puppies!!!!!',
+            locations: ['Harrington Quad']
+          },
+          {
+            time: '6:30PM - 8:00PM',
+            name: 'Dinner',
+            locations: ['Schiciano Atrium']
+          },
+          {
+            time: '8:00PM - 9:00PM',
+            name: 'MLH Werewolf',
+            locations: ['CIEMAS 1st floor']
+          },
+          {
+            time: '9:00PM - 10:00PM',
+            name: 'WIT Mixer',
+            locations: ['CoLab']
+          },
+          {
+            time: '10:00PM - 11:00PM',
+            name: 'Nerf War',
+            locations: ["Twinnie's 2nd Floor"]
+          },
+          {
+            time: '11:00PM - 11:45PM',
+            name: 'Spicy Noodle Challenge',
+            locations: ['Schiciano Atrium']
           }
         ]
       },
@@ -97,19 +137,47 @@ export default class Schedule extends React.Component {
         date: new Date(2018, 9, 14),
         events: [
           {
-            time: '12:00AM - 1:00PM',
-            name: 'third event here!',
-            locations: ['asdasds']
+            time: '12:00AM - 8:00AM',
+            name: 'Midnight Snacks',
+            locations: ["Twinnie's"]
           },
           {
-            time: '1:00PM - 2:00PM',
-            name: 'fourth second event here!',
-            locations: ['asdsds']
+            time: '9:00AM - 9:45AM',
+            name: 'Breakfast',
+            locations: ['Schiciano Atrium']
           },
           {
-            time: '2:00PM - 3:00PM',
-            name: 'fifth second event here!',
-            locations: ['asdasdsd', 'asdasdsdiji']
+            time: '10:00AM - 12:00PM',
+            name: 'Workshop & Talks',
+            locations: ['Hudson']
+          },
+          {
+            time: '12:00PM - 1:30PM',
+            name: 'Lunch',
+            locations: ['Schiciano Atrium']
+          },
+          { time: '1:30PM', name: 'Hacking Ends' },
+          { time: '2:00PM', name: 'Judging Begins' },
+          {
+            time: '2:00PM - 3:30PM',
+            name: 'Judging / Demos',
+            locations: ['CIEMAS 1st Floor']
+          },
+          {
+            time: '3;45PM - 4:15PM',
+            name: 'Judging Finalists',
+            locations: ['CIEMAS 1st Floor']
+          },
+          { name: 'HackDuke Ends' },
+          {
+            time: '4:30PM - 5:30PM',
+            name: 'Closing Ceremony',
+            locations: ['Reynolds Theatre']
+          },
+          {
+            time: '6:00PM - 6:00PM',
+            name: 'VA Bus Leaves',
+            locations: ['Science Drive']
           }
         ]
       }

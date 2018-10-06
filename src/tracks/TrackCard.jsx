@@ -4,17 +4,27 @@ import { css } from 'emotion';
 
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 
-const cardHeight = '285px';
+const cardHeight = '290px';
+
+const zeroBottomMargin = css`
+  margin-bottom: 0;
+`;
 
 const CardBase = styled('div')`
   height: ${cardHeight};
-  margin-bottom: 25px;
   cursor: ${props => (props.showPointer ? 'pointer' : 'auto')};
+  margin-bottom: 25px;
+
+  :last-child {
+    ${props => props.lastRow && zeroBottomMargin};
+  }
 
   @media screen and (min-width: 960px) {
     flex-grow: 1;
     flex-basis: 0;
     margin-right: 25px;
+
+    ${props => props.lastRow && zeroBottomMargin};
 
     :last-child {
       margin-right: 0;
@@ -88,9 +98,10 @@ export default class TrackCard extends React.PureComponent {
 
   render() {
     const { opened } = this.state;
-    const { material, icon, title, children } = this.props;
+    const { material, icon, title, children, lastRow } = this.props;
     return (
       <CardBase
+        lastRow={lastRow}
         material={material}
         showPointer={!opened}
         onClick={this.setOpened}

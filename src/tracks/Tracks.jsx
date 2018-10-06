@@ -72,7 +72,7 @@ export default ({ id, titleColor }) => (
   <Container id={id}>
     <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
     <SectionContent columns={true}>
-      <SectionLeftColumn>
+      <SectionLeftColumn sticky={true}>
         <SectionTextContent>
           <p>
             HackDuke emphasizes its commitment to social good through four
@@ -116,7 +116,12 @@ export default ({ id, titleColor }) => (
           </TrackCard>
         </TrackRow>
         <TrackRow>
-          <TrackCard material={RED} title="Health" icon={HealthIcon}>
+          <TrackCard
+            material={RED}
+            title="Health"
+            icon={HealthIcon}
+            lastRow={true}
+          >
             The <b>Health</b> track allows hackers to work with various kinds of
             health related data, as well as connect with mentors from the
             intersection of health and technology. More than ever, technology
@@ -130,7 +135,12 @@ export default ({ id, titleColor }) => (
               See Projects <RightArrow />
             </TrackCTA>
           </TrackCard>
-          <TrackCard material={YELLOW} title="Education" icon={EducationIcon}>
+          <TrackCard
+            material={YELLOW}
+            title="Education"
+            icon={EducationIcon}
+            lastRow={true}
+          >
             The <b>Education</b> track pairs hackers with educators, reaching
             out to all levels of subjects and skills. In addition to Education
             events sponsored by HackDuke, projects aim to increase visibility of

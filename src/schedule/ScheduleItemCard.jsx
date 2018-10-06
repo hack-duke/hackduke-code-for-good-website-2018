@@ -4,7 +4,7 @@ import { css } from 'emotion';
 
 import { TitleFont, ShadowItem } from '../common-styles';
 
-const dateColWidth = '185px';
+const dateColWidth = '190px';
 const dateColFullWidth = '210px';
 
 const CardBase = styled('div')`
@@ -12,7 +12,7 @@ const CardBase = styled('div')`
   flex-basis: 0;
   padding: 0;
   border-top: 6px solid ${props => props.color};
-  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) no-repeat;
+  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
   ${ShadowItem};
 
   background-size: ${dateColWidth};

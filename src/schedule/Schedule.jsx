@@ -26,18 +26,12 @@ const Container = styled('div')`
 
 const Day = styled('h3')`
   ${PrimaryFont};
-  color: ${props => (props.active ? props.activeColor : 'auto')};
+  color: ${props => (props.active ? props.activeColor : 'initial')};
   transition: opacity 0.2s;
-  float: left;
-  clear: left;
-
-  /* Hack for sticky support with border underline */
-  @media screen and (min-width: 1260px) {
-    float: none;
-    display: inline-block;
-  }
-
   cursor: pointer;
+
+  /* https://css-tricks.com/injecting-line-break/ */
+  display: table;
 
   margin-top: 0;
   margin-bottom: 1em;

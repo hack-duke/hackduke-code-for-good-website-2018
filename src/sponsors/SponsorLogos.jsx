@@ -117,11 +117,7 @@ export default () => (
         href="https://www.globalbankers.com/"
       />
       <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
-      <Logo
-        alt="StickerMule"
-        src={StickerMuleLogo}
-        href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"
-      />
+      <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -129,7 +125,11 @@ export default () => (
         src={ScimedLogo}
         href="http://www.scimedsolutions.com/"
       />
-      <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
+      <Logo
+        alt="StickerMule"
+        src={StickerMuleLogo}
+        href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"
+      />
       <Logo alt="Zweli's" src={ZwelisLogo} href="https://www.zwelis.com/" />
     </LogoRow>
     <LogoRow>

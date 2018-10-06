@@ -60,7 +60,7 @@ const LogoImage = styled('img')`
   height: auto;
   max-height: 100%;
   object-fit: contain;
-  user-drag: none;
+  -webkit-user-drag: none;
 `;
 
 const Logo = ({ alt, src, href }) => (

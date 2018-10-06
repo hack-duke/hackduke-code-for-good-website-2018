@@ -56,7 +56,7 @@ export default ({ id, titleColor }) => (
             sponsored API prizes as well.
           </FAQItem>
           <FAQItem title="When? Where?">
-            HackDuke starts Saturday, October 13th at 10:00 AM EST and ends on
+            HackDuke starts Saturday, October 13th at 9:00 AM EST and ends on
             Sunday, October 14th at 5:30 PM EST. It is hosted on Duke
             University's West Campus, in and around the Fitzpatrick Engineering
             Building, Durham, NC 27705.

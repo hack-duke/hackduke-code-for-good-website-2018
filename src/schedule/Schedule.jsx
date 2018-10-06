@@ -182,7 +182,7 @@ export default class Schedule extends React.Component {
             locations: ['Reynolds Theatre']
           },
           {
-            time: '6:00PM - 6:00PM',
+            time: '6:00PM',
             name: 'VA Bus Leaves',
             locations: ['Science Drive']
           }

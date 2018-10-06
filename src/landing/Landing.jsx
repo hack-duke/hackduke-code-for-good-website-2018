@@ -57,7 +57,7 @@ export default ({ id }) => (
   <Container id={id}>
     <LandingContent>
       <DateText>October 13th - 14th, 2018</DateText>
-      <Logo src={LogoImage} />
+      <Logo alt="HackDuke: Code for Good" src={LogoImage} />
       <Button material={PURPLE_PRESSABLE} href="https://hackduke.org/apply/">
         Apply now
       </Button>

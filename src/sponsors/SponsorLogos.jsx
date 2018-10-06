@@ -23,7 +23,7 @@ import PalantirLogo from './img/palantir-logo.svg';
 
 import StickerMuleLogo from './img/stickermule.svg';
 import EpicLogo from './img/epic.png';
-import ClincLogo from './img/clinc-logo.png';
+import ClincLogo from './img/clinc-logo.svg';
 import DukeCSLogo from './img/duke-cs-logo.svg';
 import ZwelisLogo from './img/zwelis-logo.png';
 

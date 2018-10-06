@@ -25,6 +25,7 @@ import StickerMuleLogo from './img/stickermule.svg';
 import EpicLogo from './img/epic.png';
 import ClincLogo from './img/clinc-logo.png';
 import DukeCSLogo from './img/duke-cs-logo.svg';
+import ZwelisLogo from './img/zwelis-logo.png';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -111,9 +112,9 @@ export default () => (
     </LogoRow>
     <LogoRow>
       <Logo
-        alt="Innovation Co-Lab"
-        src={InnovationCoLabLogo}
-        href="https://colab.duke.edu/"
+        alt="Global Bankers"
+        src={GlobalBankersLogo}
+        href="https://www.globalbankers.com/"
       />
       <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
       <Logo
@@ -124,16 +125,24 @@ export default () => (
     </LogoRow>
     <LogoRow>
       <Logo
-        alt="Global Bankers"
-        src={GlobalBankersLogo}
-        href="https://www.globalbankers.com/"
-      />
-      <Logo
         alt="SciMed Solutions"
         src={ScimedLogo}
         href="http://www.scimedsolutions.com/"
       />
       <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
+      <Logo alt="Zweli's" src={ZwelisLogo} href="https://www.zwelis.com/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="Innovation Co-Lab"
+        src={InnovationCoLabLogo}
+        href="https://colab.duke.edu/"
+      />
+      <Logo
+        alt="Duke Computer Science"
+        src={DukeCSLogo}
+        href="https://www.cs.duke.edu/"
+      />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -150,11 +159,6 @@ export default () => (
         alt="Information Initiative at Duke"
         src={IIDLogo}
         href="https://bigdata.duke.edu/"
-      />
-      <Logo
-        alt="Duke Computer Science"
-        src={DukeCSLogo}
-        href="https://www.cs.duke.edu/"
       />
     </LogoRow>
   </React.Fragment>

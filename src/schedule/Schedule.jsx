@@ -27,15 +27,27 @@ const Container = styled('div')`
 const Day = styled('h3')`
   ${PrimaryFont};
   color: ${props => (props.active ? props.activeColor : 'auto')};
-  text-decoration: ${props => (props.active ? 'underline' : 'none')};
-  transition: ${props => (props.active ? 'none' : 'color 0.2s')};
-  text-underline-position: under;
+  transition: opacity 0.2s;
+  float: left;
+  clear: left;
+
+  /* Hack for sticky support with border underline */
+  @media screen and (min-width: 1260px) {
+    float: none;
+    display: inline-block;
+  }
+
   cursor: pointer;
+
   margin-top: 0;
   margin-bottom: 1em;
+  padding-bottom: 0.1em;
+
+  border-bottom: 2px solid
+    ${props => (props.active ? props.activeColor : 'transparent')};
 
   :hover {
-    color: ${props => (props.active ? 'auto' : '#5f5f5f')};
+    opacity: 0.85;
   }
 
   :last-child {
@@ -193,8 +205,8 @@ export default class Schedule extends React.Component {
       <Container id={id}>
         <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
         <SectionContent columns={true}>
-          <SectionLeftColumn>
-            <SectionTextContent sticky={true}>
+          <SectionLeftColumn sticky={true}>
+            <SectionTextContent>
               {schedule.map(({ date, events }, i) => (
                 <Day
                   active={i === selectedDayIndex}

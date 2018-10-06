@@ -23,6 +23,8 @@ import PalantirLogo from './img/palantir-logo.svg';
 
 import StickerMuleLogo from './img/stickermule.svg';
 import EpicLogo from './img/epic.png';
+import ClincLogo from './img/clinc-logo.png';
+import DukeCSLogo from './img/duke-cs-logo.svg';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -131,6 +133,7 @@ export default () => (
         src={ScimedLogo}
         href="http://www.scimedsolutions.com/"
       />
+      <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -147,6 +150,11 @@ export default () => (
         alt="Information Initiative at Duke"
         src={IIDLogo}
         href="https://bigdata.duke.edu/"
+      />
+      <Logo
+        alt="Duke Computer Science"
+        src={DukeCSLogo}
+        href="https://www.cs.duke.edu/"
       />
     </LogoRow>
   </React.Fragment>

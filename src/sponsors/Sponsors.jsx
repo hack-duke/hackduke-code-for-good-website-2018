@@ -27,7 +27,7 @@ export default ({ id, titleColor }) => (
   <Container id={id}>
     <SectionTitle titleColor={titleColor}>Sponsors</SectionTitle>
     <SectionContent columns={true}>
-      <SectionLeftColumn sticky={true}>
+      <SectionLeftColumn>
         <SectionTextContent>
           <p>A big thank you to all of our sponsors!</p>
           <p>Interested in sponsoring?</p>

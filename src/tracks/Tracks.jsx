@@ -72,7 +72,7 @@ export default ({ id, titleColor }) => (
   <Container id={id}>
     <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
     <SectionContent columns={true}>
-      <SectionLeftColumn sticky={true}>
+      <SectionLeftColumn>
         <SectionTextContent>
           <p>
             HackDuke emphasizes its commitment to social good through four

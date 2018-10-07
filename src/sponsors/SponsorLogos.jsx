@@ -82,7 +82,11 @@ export default () => (
         src={WolframLogo}
         href="http://www.wolfram.com/company/careers/students/"
       />
-      <Logo src={GoogleLogo} href="https://careers.google.com/students/" />
+      <Logo
+        alt="Google"
+        src={GoogleLogo}
+        href="https://careers.google.com/students/"
+      />
     </LogoRow>
     <LogoRow>
       <Logo

@@ -191,6 +191,19 @@ export default class Schedule extends React.Component {
     ]
   };
 
+  componentDidMount() {
+    const { schedule } = this.state;
+    const now = new Date();
+
+    let i = schedule.length;
+    while (i-- > 0) {
+      if (now >= schedule[i].date) {
+        this.setState({ selectedDayIndex: i });
+        break;
+      }
+    }
+  }
+
   render() {
     const { id, titleColor } = this.props;
     const { selectedDayIndex, schedule } = this.state;

@@ -11,7 +11,6 @@ import IIDLogo from './img/iid.png';
 
 import GlobalBankersLogo from './img/gbankers.png';
 import CapitalOneLogo from './img/capital-one.svg';
-import EquitasLogo from './img/equitas-logo.png';
 
 import MicrosoftLogo from './img/microsoft-logo.svg';
 import OptumLogo from './img/optum-logo.svg';
@@ -112,7 +111,7 @@ export default () => (
         src={CapitalOneLogo}
         href="https://campus.capitalone.com/"
       />
-      <Logo alt="Equitas" src={EquitasLogo} href="https://www.equitasls.com/" />
+      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -120,7 +119,6 @@ export default () => (
         src={GlobalBankersLogo}
         href="https://www.globalbankers.com/"
       />
-      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
       <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
     </LogoRow>
     <LogoRow>

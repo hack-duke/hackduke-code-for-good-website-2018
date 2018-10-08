@@ -171,7 +171,7 @@ export default class Schedule extends React.Component {
             locations: ['CIEMAS 1st Floor']
           },
           {
-            time: '3;45PM - 4:15PM',
+            time: '3:45PM - 4:15PM',
             name: 'Judging Finalists',
             locations: ['CIEMAS 1st Floor']
           },

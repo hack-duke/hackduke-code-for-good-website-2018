@@ -86,7 +86,7 @@ export default class Schedule extends React.Component {
           {
             time: '2:00PM - 2:30PM',
             name: 'Team Formation Mixer',
-            locations: ['CIEMAS']
+            locations: ['Schiciano Lobby']
           },
           {
             time: '2:00PM - 8:00PM',
@@ -95,7 +95,7 @@ export default class Schedule extends React.Component {
           },
           {
             time: '2:30PM - 3:30PM',
-            name: 'Arduino Workshop by August Ning',
+            name: 'Intro to Hardware Hacking by August Ning',
             locations: ['Hudson 201']
           },
           {
@@ -109,7 +109,7 @@ export default class Schedule extends React.Component {
             locations: ['Hudson 216']
           },
           {
-            time: '3:00PM - 5:00PM',
+            time: '3:30PM - 5:00PM',
             name: 'Puppies!!!!!',
             locations: ['Harrington Quad']
           },
@@ -131,17 +131,12 @@ export default class Schedule extends React.Component {
           {
             time: '8:00PM - 9:00PM',
             name: 'MLH Werewolf',
-            locations: ['CIEMAS 1st floor']
+            locations: ['Schiciano Lobby']
           },
           {
             time: '9:00PM - 10:00PM',
             name: 'Mixer for Female-Identifying and Non-Binary Hackers',
             locations: ['Innovation Co-Lab']
-          },
-          {
-            time: '9:00PM - 10:00PM',
-            name: 'WIT Mixer',
-            locations: ['CoLab']
           },
           {
             time: '10:00PM - 11:00PM',
@@ -183,17 +178,17 @@ export default class Schedule extends React.Component {
           {
             time: '2:00PM - 2:45PM',
             name: 'First Round Judging',
-            locations: ['CIEMAS Lobby']
+            locations: ['Schiciano Lobby']
           },
           {
             time: '2:45PM - 3:30PM',
             name: 'Finalist Demos',
-            locations: ['CIEMAS Lobby']
+            locations: ['Schiciano Lobby']
           },
           {
             time: '3:30PM - 4:00PM',
             name: 'Final Judging',
-            locations: ['CIEMAS Lobby']
+            locations: ['Schiciano Lobby']
           },
           {
             time: '4:00PM',

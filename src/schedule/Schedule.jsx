@@ -168,11 +168,17 @@ export default class Schedule extends React.Component {
             name: 'Breakfast',
             locations: ['Schiciano Atrium']
           },
+            {
+            time: '11:00AM - 11:30PM',
+            name: 'The Future of Healthcare Technology by Dr. Michael Kerzner (Duke Hospital)',
+            locations: ['Hudson 216']
+          },
           {
             time: '11:00AM - 12:00PM',
             name: 'Turning Hack into Startup by Kasper Kubica',
             locations: ['Hudson 222']
           },
+        
           {
             time: '12:00PM - 1:30PM',
             name: 'Lunch',

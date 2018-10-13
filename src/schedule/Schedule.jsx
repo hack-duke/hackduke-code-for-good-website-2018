@@ -103,6 +103,11 @@ export default class Schedule extends React.Component {
             name: 'VR Workshop by Mark Steelman',
             locations: ['Hudson 232']
           },
+            {
+            time: '3:00PM - 3:30PM',
+            name: 'Health Track Kickoff with Jason Liu',
+            locations: ['Hudson 222']
+          },
           {
             time: '3:00PM - 4:30PM',
             name: 'Javascript Workshop by Co-Lab',

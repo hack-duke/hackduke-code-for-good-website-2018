@@ -159,6 +159,11 @@ export default class Schedule extends React.Component {
             locations: ["Twinnie's"]
           },
           {
+            time: '12:00AM - 8:00AM',
+            name: 'Nap Time',
+            locations: ["Hudson (222, 224, 232)"]
+          },
+          {
             time: '9:00AM - 9:45AM',
             name: 'Breakfast',
             locations: ['Schiciano Atrium']

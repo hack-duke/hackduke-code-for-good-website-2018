@@ -22,7 +22,6 @@ import PalantirLogo from './img/palantir-logo.svg';
 
 import StickerMuleLogo from './img/stickermule.svg';
 import EpicLogo from './img/epic.png';
-import ClincLogo from './img/clinc-logo.svg';
 import DukeCSLogo from './img/duke-cs-logo.svg';
 import ZwelisLogo from './img/zwelis-logo.png';
 
@@ -119,9 +118,6 @@ export default () => (
         src={GlobalBankersLogo}
         href="https://www.globalbankers.com/"
       />
-      <Logo alt="Clinc" src={ClincLogo} href="https://clinc.com/" />
-    </LogoRow>
-    <LogoRow>
       <Logo
         alt="SciMed Solutions"
         src={ScimedLogo}
@@ -132,9 +128,9 @@ export default () => (
         src={StickerMuleLogo}
         href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral?utm_source=Direct"
       />
-      <Logo alt="Zweli's" src={ZwelisLogo} href="https://www.zwelis.com/" />
     </LogoRow>
     <LogoRow>
+      <Logo alt="Zweli's" src={ZwelisLogo} href="https://www.zwelis.com/" />
       <Logo
         alt="Innovation Co-Lab"
         src={InnovationCoLabLogo}

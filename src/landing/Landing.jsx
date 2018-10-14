@@ -58,8 +58,11 @@ export default ({ id }) => (
     <LandingContent>
       <DateText>October 13th - 14th, 2018</DateText>
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
-      <Button material={PURPLE_PRESSABLE} href="https://hackduke.org/apply/">
-        Apply now
+      <Button
+        material={PURPLE_PRESSABLE}
+        href="https://hackduke-2018.devpost.com/submissions"
+      >
+        See Projects
       </Button>
     </LandingContent>
   </Container>

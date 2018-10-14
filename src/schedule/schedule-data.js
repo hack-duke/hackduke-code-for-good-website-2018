@@ -130,13 +130,8 @@ export default [
       { time: '1:30PM', name: 'Hacking Ends' },
       { time: '2:00PM', name: 'Judging Begins' },
       {
-        time: '2:00PM - 2:45PM',
-        name: 'First Round Judging',
-        locations: ['Schiciano Lobby']
-      },
-      {
-        time: '2:45PM - 3:30PM',
-        name: 'Finalist Demos',
+        time: '2:00PM - 3:30PM',
+        name: 'Judging & Demos',
         locations: ['Schiciano Lobby']
       },
       {

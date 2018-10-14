@@ -128,15 +128,9 @@ export default [
         locations: ['Schiciano Atrium']
       },
       { time: '1:30PM', name: 'Hacking Ends' },
-      { time: '2:00PM', name: 'Judging Begins' },
       {
-        time: '2:00PM - 3:30PM',
+        time: '2:00PM - 4:00PM',
         name: 'Judging & Demos',
-        locations: ['Schiciano Lobby']
-      },
-      {
-        time: '3:30PM - 4:00PM',
-        name: 'Final Judging',
         locations: ['Schiciano Lobby']
       },
       {

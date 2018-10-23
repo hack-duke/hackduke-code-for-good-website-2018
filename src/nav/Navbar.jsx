@@ -2,8 +2,8 @@ import React from 'react';
 
 import { css } from 'emotion';
 import styled from 'react-emotion';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import detectPassiveEvents from 'detect-passive-events';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import memoize from 'memoize-one';
 
 import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
@@ -124,16 +124,16 @@ export default class Navbar extends React.Component {
   state = { activeItemID: this.props.navItems[0].id, scrollOffset: 0 };
 
   componentDidMount() {
-    this.handleScroll();
-    window.addEventListener(
-      'scroll',
-      this.handleScroll,
-      detectPassiveEvents.hasSupport ? { passive: true } : false
-    );
+    this.widthMediaQuery = window.matchMedia(`(min-width: ${768}px)`);
+    this.widthMediaQuery.addListener(this.onWidthQueryResult);
+    this.onWidthQueryResult({ matches: this.widthMediaQuery.matches });
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    if (this.widthMediaQuery !== null) {
+      this.widthMediaQuery.removeListener(this.onWidthQueryResult);
+      this.onWidthQueryResult({ matches: false });
+    }
   }
 
   render() {
@@ -153,6 +153,21 @@ export default class Navbar extends React.Component {
   getItemRefNodes = memoize(navItems =>
     navItems.map(({ id }) => [id, document.getElementById(id)])
   );
+
+  widthMediaQuery = null;
+
+  onWidthQueryResult = ({ matches }) => {
+    if (matches) {
+      window.addEventListener(
+        'scroll',
+        this.handleScroll,
+        detectPassiveEvents.hasSupport ? { passive: false } : false
+      );
+      this.handleScroll();
+    } else {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  };
 
   handleScroll = () => {
     this.setState({

@@ -6,7 +6,6 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "build": "react-static build",
     "stage": "react-static build --staging",
-    "precommit": "pretty-quick --staged",
     "heroku-postbuild": "npm run build",
     "start": "serve ./dist/"
   },
@@ -19,7 +18,7 @@
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.6",
     "emotion-server": "^9.2.10",
-    "husky": "^0.14.3",
+    "husky": "^1.1.2",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
     "react-static": "^5.9.8"
@@ -33,5 +32,10 @@
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",
     "serve": "^10.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

@@ -62,7 +62,7 @@ export default ({ id }) => (
         material={PURPLE_PRESSABLE}
         href="https://hackduke-2018.devpost.com/submissions"
       >
-        See Projects
+        See Winners
       </Button>
     </LandingContent>
   </Container>
